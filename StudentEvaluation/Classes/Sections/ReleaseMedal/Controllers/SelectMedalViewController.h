@@ -8,6 +8,7 @@
 
 #import "BSViewController.h"
 
-@interface ReleaseMedalViewController : BSViewController
+@interface SelectMedalViewController : BSViewController
 
 @end
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pzk-ig-W62" customClass="AddMedalCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To8-D9-dqa">
+                        <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uanzexunzhang_icon_incrcase_nor.png" translatesAutoresizingMaskIntoConstraints="NO" id="N8D-jT-TBz">
+                                <rect key="frame" x="14" y="10.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="RiQ-EN-m0c"/>
+                                    <constraint firstAttribute="height" constant="50" id="SQA-3s-dHb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N8D-jT-TBz" firstAttribute="centerX" secondItem="To8-D9-dqa" secondAttribute="centerX" id="FTR-qT-KuZ"/>
+                            <constraint firstItem="N8D-jT-TBz" firstAttribute="centerY" secondItem="To8-D9-dqa" secondAttribute="centerY" constant="-12" id="j4M-v4-zA8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="To8-D9-dqa" secondAttribute="trailing" id="Pgf-dg-Iai"/>
+                <constraint firstItem="To8-D9-dqa" firstAttribute="top" secondItem="pzk-ig-W62" secondAttribute="top" id="hf8-Fq-Qnb"/>
+                <constraint firstAttribute="bottom" secondItem="To8-D9-dqa" secondAttribute="bottom" id="t3v-1s-hS3"/>
+                <constraint firstItem="To8-D9-dqa" firstAttribute="leading" secondItem="pzk-ig-W62" secondAttribute="leading" id="ySp-RX-kCx"/>
+            </constraints>
+            <point key="canvasLocation" x="31.5" y="54.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="uanzexunzhang_icon_incrcase_nor.png" width="30" height="30"/>
+    </resources>
+</document>

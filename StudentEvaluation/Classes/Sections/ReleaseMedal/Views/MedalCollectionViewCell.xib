@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MedalCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDa-kg-Kx1">
+                        <rect key="frame" x="0.0" y="0.0" width="77" height="95"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-ce-ZMM">
+                                <rect key="frame" x="5" y="5" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="4hR-bJ-iHC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6my-Ab-lFS">
+                                <rect key="frame" x="0.0" y="72" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiugaimima_icon_mimakejian_sal.png" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-se-Jww">
+                                <rect key="frame" x="58" y="5" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="1LP-fF-poZ"/>
+                                    <constraint firstAttribute="height" constant="14" id="I5X-b3-dF6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x4n-se-Jww" firstAttribute="trailing" secondItem="sHW-ce-ZMM" secondAttribute="trailing" id="3LG-AG-URa"/>
+                            <constraint firstItem="sHW-ce-ZMM" firstAttribute="leading" secondItem="NDa-kg-Kx1" secondAttribute="leading" constant="5" id="AVa-fs-Xd5"/>
+                            <constraint firstAttribute="bottom" secondItem="6my-Ab-lFS" secondAttribute="bottom" constant="2" id="DwE-ZY-XoZ"/>
+                            <constraint firstItem="6my-Ab-lFS" firstAttribute="top" secondItem="sHW-ce-ZMM" secondAttribute="bottom" id="X3J-dY-jmB"/>
+                            <constraint firstAttribute="trailing" secondItem="6my-Ab-lFS" secondAttribute="trailing" id="cto-pm-zJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="sHW-ce-ZMM" secondAttribute="trailing" constant="5" id="fRe-az-UVB"/>
+                            <constraint firstItem="6my-Ab-lFS" firstAttribute="leading" secondItem="NDa-kg-Kx1" secondAttribute="leading" id="h9r-GE-0Ta"/>
+                            <constraint firstItem="sHW-ce-ZMM" firstAttribute="top" secondItem="NDa-kg-Kx1" secondAttribute="top" constant="5" id="qWx-vK-l0H"/>
+                            <constraint firstItem="x4n-se-Jww" firstAttribute="top" secondItem="sHW-ce-ZMM" secondAttribute="top" id="xZj-I6-DGK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="NDa-kg-Kx1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="62Z-WN-6Co"/>
+                <constraint firstAttribute="trailing" secondItem="NDa-kg-Kx1" secondAttribute="trailing" id="Crh-rC-7s1"/>
+                <constraint firstItem="NDa-kg-Kx1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nlA-hS-U9X"/>
+                <constraint firstAttribute="bottom" secondItem="NDa-kg-Kx1" secondAttribute="bottom" id="oI2-MQ-Xsq"/>
+            </constraints>
+            <connections>
+                <outlet property="container" destination="NDa-kg-Kx1" id="Ksr-Dd-R6k"/>
+                <outlet property="mdealName" destination="6my-Ab-lFS" id="X5k-RO-3JJ"/>
+                <outlet property="medalIcon" destination="sHW-ce-ZMM" id="gT6-oB-ceA"/>
+                <outlet property="selectIndicator" destination="x4n-se-Jww" id="ivt-3y-6Wv"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="54.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xiugaimima_icon_mimakejian_sal.png" width="14" height="13"/>
+    </resources>
+</document>

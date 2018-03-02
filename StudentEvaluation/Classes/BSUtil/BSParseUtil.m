@@ -13,43 +13,35 @@
 
 + (id)parseObjectFromJson:(NSDictionary *)json modelClass:(Class)modelClass error:(NSError **)error
 {
-    // ret: 0为正确返回，非0为错误
-    NSInteger ret = [[json objectForKey:@"ret"] integerValue];
+    NSInteger   errorCode = [[json objectForKey:@"code"] integerValue];
     
-    if (ret) {
-        NSInteger   errorCode = [[json objectForKey:@"errcode"] integerValue];
-        NSString    *message = [json objectForKey:@"msg"] ? : @"加载失败";
+    if (errorCode != 200) {
+        NSString *errorMessage = [json objectForKey:@"msg"] ? : [self errorMessageFromCode:errorCode];
+        errorMessage = errorMessage ? : @"操作失败";
         
-        if (errorCode == 103) {
-            message = @"当前账号已在其他设备登录";
-        }
-        
-        if (error) {
-            *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : message}];
-        }
-        
-        return nil;
+        NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
+        return error;
     }
+
+    id content = [json objectForKey:@"content"];
     
-    id data = [json objectForKey:@"data"];
-    
-    if ([data isKindOfClass:[NSArray class]]) {
+    if ([content isKindOfClass:[NSArray class]]) {
         NSMutableArray *result = [NSMutableArray array];
         
-        for (NSDictionary *dic in data) {
+        for (NSDictionary *dic in content) {
             id model = [modelClass yy_modelWithJSON:dic];
             [result addObject:model];
         }
         
         return result;
-    } else if ([data isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *dic = data;
+    } else if ([content isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *dic = content;
         
         if (dic.count == 0) {
             return nil;
         }
         
-        id model = [modelClass yy_modelWithJSON:data];
+        id model = [modelClass yy_modelWithJSON:content];
         return model;
     }
     

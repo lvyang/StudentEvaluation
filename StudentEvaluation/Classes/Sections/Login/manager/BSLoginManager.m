@@ -13,10 +13,6 @@
 static NSString *USER_INFO = @"user_info";
 static NSString *USER_DETAIL_INFO = @"user_detail_info";
 static NSString *ACCESS_TOKEN = @"token";
-static NSString *REFRESH_TOKEN = @"refresh_token";
-
-static NSString *UN_LOGIN_ACCESS_TOKEN = @"un_login_access_token";
-static NSString *UN_LOGIN_REFRESH_TOKEN = @"un_login_refresh_token";
 
 @interface BSLoginManager ()
 
@@ -83,17 +79,17 @@ static NSString *UN_LOGIN_REFRESH_TOKEN = @"un_login_refresh_token";
             return;
         }
         
-        NSDictionary *conent = [request.responseJSONObject objectForKey:@"content"];
-        self.userModel = [BSUserModel yy_modelWithDictionary:conent];
-        self.accessToken = [request.responseObject objectForKey:ACCESS_TOKEN] ? : @"";
+        NSDictionary *content = [request.responseJSONObject objectForKey:@"content"];
+        self.userModel = [BSUserModel yy_modelWithDictionary:content];
+        self.accessToken = [content objectForKey:ACCESS_TOKEN] ? : @"";
         
         [[NSUserDefaults standardUserDefaults] setObject:self.userModel.userId forKey:@"HBBS_user_id"];
         [[NSUserDefaults standardUserDefaults] setObject:self.accessToken forKey:ACCESS_TOKEN];
-        [[NSUserDefaults standardUserDefaults] setObject:conent forKey:USER_INFO];
+        [[NSUserDefaults standardUserDefaults] setObject:content forKey:USER_INFO];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         if (completed) {
-            completed(nil, conent);
+            completed(nil, content);
         }
     } failure:^(YTKBaseRequest *request) {
         if (completed) {
@@ -114,7 +110,6 @@ static NSString *UN_LOGIN_REFRESH_TOKEN = @"un_login_refresh_token";
     
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"HBBS_user_id"];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:ACCESS_TOKEN];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:REFRESH_TOKEN];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_INFO];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_DETAIL_INFO];
     [[NSUserDefaults standardUserDefaults] synchronize];

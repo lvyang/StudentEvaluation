@@ -16,7 +16,7 @@
 #import "BSLoginViewController.h"
 #import "PersonCenterViewController.h"
 #import "ReleaseRecordViewController.h"
-#import "ReleaseMedalViewController.h"
+#import "SelectMedalViewController.h"
 #import "BSLoginManager.h"
 #import "UIViewController+Addition.h"
 #import "BSBaseRequest.h"
@@ -81,9 +81,11 @@
 
 - (void)loadContentViewcontroller
 {
-    ReleaseMedalViewController *releaseMedalVC = [[ReleaseMedalViewController alloc] initWithNibName:@"ReleaseMedalViewController" bundle:nil];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"54bfca"]} forState:UIControlStateSelected];
+    
+    SelectMedalViewController *releaseMedalVC = [[SelectMedalViewController alloc] initWithNibName:@"SelectMedalViewController" bundle:nil];
     BSNavigationViewController *releaseMedalNavi = [[BSNavigationViewController alloc] initWithRootViewController:releaseMedalVC];
-    releaseMedalNavi.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"颁发奖章" image:[[UIImage imageNamed:@"nav_icon_1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"nav_icon_1_active.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    releaseMedalNavi.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"颁发奖章" image:[[UIImage imageNamed:@"class_icon_reward_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"class_icon_reward_sel.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
     ReleaseRecordViewController *releaseRecordVC = [[ReleaseRecordViewController alloc] init];
     BSNavigationViewController *releaseRecordNavi = [[BSNavigationViewController alloc] initWithRootViewController:releaseRecordVC];
