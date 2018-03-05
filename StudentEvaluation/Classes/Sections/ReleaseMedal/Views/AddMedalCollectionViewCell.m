@@ -8,6 +8,7 @@
 
 #import "AddMedalCollectionViewCell.h"
 
+
 @implementation AddMedalCollectionViewCell
 
 - (void)awakeFromNib {

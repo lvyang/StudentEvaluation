@@ -14,6 +14,7 @@
 @interface DataManager : NSObject
 
 @property (nonatomic, strong) BSClassModel *currentClass;
+@property (nonatomic, strong) NSArray *classList;
 
 @property (nonatomic, strong) NSArray *praiseMedals; // 已添加的表扬勋章
 @property (nonatomic, strong) NSArray *critismMedal; // 已添加的批评勋章

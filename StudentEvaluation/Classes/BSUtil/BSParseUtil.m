@@ -19,8 +19,8 @@
         NSString *errorMessage = [json objectForKey:@"msg"] ? : [self errorMessageFromCode:errorCode];
         errorMessage = errorMessage ? : @"操作失败";
         
-        NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
-        return error;
+        *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
+        return nil;
     }
 
     id content = [json objectForKey:@"content"];
@@ -48,7 +48,6 @@
     return nil;
 }
 
-// data中只含有status的回调处理
 + (NSError *)parseStatusFromJson:(NSDictionary *)json errorMessage:(NSString *)message
 {
     NSInteger   errorCode = [[json objectForKey:@"code"] integerValue];
@@ -61,15 +60,7 @@
         return error;
     }
     
-    NSError *error = nil;
-    BOOL    status = [[[json objectForKey:@"data"] objectForKey:@"status"] boolValue];
-    
-    if (!status) {
-        NSString *errorMessage = message ? : ([[json objectForKey:@"data"] objectForKey:@"message"] ? : @"操作失败");
-        error = [NSError errorWithDomain:@"com.dodoedu" code:888 userInfo:@{NSLocalizedDescriptionKey:errorMessage}];
-    }
-    
-    return error;
+    return nil;
 }
 
 + (NSString *)errorMessageFromCode:(NSInteger)code

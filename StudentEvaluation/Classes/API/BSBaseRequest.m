@@ -15,7 +15,7 @@
 {
     YTKRequestCompletionBlock successBlock = ^(__kindof YTKBaseRequest *request) {
         NSDictionary    *response = request.responseObject;
-        NSInteger       errorCode = [[response objectForKey:@"errcode"] integerValue];
+        NSInteger       errorCode = [[response objectForKey:@"code"] integerValue];
         NSError         *error = nil;
         
         switch (errorCode) {

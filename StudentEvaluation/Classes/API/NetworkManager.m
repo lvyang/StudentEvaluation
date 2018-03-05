@@ -15,6 +15,7 @@
 #import "BSClassModel.h"
 #import "BSMedalModel.h"
 #import "MedalLibraryApi.h"
+#import "AddMedalToFrequentUsedApi.h"
 
 @implementation NetworkManager
 
@@ -122,6 +123,17 @@
         completed(nil, object);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         completed(request.error, nil);
+    }];
+}
+
++ (void)addMedalToFrequent:(NSString *)medalId teacherId:(NSString *)teacherId completed:(void(^)(NSError *error))completed
+{
+    AddMedalToFrequentUsedApi *api = [[AddMedalToFrequentUsedApi alloc] initWithTeacherId:teacherId medalId:medalId];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
     }];
 }
 

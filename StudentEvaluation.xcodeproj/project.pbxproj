@@ -85,6 +85,13 @@
 		8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E32048DB1D00855392 /* SelectMedalCollectionView.m */; };
 		8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */; };
 		8DA1C3EA2048EC5000855392 /* BSMedalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E82048EC4F00855392 /* BSMedalModel.m */; };
+		8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A817204CF594006445E3 /* AddMedalToFrequentUsedApi.m */; };
+		8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A81A204D3314006445E3 /* ClassListViewController.m */; };
+		8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A81D204D333D006445E3 /* ClassListTableView.m */; };
+		8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A820204D3351006445E3 /* ClassListCell.m */; };
+		8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9A821204D3351006445E3 /* ClassListCell.xib */; };
+		8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */; };
+		8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */; };
 		8DD84B642048F80D0047E125 /* ClassListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD84B632048F80D0047E125 /* ClassListApi.m */; };
 		8DD84B672048FC450047E125 /* BSClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD84B662048FC450047E125 /* BSClassModel.m */; };
 		8DD84B6B20492BF50047E125 /* AddMedalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD84B6920492BF50047E125 /* AddMedalCollectionViewCell.m */; };
@@ -307,6 +314,18 @@
 		8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FequentlyUsedMedalApi.m; sourceTree = "<group>"; };
 		8DA1C3E82048EC4F00855392 /* BSMedalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMedalModel.m; sourceTree = "<group>"; };
 		8DA1C3E92048EC5000855392 /* BSMedalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMedalModel.h; sourceTree = "<group>"; };
+		8DB9A816204CF594006445E3 /* AddMedalToFrequentUsedApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedalToFrequentUsedApi.h; sourceTree = "<group>"; };
+		8DB9A817204CF594006445E3 /* AddMedalToFrequentUsedApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedalToFrequentUsedApi.m; sourceTree = "<group>"; };
+		8DB9A819204D3314006445E3 /* ClassListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListViewController.h; sourceTree = "<group>"; };
+		8DB9A81A204D3314006445E3 /* ClassListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassListViewController.m; sourceTree = "<group>"; };
+		8DB9A81C204D333D006445E3 /* ClassListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListTableView.h; sourceTree = "<group>"; };
+		8DB9A81D204D333D006445E3 /* ClassListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassListTableView.m; sourceTree = "<group>"; };
+		8DB9A81F204D3351006445E3 /* ClassListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListCell.h; sourceTree = "<group>"; };
+		8DB9A820204D3351006445E3 /* ClassListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassListCell.m; sourceTree = "<group>"; };
+		8DB9A821204D3351006445E3 /* ClassListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassListCell.xib; sourceTree = "<group>"; };
+		8DCD0145204D4EFD000B93E1 /* ReleaseMedalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseMedalViewController.h; sourceTree = "<group>"; };
+		8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseMedalViewController.m; sourceTree = "<group>"; };
+		8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseMedalViewController.xib; sourceTree = "<group>"; };
 		8DD84B622048F80D0047E125 /* ClassListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListApi.h; sourceTree = "<group>"; };
 		8DD84B632048F80D0047E125 /* ClassListApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassListApi.m; sourceTree = "<group>"; };
 		8DD84B652048FC450047E125 /* BSClassModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSClassModel.h; sourceTree = "<group>"; };
@@ -718,6 +737,8 @@
 				8DD84B632048F80D0047E125 /* ClassListApi.m */,
 				8DD84C2D20493FAB0047E125 /* MedalLibraryApi.h */,
 				8DD84C2E20493FAB0047E125 /* MedalLibraryApi.m */,
+				8DB9A816204CF594006445E3 /* AddMedalToFrequentUsedApi.h */,
+				8DB9A817204CF594006445E3 /* AddMedalToFrequentUsedApi.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -850,11 +871,16 @@
 		8DA1788620480E43000D7B5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8DB9A819204D3314006445E3 /* ClassListViewController.h */,
+				8DB9A81A204D3314006445E3 /* ClassListViewController.m */,
 				8D99A0332046B80B005ADE6D /* SelectMedalViewController.h */,
 				8D99A0342046B80B005ADE6D /* SelectMedalViewController.m */,
 				8D99A0352046B80B005ADE6D /* SelectMedalViewController.xib */,
 				8DD84C2520493DD30047E125 /* MedalLibraryViewController.h */,
 				8DD84C2620493DD30047E125 /* MedalLibraryViewController.m */,
+				8DCD0145204D4EFD000B93E1 /* ReleaseMedalViewController.h */,
+				8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */,
+				8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -873,6 +899,11 @@
 				8DD84C2920493E540047E125 /* BSMedalTableViewCell.h */,
 				8DD84C2820493E540047E125 /* BSMedalTableViewCell.m */,
 				8DD84C2B20493E630047E125 /* BSMedalTableViewCell.xib */,
+				8DB9A81C204D333D006445E3 /* ClassListTableView.h */,
+				8DB9A81D204D333D006445E3 /* ClassListTableView.m */,
+				8DB9A81F204D3351006445E3 /* ClassListCell.h */,
+				8DB9A820204D3351006445E3 /* ClassListCell.m */,
+				8DB9A821204D3351006445E3 /* ClassListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -966,6 +997,7 @@
 				8DD84C1E204936060047E125 /* lssued_icon_score_nor@2x.png in Resources */,
 				8D99A01220468ED6005ADE6D /* Info.plist in Resources */,
 				8DA1789820480EBB000D7B5B /* class_icon_reward_nor@2x.png in Resources */,
+				8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */,
 				8DD84BFF204936060047E125 /* LaunchImage.png in Resources */,
 				8DD84C05204936060047E125 /* chehuitankuang_button_cancel@3x.png in Resources */,
 				8DD84BF2204936060047E125 /* bind_button_enter_nor@3x.png in Resources */,
@@ -1060,6 +1092,7 @@
 				8DD84C15204936060047E125 /* xuanzexunzhang_icon_selected@3x.png in Resources */,
 				8DD84BEA204936060047E125 /* banfaxunzhang_icon_lssued_nor@3x.png in Resources */,
 				8DA1789320480EBB000D7B5B /* class_icon_personal_nor@2x.png in Resources */,
+				8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */,
 				8D99A0372046B80B005ADE6D /* SelectMedalViewController.xib in Resources */,
 				8DA178822047E4FD000D7B5B /* ChangePasswordViewController.xib in Resources */,
 				8DD84BDF204936060047E125 /* banfajiangli_button_annex_sal@2x.png in Resources */,
@@ -1155,14 +1188,17 @@
 				8D99A0302046A3F9005ADE6D /* NSString+HTML.m in Sources */,
 				8DD84B672048FC450047E125 /* BSClassModel.m in Sources */,
 				8D999FF320468A79005ADE6D /* UIView+LayoutMethods.m in Sources */,
+				8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */,
 				8D99A00220468C04005ADE6D /* NJKWebViewProgressView.m in Sources */,
 				8D999FBF20464D31005ADE6D /* BSSubjectModel.m in Sources */,
+				8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */,
 				8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */,
 				8D999FCD20464D69005ADE6D /* BSNavigationViewController.m in Sources */,
 				8DD84C2F20493FAB0047E125 /* MedalLibraryApi.m in Sources */,
 				8DD84B642048F80D0047E125 /* ClassListApi.m in Sources */,
 				8D999FC020464D31005ADE6D /* BSUserModel.m in Sources */,
 				8DA1787D2047B1A8000D7B5B /* NetworkManager.m in Sources */,
+				8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */,
 				8D99A00120468C04005ADE6D /* NJKWebViewProgress.m in Sources */,
 				8DD84C33204941EA0047E125 /* DataManager.m in Sources */,
 				8DA178A420481033000D7B5B /* MedalCollectionViewCell.m in Sources */,
@@ -1172,7 +1208,9 @@
 				8D99A02C2046A3F9005ADE6D /* BSDateUtil.m in Sources */,
 				8D99A02E2046A3F9005ADE6D /* BSStringUtil.m in Sources */,
 				8DD84B6B20492BF50047E125 /* AddMedalCollectionViewCell.m in Sources */,
+				8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */,
 				8D999FDE20468209005ADE6D /* BSBaseRequest.m in Sources */,
+				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
 				8D999FF020468A79005ADE6D /* UIColor+Hex.m in Sources */,
 				8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */,
 				8D99A02F2046A3F9005ADE6D /* GTMNSString+HTML.m in Sources */,

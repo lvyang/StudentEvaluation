@@ -26,4 +26,6 @@
 - (void)didSelectMedal:(BSMedalModel *)model;
 - (void)didDeselectMedal:(BSMedalModel *)model;
 
++ (CGFloat)cellHeight;
+
 @end

@@ -19,9 +19,10 @@ typedef NS_ENUM(NSInteger, MedalType) {
  */
 @interface BSMedalModel : NSObject
 
-@property (nonatomic, strong) NSNumber  *identifier;        // 勋章ID
+@property (nonatomic, strong) NSString  *identifier;        // 勋章ID
 @property (nonatomic, assign) MedalType medalType;          // 勋章类型
 @property (nonatomic, strong) NSString  *medalName;         // 勋章名称
+@property (nonatomic, strong) NSString  *kernelName;        // 勋章名称
 @property (nonatomic, strong) NSString  *medalIcon;         // 勋章图标
 
 @property (nonatomic, strong) NSNumber  *medalFieldId;      // 维度ID

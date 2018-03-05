@@ -85,6 +85,9 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == self.dataArray.count) {
+        if (self.addMedalHandler) {
+            self.addMedalHandler();
+        }
         return;
     }
     

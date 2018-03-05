@@ -15,13 +15,12 @@
 #import "BSClassModel.h"
 #import "DataManager.h"
 #import "MedalLibraryViewController.h"
+#import "ClassListViewController.h"
 
-@interface SelectMedalViewController ()
+@interface SelectMedalViewController ()<MedalLibraryViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (nonatomic, strong) SelectMedalCollectionView *collectionView;
-
-@property (nonatomic, strong) NSMutableArray *classList;
 
 @end
 
@@ -33,24 +32,27 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"选择勋章";
     [self removeBackButtonItem];
-    
-    self.classList = [NSMutableArray array];
-    
+        
     __weak typeof(self) weakSelf = self;
     {
         self.collectionView = [[SelectMedalCollectionView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:self.collectionView];
         [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.segment.mas_bottom).with.offset(0);
-            make.bottom.equalTo(self.view.mas_bottom).with.offset(0);
+            make.top.equalTo(self.segment.mas_bottom).with.offset(5);
+            make.bottom.equalTo(self.view.mas_bottom).with.offset(-49);
             make.left.equalTo(self.view.mas_left).with.offset(0);
             make.right.equalTo(self.view.mas_right).with.offset(0);
         }];
         
         self.collectionView.cellSelectedHandler = ^(UICollectionView *collectionView, NSIndexPath *indexPath, id dataModel) {
+        };
+        
+        self.collectionView.addMedalHandler = ^{
             [weakSelf medalLibrary];
         };
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedClassChanged:) name:SELECTED_CLASS_CHANGED object:nil];
     
     [self loadClassList];
 }
@@ -65,12 +67,14 @@
         
         if (error) {
             [strongSelf showPrompt:error.localizedDescription];
+            [self addRightBarButtonItem];
             return ;
         }
         
-        [strongSelf.classList setArray:result];
+        [DataManager shareManager].classList = result;
         BSClassModel *model = result.firstObject;
         [DataManager shareManager].currentClass = model;
+        [self addRightBarButtonItem];
         [strongSelf loadMedal:(strongSelf.segment.selectedSegmentIndex == 0 ? MedalTypePraise: MedalTypeCriticism) forClass:model.classId];
     }];
 }
@@ -94,18 +98,52 @@
     }];
 }
 
+- (void)addRightBarButtonItem
+{
+    NSString *className = [DataManager shareManager].currentClass.className;
+    if (!className) {
+        className = @"选择班级";
+    }
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:className style:UIBarButtonItemStylePlain target:self action:@selector(classList)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                                NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:attribute forState:UIControlStateNormal];
+}
+
 - (IBAction)valueChanged:(id)sender
 {
-    BSClassModel *model = self.classList.firstObject;
+    BSClassModel *model = [DataManager shareManager].classList.firstObject;
     [self loadMedal:(self.segment.selectedSegmentIndex == 0 ? MedalTypePraise: MedalTypeCriticism) forClass:model.classId];
 }
 
 - (void)medalLibrary
 {
     MedalLibraryViewController *vc = [[MedalLibraryViewController alloc] init];
+    vc.delegate = self;
     vc.medalType = (self.segment.selectedSegmentIndex == 0 ? MedalTypePraise: MedalTypeCriticism);
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)selectedClassChanged:(NSNotification *)notification
+{
+    [self addRightBarButtonItem];
+    BSClassModel *model = [DataManager shareManager].currentClass;
+    [self loadMedal:(self.segment.selectedSegmentIndex == 0 ? MedalTypePraise: MedalTypeCriticism) forClass:model.classId];
+}
+
+- (void)classList
+{
+    ClassListViewController *vc = [[ClassListViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - MedalLibraryViewControllerDelegate
+- (void)frequentMedalChanged:(MedalType)type
+{
+    [self valueChanged:self.segment];
 }
 
 @end

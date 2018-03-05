@@ -23,4 +23,13 @@
              @"teacherName":@"teacher_name"};
 }
 
+- (BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass:[BSClassModel class]]) {
+        return NO;
+    }
+    
+    return [self.classId isEqualToString:((BSClassModel *)object).classId];
+}
+
 @end

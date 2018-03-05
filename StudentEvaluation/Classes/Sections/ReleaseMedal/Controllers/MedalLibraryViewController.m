@@ -29,20 +29,6 @@
 
 @implementation MedalLibraryViewController
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedMedalChanged:) name:@"BS_SELECTED_MADEL_CHANGED" object:nil];
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -81,6 +67,15 @@
             make.left.equalTo(self.view.mas_left).with.offset(0);
             make.right.equalTo(self.view.mas_right).with.offset(0);
         }];
+    }
+    
+    // right bar button item
+    {
+        UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(confirm:)];
+        self.navigationItem.rightBarButtonItem = rightItem;
+        NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                                    NSForegroundColorAttributeName : [UIColor whiteColor]};
+        [self.navigationItem.rightBarButtonItem setTitleTextAttributes:attribute forState:UIControlStateNormal];
     }
     
     [self loadMedalList];
@@ -133,11 +128,19 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    if ([self.medalArray[indexPath.section] count] == 0) {
+        return 0;
+    }
+    
+    return [BSMedalTableViewCell cellHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if ([self.medalArray[section] count] == 0) {
+        return 0;
+    }
+    
     return 45;
 }
 
@@ -187,34 +190,33 @@
     }
 }
 
-- (void)selectedMedalChanged:(NSNotification *)notification
+- (void)confirm:(id)sender
 {
-    NSDictionary    *dic = notification.userInfo;
-    NSIndexPath     *indexPath = [dic objectForKey:@"indexPath"];
-    BSMedalModel    *model = [dic objectForKey:@"medalModel"];
-    UITableView     *tableView = [dic objectForKey:@"tableView"];
-    
-    BSMedalTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
-    [cell didDeselectMedal:self.selectedMedal];
-    
-    if (tableView != self.tableView) {
-        self.selectedIndexPath = nil;
-        self.selectedMedal = nil;
+    if (!self.selectedMedal) {
+        [self showPrompt:@"请选择勋章"];
         return;
     }
     
-    self.selectedIndexPath = indexPath;
-    self.selectedMedal = model;
+    [self showLoadingProgress:nil];
+    [NetworkManager addMedalToFrequent:self.selectedMedal.identifier teacherId:[BSLoginManager shareManager].userModel.userId completed:^(NSError *error) {
+        NSString *message = error ? error.localizedDescription : @"添加成功";
+        [self showPrompt:message HideDelay:2 withCompletionBlock:^{
+            [self.navigationController popViewControllerAnimated:YES];
+            if ([self.delegate respondsToSelector:@selector(frequentMedalChanged:)]) {
+                [self.delegate frequentMedalChanged:self.medalType];
+            }
+        }];
+    }];
 }
 
 #pragma mark - BSMedalTableViewCellDelegate
 - (void)medalTableViewCellAtIndexPath:(NSIndexPath *)indexPath didSelectedMedal:(BSMedalModel *)medal
 {
-    NSDictionary *dic = @{@"indexPath":indexPath,
-                          @"medalModel":medal,
-                          @"tableView":self.tableView};
+    BSMedalTableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.selectedIndexPath];
+    [cell didDeselectMedal:self.selectedMedal];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"BS_SELECTED_MADEL_CHANGED" object:nil userInfo:dic];
+    self.selectedIndexPath = indexPath;
+    self.selectedMedal = medal;
 }
 
 @end
