@@ -16,6 +16,7 @@
 #import "DataManager.h"
 #import "MedalLibraryViewController.h"
 #import "ClassListViewController.h"
+#import "ReleaseMedalViewController.h"
 
 @interface SelectMedalViewController ()<MedalLibraryViewControllerDelegate>
 
@@ -45,6 +46,7 @@
         }];
         
         self.collectionView.cellSelectedHandler = ^(UICollectionView *collectionView, NSIndexPath *indexPath, id dataModel) {
+            [weakSelf releaseMedal:dataModel];
         };
         
         self.collectionView.addMedalHandler = ^{
@@ -123,6 +125,14 @@
     MedalLibraryViewController *vc = [[MedalLibraryViewController alloc] init];
     vc.delegate = self;
     vc.medalType = (self.segment.selectedSegmentIndex == 0 ? MedalTypePraise: MedalTypeCriticism);
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)releaseMedal:(BSMedalModel *)medal
+{
+    ReleaseMedalViewController *vc = [[ReleaseMedalViewController alloc] initWithNibName:nil bundle:nil];
+    vc.model = medal;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

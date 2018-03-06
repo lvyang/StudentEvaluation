@@ -55,6 +55,16 @@
 		8D99A03D2046B866005ADE6D /* PersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D99A03B2046B866005ADE6D /* PersonCenterViewController.m */; };
 		8D99A03E2046B866005ADE6D /* PersonCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A03C2046B866005ADE6D /* PersonCenterViewController.xib */; };
 		8D99A0412046B886005ADE6D /* ReleaseRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D99A0402046B886005ADE6D /* ReleaseRecordViewController.m */; };
+		8D9D0716204E3C9200446775 /* AttachmentListCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0715204E3C9200446775 /* AttachmentListCollectionView.m */; };
+		8D9D071A204E3CC100446775 /* AttachmentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0718204E3CC100446775 /* AttachmentListCell.m */; };
+		8D9D071B204E3CC100446775 /* AttachmentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D0719204E3CC100446775 /* AttachmentListCell.xib */; };
+		8D9D071E204E3F2A00446775 /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D071C204E3F2900446775 /* delete@2x.png */; };
+		8D9D071F204E3F2A00446775 /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D071D204E3F2900446775 /* delete@3x.png */; };
+		8D9D0722204E412D00446775 /* video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D0720204E412C00446775 /* video@2x.png */; };
+		8D9D0723204E412D00446775 /* video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D0721204E412D00446775 /* video@3x.png */; };
+		8D9D0726204E44D100446775 /* BSAttachmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0725204E44D100446775 /* BSAttachmentModel.m */; };
+		8D9D072A204E485200446775 /* AddAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0728204E485200446775 /* AddAttachmentCell.m */; };
+		8D9D072B204E485200446775 /* AddAttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D0729204E485200446775 /* AddAttachmentCell.xib */; };
 		8DA178722047A45C000D7B5B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA178702047A45C000D7B5B /* ForgetPasswordViewController.m */; };
 		8DA178732047A45C000D7B5B /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA178712047A45C000D7B5B /* ForgetPasswordViewController.xib */; };
 		8DA178762047A957000D7B5B /* arrow_back_w@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA178742047A956000D7B5B /* arrow_back_w@3x.png */; };
@@ -275,6 +285,20 @@
 		8D99A03C2046B866005ADE6D /* PersonCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCenterViewController.xib; sourceTree = "<group>"; };
 		8D99A03F2046B886005ADE6D /* ReleaseRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseRecordViewController.h; sourceTree = "<group>"; };
 		8D99A0402046B886005ADE6D /* ReleaseRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseRecordViewController.m; sourceTree = "<group>"; };
+		8D9D0714204E3C9200446775 /* AttachmentListCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttachmentListCollectionView.h; sourceTree = "<group>"; };
+		8D9D0715204E3C9200446775 /* AttachmentListCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttachmentListCollectionView.m; sourceTree = "<group>"; };
+		8D9D0717204E3CC100446775 /* AttachmentListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttachmentListCell.h; sourceTree = "<group>"; };
+		8D9D0718204E3CC100446775 /* AttachmentListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttachmentListCell.m; sourceTree = "<group>"; };
+		8D9D0719204E3CC100446775 /* AttachmentListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttachmentListCell.xib; sourceTree = "<group>"; };
+		8D9D071C204E3F2900446775 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
+		8D9D071D204E3F2900446775 /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
+		8D9D0720204E412C00446775 /* video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@2x.png"; sourceTree = "<group>"; };
+		8D9D0721204E412D00446775 /* video@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video@3x.png"; sourceTree = "<group>"; };
+		8D9D0724204E44D100446775 /* BSAttachmentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAttachmentModel.h; sourceTree = "<group>"; };
+		8D9D0725204E44D100446775 /* BSAttachmentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAttachmentModel.m; sourceTree = "<group>"; };
+		8D9D0727204E485200446775 /* AddAttachmentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAttachmentCell.h; sourceTree = "<group>"; };
+		8D9D0728204E485200446775 /* AddAttachmentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAttachmentCell.m; sourceTree = "<group>"; };
+		8D9D0729204E485200446775 /* AddAttachmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAttachmentCell.xib; sourceTree = "<group>"; };
 		8DA1786F2047A45C000D7B5B /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		8DA178702047A45C000D7B5B /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		8DA178712047A45C000D7B5B /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
@@ -535,6 +559,10 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D9D071C204E3F2900446775 /* delete@2x.png */,
+				8D9D071D204E3F2900446775 /* delete@3x.png */,
+				8D9D0720204E412C00446775 /* video@2x.png */,
+				8D9D0721204E412D00446775 /* video@3x.png */,
 				8D99A01820469434005ADE6D /* login_icon_account_default@2x.png */,
 				8D99A01520469434005ADE6D /* login_icon_account_default@3x.png */,
 				8D99A01420469434005ADE6D /* login_icon_avatar_default@2x.png */,
@@ -904,6 +932,14 @@
 				8DB9A81F204D3351006445E3 /* ClassListCell.h */,
 				8DB9A820204D3351006445E3 /* ClassListCell.m */,
 				8DB9A821204D3351006445E3 /* ClassListCell.xib */,
+				8D9D0714204E3C9200446775 /* AttachmentListCollectionView.h */,
+				8D9D0715204E3C9200446775 /* AttachmentListCollectionView.m */,
+				8D9D0717204E3CC100446775 /* AttachmentListCell.h */,
+				8D9D0718204E3CC100446775 /* AttachmentListCell.m */,
+				8D9D0719204E3CC100446775 /* AttachmentListCell.xib */,
+				8D9D0727204E485200446775 /* AddAttachmentCell.h */,
+				8D9D0728204E485200446775 /* AddAttachmentCell.m */,
+				8D9D0729204E485200446775 /* AddAttachmentCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -915,6 +951,8 @@
 				8DA1C3E82048EC4F00855392 /* BSMedalModel.m */,
 				8DD84B652048FC450047E125 /* BSClassModel.h */,
 				8DD84B662048FC450047E125 /* BSClassModel.m */,
+				8D9D0724204E44D100446775 /* BSAttachmentModel.h */,
+				8D9D0725204E44D100446775 /* BSAttachmentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1022,11 +1060,13 @@
 				8DA178732047A45C000D7B5B /* ForgetPasswordViewController.xib in Resources */,
 				8DD84BDE204936060047E125 /* photograph_button_progress rate_sel@3x.png in Resources */,
 				8D99A01C20469435005ADE6D /* login_icon_avatar_default@3x.png in Resources */,
+				8D9D0723204E412D00446775 /* video@3x.png in Resources */,
 				8DD84BF1204936060047E125 /* luyinshi_icon_record_sel@3x.png in Resources */,
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
 				8DD84BFA204936060047E125 /* class_icon_sweep_nor@3x.png in Resources */,
 				8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */,
 				8DD84C21204936060047E125 /* lssued_icon_camera_nor@2x.png in Resources */,
+				8D9D0722204E412D00446775 /* video@2x.png in Resources */,
 				8D999FFA20468AC4005ADE6D /* BSErrorPage.xib in Resources */,
 				8DA1789A20480EBB000D7B5B /* class_icon_reward_nor@3x.png in Resources */,
 				8DD84BCA204936060047E125 /* personal_icon_notice_nor@2x.png in Resources */,
@@ -1099,6 +1139,7 @@
 				8DD84C1F204936060047E125 /* lssued_icon_camera_nor@3x.png in Resources */,
 				8DD84BC9204936060047E125 /* class_icon_more_nor@2x.png in Resources */,
 				8DD84C24204936060047E125 /* benji file_icon_pack up_nor@3x.png in Resources */,
+				8D9D072B204E485200446775 /* AddAttachmentCell.xib in Resources */,
 				8DD84C06204936060047E125 /* password_button_get back_nor@2x.png in Resources */,
 				8DD84C14204936060047E125 /* tab_icon_back_nor@2x.png in Resources */,
 				8DD84BE7204936060047E125 /* class_icon_more_nor@3x.png in Resources */,
@@ -1109,14 +1150,17 @@
 				8DA1789720480EBB000D7B5B /* class_icon_comment_sel@2x.png in Resources */,
 				8DD84BCD204936060047E125 /* photograph_button_progress rate_sel@2x.png in Resources */,
 				8D999FBE20464D31005ADE6D /* BSWebviewViewController.xib in Resources */,
+				8D9D071B204E3CC100446775 /* AttachmentListCell.xib in Resources */,
 				8DA178772047A957000D7B5B /* arrow_back_w@2x.png in Resources */,
 				8DD84BEB204936060047E125 /* xingaimima_icon_open_hig@3x.png in Resources */,
+				8D9D071E204E3F2A00446775 /* delete@2x.png in Resources */,
 				8DD84BE8204936060047E125 /* medal_icon_nor@2x.png in Resources */,
 				8DD84BEF204936060047E125 /* login_dividing line@3x.png in Resources */,
 				8DD84C04204936060047E125 /* luyinshi_button_recor@3x.png in Resources */,
 				8DD84C17204936060047E125 /* class_icon_selected@3x.png in Resources */,
 				8DD84BCB204936060047E125 /* chehuitankuang_button_cancel@2x.png in Resources */,
 				8DD84BE1204936060047E125 /* class_icon_sweep_nor@2x.png in Resources */,
+				8D9D071F204E3F2A00446775 /* delete@3x.png in Resources */,
 				8DD84BE9204936060047E125 /* file_icon_unselected@2x.png in Resources */,
 				8DD84BD7204936060047E125 /* luyinshi_icon_record_sel@2x.png in Resources */,
 				8DD84BCC204936060047E125 /* lssued_icon_score_sel@3x.png in Resources */,
@@ -1167,10 +1211,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudentEvaluation/Pods-StudentEvaluation-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1189,6 +1235,7 @@
 				8DD84B672048FC450047E125 /* BSClassModel.m in Sources */,
 				8D999FF320468A79005ADE6D /* UIView+LayoutMethods.m in Sources */,
 				8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */,
+				8D9D0726204E44D100446775 /* BSAttachmentModel.m in Sources */,
 				8D99A00220468C04005ADE6D /* NJKWebViewProgressView.m in Sources */,
 				8D999FBF20464D31005ADE6D /* BSSubjectModel.m in Sources */,
 				8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */,
@@ -1199,8 +1246,10 @@
 				8D999FC020464D31005ADE6D /* BSUserModel.m in Sources */,
 				8DA1787D2047B1A8000D7B5B /* NetworkManager.m in Sources */,
 				8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */,
+				8D9D0716204E3C9200446775 /* AttachmentListCollectionView.m in Sources */,
 				8D99A00120468C04005ADE6D /* NJKWebViewProgress.m in Sources */,
 				8DD84C33204941EA0047E125 /* DataManager.m in Sources */,
+				8D9D071A204E3CC100446775 /* AttachmentListCell.m in Sources */,
 				8DA178A420481033000D7B5B /* MedalCollectionViewCell.m in Sources */,
 				8D999FF120468A79005ADE6D /* UIImage+ImageAddition.m in Sources */,
 				8D999FA920464C8C005ADE6D /* main.m in Sources */,
@@ -1236,6 +1285,7 @@
 				8D999FC120464D31005ADE6D /* BSUserRelationshipModel.m in Sources */,
 				8D999FD120464D69005ADE6D /* BSViewController.m in Sources */,
 				8D999FF420468A79005ADE6D /* UIViewController+Addition.m in Sources */,
+				8D9D072A204E485200446775 /* AddAttachmentCell.m in Sources */,
 				8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

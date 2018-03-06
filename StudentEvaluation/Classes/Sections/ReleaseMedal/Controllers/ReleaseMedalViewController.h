@@ -7,7 +7,10 @@
 //
 
 #import "BSViewController.h"
+#import "BSMedalModel.h"
 
 @interface ReleaseMedalViewController : BSViewController
+
+@property (nonatomic, strong) BSMedalModel *model;
 
 @end

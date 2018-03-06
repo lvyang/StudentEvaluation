@@ -12,4 +12,6 @@ pod 'MJRefresh', '~> 3.1.12'
 
 pod 'LYComponents', '~> 0.0.1'
 
+pod 'TZImagePickerController', '~> 2.0.0.6'
+
 end
