@@ -11,7 +11,10 @@
 #import <UIImageView+WebCache.h>
 #import "AttachmentListCollectionView.h"
 #import <Masonry.h>
-#import <TZImagePickerController.h>
+#import "TZImagePickerController.h"
+#import "WechatShortVideoController.h"
+#import "BSAttachmentModel.h"
+#import <Photos/Photos.h>
 
 @interface ReleaseMedalViewController ()
 
@@ -107,14 +110,24 @@
 {
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:5 delegate:nil];
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        NSLog(@"%@",photos);
+        NSLog(@"%@",assets);
         
+        NSMutableArray *items = [NSMutableArray array];
+        for (PHAsset *asset in assets) {
+            [[PHImageManager defaultManager] requestImageDataForAsset:asset options:NULL resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
+                NSLog(@"%@",info);
+            }];
+            BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
+        }
     }];;
     [self presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
 - (void)addVideo
 {
-    
+    WechatShortVideoController *wechatShortVideoController = [[WechatShortVideoController alloc] init];
+    [self presentViewController:wechatShortVideoController animated:YES completion:nil];
 }
 
 #pragma mark - KVO

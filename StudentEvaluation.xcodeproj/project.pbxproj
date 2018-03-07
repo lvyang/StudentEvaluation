@@ -8,6 +8,72 @@
 
 /* Begin PBXBuildFile section */
 		491D396E9BB5B6CFA68D831C /* libPods-StudentEvaluation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */; };
+		8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */; };
+		8D8F5972204F8AEB00D99399 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5931204F8AEB00D99399 /* LICENSE */; };
+		8D8F5973204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5933204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m */; };
+		8D8F5974204F8AEB00D99399 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5934204F8AEB00D99399 /* README.md */; };
+		8D8F5975204F8AEB00D99399 /* SCAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5936204F8AEB00D99399 /* SCAssetExportSession.m */; };
+		8D8F5976204F8AEB00D99399 /* SCAudioConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5938204F8AEB00D99399 /* SCAudioConfiguration.m */; };
+		8D8F5977204F8AEB00D99399 /* SCAudioTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F593A204F8AEB00D99399 /* SCAudioTools.m */; };
+		8D8F5978204F8AEB00D99399 /* SCContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F593D204F8AEB00D99399 /* SCContext.m */; };
+		8D8F5979204F8AEB00D99399 /* SCFilter+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F593F204F8AEB00D99399 /* SCFilter+UIImage.m */; };
+		8D8F597A204F8AEB00D99399 /* SCFilter+VideoComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5941204F8AEB00D99399 /* SCFilter+VideoComposition.m */; };
+		8D8F597B204F8AEB00D99399 /* SCFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5943204F8AEB00D99399 /* SCFilter.m */; };
+		8D8F597C204F8AEB00D99399 /* SCFilterAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5945204F8AEB00D99399 /* SCFilterAnimation.m */; };
+		8D8F597D204F8AEB00D99399 /* SCFilterImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5947204F8AEB00D99399 /* SCFilterImageView.m */; };
+		8D8F597E204F8AEB00D99399 /* SCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5949204F8AEB00D99399 /* SCImageView.m */; };
+		8D8F597F204F8AEB00D99399 /* SCIOPixelBuffers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F594B204F8AEB00D99399 /* SCIOPixelBuffers.m */; };
+		8D8F5980204F8AEB00D99399 /* SCMediaTypeConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F594D204F8AEB00D99399 /* SCMediaTypeConfiguration.m */; };
+		8D8F5981204F8AEB00D99399 /* SCPhotoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F594F204F8AEB00D99399 /* SCPhotoConfiguration.m */; };
+		8D8F5982204F8AEB00D99399 /* SCPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5951204F8AEB00D99399 /* SCPlayer.m */; };
+		8D8F5983204F8AEB00D99399 /* SCProcessingQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5953204F8AEB00D99399 /* SCProcessingQueue.m */; };
+		8D8F5984204F8AEB00D99399 /* SCRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5955204F8AEB00D99399 /* SCRecorder.m */; };
+		8D8F5985204F8AEB00D99399 /* SCRecorderFocusTargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5958204F8AEB00D99399 /* SCRecorderFocusTargetView.m */; };
+		8D8F5986204F8AEB00D99399 /* SCRecorderTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F595B204F8AEB00D99399 /* SCRecorderTools.m */; };
+		8D8F5987204F8AEB00D99399 /* SCRecorderToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F595D204F8AEB00D99399 /* SCRecorderToolsView.m */; };
+		8D8F5988204F8AEB00D99399 /* SCRecordSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F595F204F8AEB00D99399 /* SCRecordSession.m */; };
+		8D8F5989204F8AEB00D99399 /* SCRecordSessionSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5962204F8AEB00D99399 /* SCRecordSessionSegment.m */; };
+		8D8F598A204F8AEB00D99399 /* SCSampleBufferHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5964204F8AEB00D99399 /* SCSampleBufferHolder.m */; };
+		8D8F598B204F8AEB00D99399 /* SCSaveToCameraRollOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5966204F8AEB00D99399 /* SCSaveToCameraRollOperation.m */; };
+		8D8F598C204F8AEB00D99399 /* SCSwipeableFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5968204F8AEB00D99399 /* SCSwipeableFilterView.m */; };
+		8D8F598D204F8AEB00D99399 /* SCVideoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F596A204F8AEB00D99399 /* SCVideoConfiguration.m */; };
+		8D8F598E204F8AEB00D99399 /* SCVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F596C204F8AEB00D99399 /* SCVideoPlayerView.m */; };
+		8D8F598F204F8AEB00D99399 /* SCWeakSelectorTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F596E204F8AEB00D99399 /* SCWeakSelectorTarget.m */; };
+		8D8F5990204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5970204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m */; };
+		8D8F59A3204F8AFA00D99399 /* CALayer+AddUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */; };
+		8D8F59A4204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */; };
+		8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */; };
+		8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */; };
+		8D8F59A7204F8AFA00D99399 /* WechatShortVideo_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */; };
+		8D8F59A8204F8AFA00D99399 /* WechatShortVideo_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */; };
+		8D8F59A9204F8AFA00D99399 /* WechatShortVideo_scan_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */; };
+		8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */; };
+		8D8F59AB204F8AFA00D99399 /* WechatShortVideo_scan_focus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */; };
+		8D8F59AC204F8AFA00D99399 /* SCRecordSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */; };
+		8D8F59AD204F8AFA00D99399 /* WechatShortVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */; };
+		8D8F59AE204F8AFA00D99399 /* WechatShortVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */; };
+		8D8F59FA204F8DC500D99399 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59DE204F8DC500D99399 /* NSBundle+TZImagePicker.m */; };
+		8D8F59FB204F8DC500D99399 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E0204F8DC500D99399 /* TZAssetCell.m */; };
+		8D8F59FC204F8DC500D99399 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E2204F8DC500D99399 /* TZAssetModel.m */; };
+		8D8F59FD204F8DC500D99399 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E4204F8DC500D99399 /* TZGifPhotoPreviewController.m */; };
+		8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E6204F8DC500D99399 /* TZImageCropManager.m */; };
+		8D8F59FF204F8DC500D99399 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E8204F8DC500D99399 /* TZImageManager.m */; };
+		8D8F5A00204F8DC500D99399 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F59E9204F8DC500D99399 /* TZImagePickerController.bundle */; };
+		8D8F5A01204F8DC500D99399 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59EB204F8DC500D99399 /* TZImagePickerController.m */; };
+		8D8F5A02204F8DC500D99399 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59ED204F8DC500D99399 /* TZLocationManager.m */; };
+		8D8F5A03204F8DC500D99399 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59EF204F8DC500D99399 /* TZPhotoPickerController.m */; };
+		8D8F5A04204F8DC500D99399 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F1204F8DC500D99399 /* TZPhotoPreviewCell.m */; };
+		8D8F5A05204F8DC500D99399 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F3204F8DC500D99399 /* TZPhotoPreviewController.m */; };
+		8D8F5A06204F8DC500D99399 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F5204F8DC500D99399 /* TZProgressView.m */; };
+		8D8F5A07204F8DC500D99399 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F7204F8DC500D99399 /* TZVideoPlayerController.m */; };
+		8D8F5A08204F8DC500D99399 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F9204F8DC500D99399 /* UIView+Layout.m */; };
+		8D8F5A0B204F929600D99399 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0A204F929600D99399 /* ProgressView.m */; };
+		8D8F5A10204FBC1600D99399 /* video_record_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */; };
+		8D8F5A11204FBC1600D99399 /* video_record_confirm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */; };
+		8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */; };
+		8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */; };
+		8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */; };
+		8D8F5A17204FC66700D99399 /* camera_transfer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */; };
 		8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999F9920464C8C005ADE6D /* AppDelegate.m */; };
 		8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D999F9A20464C8C005ADE6D /* Assets.xcassets */; };
 		8D999FA920464C8C005ADE6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999FA020464C8C005ADE6D /* main.m */; };
@@ -206,6 +272,126 @@
 
 /* Begin PBXFileReference section */
 		5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StudentEvaluation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D8F592E204F8AEB00D99399 /* CIImageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRenderer.h; sourceTree = "<group>"; };
+		8D8F592F204F8AEB00D99399 /* CIImageRendererUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRendererUtils.h; sourceTree = "<group>"; };
+		8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIImageRendererUtils.m; sourceTree = "<group>"; };
+		8D8F5931204F8AEB00D99399 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8D8F5932204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SCSaveToCameraRoll.h"; sourceTree = "<group>"; };
+		8D8F5933204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SCSaveToCameraRoll.m"; sourceTree = "<group>"; };
+		8D8F5934204F8AEB00D99399 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8D8F5935204F8AEB00D99399 /* SCAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAssetExportSession.h; sourceTree = "<group>"; };
+		8D8F5936204F8AEB00D99399 /* SCAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAssetExportSession.m; sourceTree = "<group>"; };
+		8D8F5937204F8AEB00D99399 /* SCAudioConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioConfiguration.h; sourceTree = "<group>"; };
+		8D8F5938204F8AEB00D99399 /* SCAudioConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioConfiguration.m; sourceTree = "<group>"; };
+		8D8F5939204F8AEB00D99399 /* SCAudioTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioTools.h; sourceTree = "<group>"; };
+		8D8F593A204F8AEB00D99399 /* SCAudioTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioTools.m; sourceTree = "<group>"; };
+		8D8F593B204F8AEB00D99399 /* SCAudioVideoRecorder-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCAudioVideoRecorder-Prefix.pch"; sourceTree = "<group>"; };
+		8D8F593C204F8AEB00D99399 /* SCContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCContext.h; sourceTree = "<group>"; };
+		8D8F593D204F8AEB00D99399 /* SCContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCContext.m; sourceTree = "<group>"; };
+		8D8F593E204F8AEB00D99399 /* SCFilter+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCFilter+UIImage.h"; sourceTree = "<group>"; };
+		8D8F593F204F8AEB00D99399 /* SCFilter+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCFilter+UIImage.m"; sourceTree = "<group>"; };
+		8D8F5940204F8AEB00D99399 /* SCFilter+VideoComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCFilter+VideoComposition.h"; sourceTree = "<group>"; };
+		8D8F5941204F8AEB00D99399 /* SCFilter+VideoComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCFilter+VideoComposition.m"; sourceTree = "<group>"; };
+		8D8F5942204F8AEB00D99399 /* SCFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilter.h; sourceTree = "<group>"; };
+		8D8F5943204F8AEB00D99399 /* SCFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilter.m; sourceTree = "<group>"; };
+		8D8F5944204F8AEB00D99399 /* SCFilterAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterAnimation.h; sourceTree = "<group>"; };
+		8D8F5945204F8AEB00D99399 /* SCFilterAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilterAnimation.m; sourceTree = "<group>"; };
+		8D8F5946204F8AEB00D99399 /* SCFilterImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterImageView.h; sourceTree = "<group>"; };
+		8D8F5947204F8AEB00D99399 /* SCFilterImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilterImageView.m; sourceTree = "<group>"; };
+		8D8F5948204F8AEB00D99399 /* SCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageView.h; sourceTree = "<group>"; };
+		8D8F5949204F8AEB00D99399 /* SCImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageView.m; sourceTree = "<group>"; };
+		8D8F594A204F8AEB00D99399 /* SCIOPixelBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIOPixelBuffers.h; sourceTree = "<group>"; };
+		8D8F594B204F8AEB00D99399 /* SCIOPixelBuffers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIOPixelBuffers.m; sourceTree = "<group>"; };
+		8D8F594C204F8AEB00D99399 /* SCMediaTypeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMediaTypeConfiguration.h; sourceTree = "<group>"; };
+		8D8F594D204F8AEB00D99399 /* SCMediaTypeConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMediaTypeConfiguration.m; sourceTree = "<group>"; };
+		8D8F594E204F8AEB00D99399 /* SCPhotoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPhotoConfiguration.h; sourceTree = "<group>"; };
+		8D8F594F204F8AEB00D99399 /* SCPhotoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPhotoConfiguration.m; sourceTree = "<group>"; };
+		8D8F5950204F8AEB00D99399 /* SCPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayer.h; sourceTree = "<group>"; };
+		8D8F5951204F8AEB00D99399 /* SCPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayer.m; sourceTree = "<group>"; };
+		8D8F5952204F8AEB00D99399 /* SCProcessingQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCProcessingQueue.h; sourceTree = "<group>"; };
+		8D8F5953204F8AEB00D99399 /* SCProcessingQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCProcessingQueue.m; sourceTree = "<group>"; };
+		8D8F5954204F8AEB00D99399 /* SCRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorder.h; sourceTree = "<group>"; };
+		8D8F5955204F8AEB00D99399 /* SCRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecorder.m; sourceTree = "<group>"; };
+		8D8F5956204F8AEB00D99399 /* SCRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderDelegate.h; sourceTree = "<group>"; };
+		8D8F5957204F8AEB00D99399 /* SCRecorderFocusTargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderFocusTargetView.h; sourceTree = "<group>"; };
+		8D8F5958204F8AEB00D99399 /* SCRecorderFocusTargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecorderFocusTargetView.m; sourceTree = "<group>"; };
+		8D8F5959204F8AEB00D99399 /* SCRecorderHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderHeader.h; sourceTree = "<group>"; };
+		8D8F595A204F8AEB00D99399 /* SCRecorderTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderTools.h; sourceTree = "<group>"; };
+		8D8F595B204F8AEB00D99399 /* SCRecorderTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecorderTools.m; sourceTree = "<group>"; };
+		8D8F595C204F8AEB00D99399 /* SCRecorderToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderToolsView.h; sourceTree = "<group>"; };
+		8D8F595D204F8AEB00D99399 /* SCRecorderToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecorderToolsView.m; sourceTree = "<group>"; };
+		8D8F595E204F8AEB00D99399 /* SCRecordSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSession.h; sourceTree = "<group>"; };
+		8D8F595F204F8AEB00D99399 /* SCRecordSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecordSession.m; sourceTree = "<group>"; };
+		8D8F5960204F8AEB00D99399 /* SCRecordSession_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSession_Internal.h; sourceTree = "<group>"; };
+		8D8F5961204F8AEB00D99399 /* SCRecordSessionSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSessionSegment.h; sourceTree = "<group>"; };
+		8D8F5962204F8AEB00D99399 /* SCRecordSessionSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecordSessionSegment.m; sourceTree = "<group>"; };
+		8D8F5963204F8AEB00D99399 /* SCSampleBufferHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSampleBufferHolder.h; sourceTree = "<group>"; };
+		8D8F5964204F8AEB00D99399 /* SCSampleBufferHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSampleBufferHolder.m; sourceTree = "<group>"; };
+		8D8F5965204F8AEB00D99399 /* SCSaveToCameraRollOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSaveToCameraRollOperation.h; sourceTree = "<group>"; };
+		8D8F5966204F8AEB00D99399 /* SCSaveToCameraRollOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSaveToCameraRollOperation.m; sourceTree = "<group>"; };
+		8D8F5967204F8AEB00D99399 /* SCSwipeableFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSwipeableFilterView.h; sourceTree = "<group>"; };
+		8D8F5968204F8AEB00D99399 /* SCSwipeableFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSwipeableFilterView.m; sourceTree = "<group>"; };
+		8D8F5969204F8AEB00D99399 /* SCVideoConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVideoConfiguration.h; sourceTree = "<group>"; };
+		8D8F596A204F8AEB00D99399 /* SCVideoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVideoConfiguration.m; sourceTree = "<group>"; };
+		8D8F596B204F8AEB00D99399 /* SCVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVideoPlayerView.h; sourceTree = "<group>"; };
+		8D8F596C204F8AEB00D99399 /* SCVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVideoPlayerView.m; sourceTree = "<group>"; };
+		8D8F596D204F8AEB00D99399 /* SCWeakSelectorTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWeakSelectorTarget.h; sourceTree = "<group>"; };
+		8D8F596E204F8AEB00D99399 /* SCWeakSelectorTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWeakSelectorTarget.m; sourceTree = "<group>"; };
+		8D8F596F204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCSaveToCameraRoll.h"; sourceTree = "<group>"; };
+		8D8F5970204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCSaveToCameraRoll.m"; sourceTree = "<group>"; };
+		8D8F5992204F8AF900D99399 /* CALayer+AddUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AddUIColor.h"; sourceTree = "<group>"; };
+		8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AddUIColor.m"; sourceTree = "<group>"; };
+		8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_37x-Checkmark.png"; sourceTree = "<group>"; };
+		8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WechatShortVideo_close.png; sourceTree = "<group>"; };
+		8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_close@2x.png"; sourceTree = "<group>"; };
+		8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_close@3x.png"; sourceTree = "<group>"; };
+		8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WechatShortVideo_scan_focus.png; sourceTree = "<group>"; };
+		8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_scan_focus@2x.png"; sourceTree = "<group>"; };
+		8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_scan_focus@3x.png"; sourceTree = "<group>"; };
+		8D8F599D204F8AF900D99399 /* SCRecordSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSessionManager.h; sourceTree = "<group>"; };
+		8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecordSessionManager.m; sourceTree = "<group>"; };
+		8D8F599F204F8AF900D99399 /* WechatShortVideoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatShortVideoConfig.h; sourceTree = "<group>"; };
+		8D8F59A0204F8AF900D99399 /* WechatShortVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatShortVideoController.h; sourceTree = "<group>"; };
+		8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatShortVideoController.m; sourceTree = "<group>"; };
+		8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WechatShortVideoController.xib; sourceTree = "<group>"; };
+		8D8F59DD204F8DC500D99399 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		8D8F59DE204F8DC500D99399 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		8D8F59DF204F8DC500D99399 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		8D8F59E0204F8DC500D99399 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		8D8F59E1204F8DC500D99399 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		8D8F59E2204F8DC500D99399 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		8D8F59E3204F8DC500D99399 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		8D8F59E4204F8DC500D99399 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		8D8F59E5204F8DC500D99399 /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		8D8F59E6204F8DC500D99399 /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		8D8F59E7204F8DC500D99399 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		8D8F59E8204F8DC500D99399 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		8D8F59E9204F8DC500D99399 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		8D8F59EA204F8DC500D99399 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		8D8F59EB204F8DC500D99399 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		8D8F59EC204F8DC500D99399 /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
+		8D8F59ED204F8DC500D99399 /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
+		8D8F59EE204F8DC500D99399 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		8D8F59EF204F8DC500D99399 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		8D8F59F0204F8DC500D99399 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		8D8F59F1204F8DC500D99399 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		8D8F59F2204F8DC500D99399 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		8D8F59F3204F8DC500D99399 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		8D8F59F4204F8DC500D99399 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+		8D8F59F5204F8DC500D99399 /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		8D8F59F6204F8DC500D99399 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		8D8F59F7204F8DC500D99399 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		8D8F59F8204F8DC500D99399 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		8D8F59F9204F8DC500D99399 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		8D8F5A09204F929600D99399 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		8D8F5A0A204F929600D99399 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_cancel@2x.png"; sourceTree = "<group>"; };
+		8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_confirm@3x.png"; sourceTree = "<group>"; };
+		8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_confirm@2x.png"; sourceTree = "<group>"; };
+		8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_cancel@3x.png"; sourceTree = "<group>"; };
+		8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@2x.png"; sourceTree = "<group>"; };
+		8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@3x.png"; sourceTree = "<group>"; };
 		8D999F7A20464775005ADE6D /* StudentEvaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentEvaluation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D999F9820464C8C005ADE6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D999F9920464C8C005ADE6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -488,6 +674,155 @@
 				5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D8F592D204F8AEB00D99399 /* SCRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				8D8F592E204F8AEB00D99399 /* CIImageRenderer.h */,
+				8D8F592F204F8AEB00D99399 /* CIImageRendererUtils.h */,
+				8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */,
+				8D8F5931204F8AEB00D99399 /* LICENSE */,
+				8D8F5932204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.h */,
+				8D8F5933204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m */,
+				8D8F5934204F8AEB00D99399 /* README.md */,
+				8D8F5935204F8AEB00D99399 /* SCAssetExportSession.h */,
+				8D8F5936204F8AEB00D99399 /* SCAssetExportSession.m */,
+				8D8F5937204F8AEB00D99399 /* SCAudioConfiguration.h */,
+				8D8F5938204F8AEB00D99399 /* SCAudioConfiguration.m */,
+				8D8F5939204F8AEB00D99399 /* SCAudioTools.h */,
+				8D8F593A204F8AEB00D99399 /* SCAudioTools.m */,
+				8D8F593B204F8AEB00D99399 /* SCAudioVideoRecorder-Prefix.pch */,
+				8D8F593C204F8AEB00D99399 /* SCContext.h */,
+				8D8F593D204F8AEB00D99399 /* SCContext.m */,
+				8D8F593E204F8AEB00D99399 /* SCFilter+UIImage.h */,
+				8D8F593F204F8AEB00D99399 /* SCFilter+UIImage.m */,
+				8D8F5940204F8AEB00D99399 /* SCFilter+VideoComposition.h */,
+				8D8F5941204F8AEB00D99399 /* SCFilter+VideoComposition.m */,
+				8D8F5942204F8AEB00D99399 /* SCFilter.h */,
+				8D8F5943204F8AEB00D99399 /* SCFilter.m */,
+				8D8F5944204F8AEB00D99399 /* SCFilterAnimation.h */,
+				8D8F5945204F8AEB00D99399 /* SCFilterAnimation.m */,
+				8D8F5946204F8AEB00D99399 /* SCFilterImageView.h */,
+				8D8F5947204F8AEB00D99399 /* SCFilterImageView.m */,
+				8D8F5948204F8AEB00D99399 /* SCImageView.h */,
+				8D8F5949204F8AEB00D99399 /* SCImageView.m */,
+				8D8F594A204F8AEB00D99399 /* SCIOPixelBuffers.h */,
+				8D8F594B204F8AEB00D99399 /* SCIOPixelBuffers.m */,
+				8D8F594C204F8AEB00D99399 /* SCMediaTypeConfiguration.h */,
+				8D8F594D204F8AEB00D99399 /* SCMediaTypeConfiguration.m */,
+				8D8F594E204F8AEB00D99399 /* SCPhotoConfiguration.h */,
+				8D8F594F204F8AEB00D99399 /* SCPhotoConfiguration.m */,
+				8D8F5950204F8AEB00D99399 /* SCPlayer.h */,
+				8D8F5951204F8AEB00D99399 /* SCPlayer.m */,
+				8D8F5952204F8AEB00D99399 /* SCProcessingQueue.h */,
+				8D8F5953204F8AEB00D99399 /* SCProcessingQueue.m */,
+				8D8F5954204F8AEB00D99399 /* SCRecorder.h */,
+				8D8F5955204F8AEB00D99399 /* SCRecorder.m */,
+				8D8F5956204F8AEB00D99399 /* SCRecorderDelegate.h */,
+				8D8F5957204F8AEB00D99399 /* SCRecorderFocusTargetView.h */,
+				8D8F5958204F8AEB00D99399 /* SCRecorderFocusTargetView.m */,
+				8D8F5959204F8AEB00D99399 /* SCRecorderHeader.h */,
+				8D8F595A204F8AEB00D99399 /* SCRecorderTools.h */,
+				8D8F595B204F8AEB00D99399 /* SCRecorderTools.m */,
+				8D8F595C204F8AEB00D99399 /* SCRecorderToolsView.h */,
+				8D8F595D204F8AEB00D99399 /* SCRecorderToolsView.m */,
+				8D8F595E204F8AEB00D99399 /* SCRecordSession.h */,
+				8D8F595F204F8AEB00D99399 /* SCRecordSession.m */,
+				8D8F5960204F8AEB00D99399 /* SCRecordSession_Internal.h */,
+				8D8F5961204F8AEB00D99399 /* SCRecordSessionSegment.h */,
+				8D8F5962204F8AEB00D99399 /* SCRecordSessionSegment.m */,
+				8D8F5963204F8AEB00D99399 /* SCSampleBufferHolder.h */,
+				8D8F5964204F8AEB00D99399 /* SCSampleBufferHolder.m */,
+				8D8F5965204F8AEB00D99399 /* SCSaveToCameraRollOperation.h */,
+				8D8F5966204F8AEB00D99399 /* SCSaveToCameraRollOperation.m */,
+				8D8F5967204F8AEB00D99399 /* SCSwipeableFilterView.h */,
+				8D8F5968204F8AEB00D99399 /* SCSwipeableFilterView.m */,
+				8D8F5969204F8AEB00D99399 /* SCVideoConfiguration.h */,
+				8D8F596A204F8AEB00D99399 /* SCVideoConfiguration.m */,
+				8D8F596B204F8AEB00D99399 /* SCVideoPlayerView.h */,
+				8D8F596C204F8AEB00D99399 /* SCVideoPlayerView.m */,
+				8D8F596D204F8AEB00D99399 /* SCWeakSelectorTarget.h */,
+				8D8F596E204F8AEB00D99399 /* SCWeakSelectorTarget.m */,
+				8D8F596F204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.h */,
+				8D8F5970204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m */,
+			);
+			path = SCRecorder;
+			sourceTree = "<group>";
+		};
+		8D8F5991204F8AF900D99399 /* WechatShortVideo */ = {
+			isa = PBXGroup;
+			children = (
+				8D8F5A09204F929600D99399 /* ProgressView.h */,
+				8D8F5A0A204F929600D99399 /* ProgressView.m */,
+				8D8F5992204F8AF900D99399 /* CALayer+AddUIColor.h */,
+				8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */,
+				8D8F599D204F8AF900D99399 /* SCRecordSessionManager.h */,
+				8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */,
+				8D8F599F204F8AF900D99399 /* WechatShortVideoConfig.h */,
+				8D8F59A0204F8AF900D99399 /* WechatShortVideoController.h */,
+				8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */,
+				8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */,
+				8D8F5994204F8AF900D99399 /* Resources */,
+			);
+			path = WechatShortVideo;
+			sourceTree = "<group>";
+		};
+		8D8F5994204F8AF900D99399 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */,
+				8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */,
+				8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */,
+				8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */,
+				8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */,
+				8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */,
+				8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */,
+				8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */,
+				8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */,
+				8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */,
+				8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */,
+				8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */,
+				8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */,
+				8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8D8F59DC204F8DC500D99399 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				8D8F59DD204F8DC500D99399 /* NSBundle+TZImagePicker.h */,
+				8D8F59DE204F8DC500D99399 /* NSBundle+TZImagePicker.m */,
+				8D8F59DF204F8DC500D99399 /* TZAssetCell.h */,
+				8D8F59E0204F8DC500D99399 /* TZAssetCell.m */,
+				8D8F59E1204F8DC500D99399 /* TZAssetModel.h */,
+				8D8F59E2204F8DC500D99399 /* TZAssetModel.m */,
+				8D8F59E3204F8DC500D99399 /* TZGifPhotoPreviewController.h */,
+				8D8F59E4204F8DC500D99399 /* TZGifPhotoPreviewController.m */,
+				8D8F59E5204F8DC500D99399 /* TZImageCropManager.h */,
+				8D8F59E6204F8DC500D99399 /* TZImageCropManager.m */,
+				8D8F59E7204F8DC500D99399 /* TZImageManager.h */,
+				8D8F59E8204F8DC500D99399 /* TZImageManager.m */,
+				8D8F59E9204F8DC500D99399 /* TZImagePickerController.bundle */,
+				8D8F59EA204F8DC500D99399 /* TZImagePickerController.h */,
+				8D8F59EB204F8DC500D99399 /* TZImagePickerController.m */,
+				8D8F59EC204F8DC500D99399 /* TZLocationManager.h */,
+				8D8F59ED204F8DC500D99399 /* TZLocationManager.m */,
+				8D8F59EE204F8DC500D99399 /* TZPhotoPickerController.h */,
+				8D8F59EF204F8DC500D99399 /* TZPhotoPickerController.m */,
+				8D8F59F0204F8DC500D99399 /* TZPhotoPreviewCell.h */,
+				8D8F59F1204F8DC500D99399 /* TZPhotoPreviewCell.m */,
+				8D8F59F2204F8DC500D99399 /* TZPhotoPreviewController.h */,
+				8D8F59F3204F8DC500D99399 /* TZPhotoPreviewController.m */,
+				8D8F59F4204F8DC500D99399 /* TZProgressView.h */,
+				8D8F59F5204F8DC500D99399 /* TZProgressView.m */,
+				8D8F59F6204F8DC500D99399 /* TZVideoPlayerController.h */,
+				8D8F59F7204F8DC500D99399 /* TZVideoPlayerController.m */,
+				8D8F59F8204F8DC500D99399 /* UIView+Layout.h */,
+				8D8F59F9204F8DC500D99399 /* UIView+Layout.m */,
+			);
+			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
 		8D999F7120464775005ADE6D = {
@@ -805,6 +1140,9 @@
 		8D999FFB20468C04005ADE6D /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				8D8F59DC204F8DC500D99399 /* TZImagePickerController */,
+				8D8F5991204F8AF900D99399 /* WechatShortVideo */,
+				8D8F592D204F8AEB00D99399 /* SCRecorder */,
 				8D999FFC20468C04005ADE6D /* NJKWebViewProgress */,
 			);
 			name = ThirdPart;
@@ -1027,11 +1365,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8F5A17204FC66700D99399 /* camera_transfer@3x.png in Resources */,
 				8DA178AC204813FC000D7B5B /* uanzexunzhang_icon_incrcase_nor@3x.png in Resources */,
 				8DD84C12204936060047E125 /* personal_icon_new message_nor@2x.png in Resources */,
 				8D99A01E20469435005ADE6D /* login_icon_account_default@2x.png in Resources */,
+				8D8F59A8204F8AFA00D99399 /* WechatShortVideo_close@3x.png in Resources */,
 				8DD84C03204936060047E125 /* login_button_login_normal@2x.png in Resources */,
 				8DD84C23204936060047E125 /* photograph_button_determine_nor@2x.png in Resources */,
+				8D8F59A9204F8AFA00D99399 /* WechatShortVideo_scan_focus.png in Resources */,
 				8DD84C1E204936060047E125 /* lssued_icon_score_nor@2x.png in Resources */,
 				8D99A01220468ED6005ADE6D /* Info.plist in Resources */,
 				8DA1789820480EBB000D7B5B /* class_icon_reward_nor@2x.png in Resources */,
@@ -1052,7 +1393,9 @@
 				8DD84BE0204936060047E125 /* personal_icon_set up_nor@2x.png in Resources */,
 				8DD84BED204936060047E125 /* bind_button_enter_nor@2x.png in Resources */,
 				8DD84C0A204936060047E125 /* benji file_icon_pack up_nor@2x.png in Resources */,
+				8D8F59A7204F8AFA00D99399 /* WechatShortVideo_close@2x.png in Resources */,
 				8DD84C2C20493E630047E125 /* BSMedalTableViewCell.xib in Resources */,
+				8D8F59AB204F8AFA00D99399 /* WechatShortVideo_scan_focus@3x.png in Resources */,
 				8DD84BF3204936060047E125 /* benji file_icon_unfolded_nor@2x.png in Resources */,
 				8DD84C0C204936060047E125 /* lssued_icon_record_nor@2x.png in Resources */,
 				8DD84BEC204936060047E125 /* tab_button_nav_normal@3x.png in Resources */,
@@ -1061,19 +1404,25 @@
 				8DD84BDE204936060047E125 /* photograph_button_progress rate_sel@3x.png in Resources */,
 				8D99A01C20469435005ADE6D /* login_icon_avatar_default@3x.png in Resources */,
 				8D9D0723204E412D00446775 /* video@3x.png in Resources */,
+				8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */,
 				8DD84BF1204936060047E125 /* luyinshi_icon_record_sel@3x.png in Resources */,
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
+				8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */,
+				8D8F5972204F8AEB00D99399 /* LICENSE in Resources */,
 				8DD84BFA204936060047E125 /* class_icon_sweep_nor@3x.png in Resources */,
 				8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */,
 				8DD84C21204936060047E125 /* lssued_icon_camera_nor@2x.png in Resources */,
 				8D9D0722204E412D00446775 /* video@2x.png in Resources */,
 				8D999FFA20468AC4005ADE6D /* BSErrorPage.xib in Resources */,
+				8D8F5A00204F8DC500D99399 /* TZImagePickerController.bundle in Resources */,
+				8D8F5A10204FBC1600D99399 /* video_record_cancel@2x.png in Resources */,
 				8DA1789A20480EBB000D7B5B /* class_icon_reward_nor@3x.png in Resources */,
 				8DD84BCA204936060047E125 /* personal_icon_notice_nor@2x.png in Resources */,
 				8DD84C10204936060047E125 /* lssued_icon_fu score_sel@3x.png in Resources */,
 				8DD84BD0204936060047E125 /* chehuitankuang_button_determine@3x.png in Resources */,
 				8DD84BFD204936060047E125 /* lssued_icon_photo_nor@3x.png in Resources */,
 				8DA1789520480EBB000D7B5B /* class_icon_comment_sel@3x.png in Resources */,
+				8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				8DD84BCF204936060047E125 /* xingaimima_icon_close_hig@3x.png in Resources */,
 				8DD84BE2204936060047E125 /* password_button_verification_nor@3x.png in Resources */,
 				8DD84BF6204936060047E125 /* login_dividing line_short@2x.png in Resources */,
@@ -1101,18 +1450,22 @@
 				8DD84C22204936060047E125 /* lssued_icon_score_nor@3x.png in Resources */,
 				8DD84C13204936060047E125 /* personal_icon_new message_nor@3x.png in Resources */,
 				8DD84BD2204936060047E125 /* lssued_icon_fu score_sel@2x.png in Resources */,
+				8D8F5A11204FBC1600D99399 /* video_record_confirm@3x.png in Resources */,
 				8DA178AD204813FC000D7B5B /* xiugaimima_icon_mimakejian_sal@3x.png in Resources */,
 				8DD84BF4204936060047E125 /* xiugaimima_button_enter_nor@2x.png in Resources */,
 				8DD84C08204936060047E125 /* medal_icon_nor@3x.png in Resources */,
 				8DA178762047A957000D7B5B /* arrow_back_w@3x.png in Resources */,
+				8D8F59A4204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark.png in Resources */,
 				8DD84C09204936060047E125 /* photograph_button_camera_nor@2x.png in Resources */,
 				8DD84BFC204936060047E125 /* photograph_button_determine_nor@3x.png in Resources */,
 				8D99A01A20469435005ADE6D /* login_icon_avatar_default@2x.png in Resources */,
 				8DA1789B20480EBB000D7B5B /* class_icon_reward_sel@2x.png in Resources */,
 				8DD84BEE204936060047E125 /* file_icon_audil_nor@3x.png in Resources */,
 				8DD84C20204936060047E125 /* benji file_icon_unfolded_nor@3x.png in Resources */,
+				8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */,
 				8DD84BDC204936060047E125 /* password_button_verification_nor@2x.png in Resources */,
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
+				8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */,
 				8DA1789E20480EBB000D7B5B /* class_icon_reward_sel@3x.png in Resources */,
 				8DD84BD3204936060047E125 /* xuanzexunzhang_icon_selected@2x.png in Resources */,
 				8DD84C1A204936060047E125 /* record_button_withdraw_sal@2x.png in Resources */,
@@ -1132,10 +1485,12 @@
 				8DD84C15204936060047E125 /* xuanzexunzhang_icon_selected@3x.png in Resources */,
 				8DD84BEA204936060047E125 /* banfaxunzhang_icon_lssued_nor@3x.png in Resources */,
 				8DA1789320480EBB000D7B5B /* class_icon_personal_nor@2x.png in Resources */,
+				8D8F59AE204F8AFA00D99399 /* WechatShortVideoController.xib in Resources */,
 				8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */,
 				8D99A0372046B80B005ADE6D /* SelectMedalViewController.xib in Resources */,
 				8DA178822047E4FD000D7B5B /* ChangePasswordViewController.xib in Resources */,
 				8DD84BDF204936060047E125 /* banfajiangli_button_annex_sal@2x.png in Resources */,
+				8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */,
 				8DD84C1F204936060047E125 /* lssued_icon_camera_nor@3x.png in Resources */,
 				8DD84BC9204936060047E125 /* class_icon_more_nor@2x.png in Resources */,
 				8DD84C24204936060047E125 /* benji file_icon_pack up_nor@3x.png in Resources */,
@@ -1149,6 +1504,7 @@
 				8D99A03E2046B866005ADE6D /* PersonCenterViewController.xib in Resources */,
 				8DA1789720480EBB000D7B5B /* class_icon_comment_sel@2x.png in Resources */,
 				8DD84BCD204936060047E125 /* photograph_button_progress rate_sel@2x.png in Resources */,
+				8D8F5974204F8AEB00D99399 /* README.md in Resources */,
 				8D999FBE20464D31005ADE6D /* BSWebviewViewController.xib in Resources */,
 				8D9D071B204E3CC100446775 /* AttachmentListCell.xib in Resources */,
 				8DA178772047A957000D7B5B /* arrow_back_w@2x.png in Resources */,
@@ -1211,12 +1567,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudentEvaluation/Pods-StudentEvaluation-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1233,60 +1587,108 @@
 				8D99A02D2046A3F9005ADE6D /* BSParseUtil.m in Sources */,
 				8D99A0302046A3F9005ADE6D /* NSString+HTML.m in Sources */,
 				8DD84B672048FC450047E125 /* BSClassModel.m in Sources */,
+				8D8F5A03204F8DC500D99399 /* TZPhotoPickerController.m in Sources */,
 				8D999FF320468A79005ADE6D /* UIView+LayoutMethods.m in Sources */,
 				8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */,
 				8D9D0726204E44D100446775 /* BSAttachmentModel.m in Sources */,
+				8D8F598C204F8AEB00D99399 /* SCSwipeableFilterView.m in Sources */,
+				8D8F5986204F8AEB00D99399 /* SCRecorderTools.m in Sources */,
+				8D8F597F204F8AEB00D99399 /* SCIOPixelBuffers.m in Sources */,
 				8D99A00220468C04005ADE6D /* NJKWebViewProgressView.m in Sources */,
+				8D8F5985204F8AEB00D99399 /* SCRecorderFocusTargetView.m in Sources */,
 				8D999FBF20464D31005ADE6D /* BSSubjectModel.m in Sources */,
 				8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */,
+				8D8F5984204F8AEB00D99399 /* SCRecorder.m in Sources */,
+				8D8F598D204F8AEB00D99399 /* SCVideoConfiguration.m in Sources */,
 				8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */,
+				8D8F5A02204F8DC500D99399 /* TZLocationManager.m in Sources */,
 				8D999FCD20464D69005ADE6D /* BSNavigationViewController.m in Sources */,
 				8DD84C2F20493FAB0047E125 /* MedalLibraryApi.m in Sources */,
+				8D8F598E204F8AEB00D99399 /* SCVideoPlayerView.m in Sources */,
 				8DD84B642048F80D0047E125 /* ClassListApi.m in Sources */,
 				8D999FC020464D31005ADE6D /* BSUserModel.m in Sources */,
+				8D8F5A06204F8DC500D99399 /* TZProgressView.m in Sources */,
 				8DA1787D2047B1A8000D7B5B /* NetworkManager.m in Sources */,
+				8D8F5988204F8AEB00D99399 /* SCRecordSession.m in Sources */,
+				8D8F5A0B204F929600D99399 /* ProgressView.m in Sources */,
 				8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */,
+				8D8F597C204F8AEB00D99399 /* SCFilterAnimation.m in Sources */,
 				8D9D0716204E3C9200446775 /* AttachmentListCollectionView.m in Sources */,
 				8D99A00120468C04005ADE6D /* NJKWebViewProgress.m in Sources */,
+				8D8F598A204F8AEB00D99399 /* SCSampleBufferHolder.m in Sources */,
+				8D8F5977204F8AEB00D99399 /* SCAudioTools.m in Sources */,
+				8D8F59AC204F8AFA00D99399 /* SCRecordSessionManager.m in Sources */,
 				8DD84C33204941EA0047E125 /* DataManager.m in Sources */,
 				8D9D071A204E3CC100446775 /* AttachmentListCell.m in Sources */,
+				8D8F5979204F8AEB00D99399 /* SCFilter+UIImage.m in Sources */,
 				8DA178A420481033000D7B5B /* MedalCollectionViewCell.m in Sources */,
+				8D8F59A3204F8AFA00D99399 /* CALayer+AddUIColor.m in Sources */,
+				8D8F5981204F8AEB00D99399 /* SCPhotoConfiguration.m in Sources */,
+				8D8F5975204F8AEB00D99399 /* SCAssetExportSession.m in Sources */,
+				8D8F5989204F8AEB00D99399 /* SCRecordSessionSegment.m in Sources */,
 				8D999FF120468A79005ADE6D /* UIImage+ImageAddition.m in Sources */,
 				8D999FA920464C8C005ADE6D /* main.m in Sources */,
 				8DA1C3EA2048EC5000855392 /* BSMedalModel.m in Sources */,
+				8D8F5A08204F8DC500D99399 /* UIView+Layout.m in Sources */,
 				8D99A02C2046A3F9005ADE6D /* BSDateUtil.m in Sources */,
+				8D8F5982204F8AEB00D99399 /* SCPlayer.m in Sources */,
+				8D8F598F204F8AEB00D99399 /* SCWeakSelectorTarget.m in Sources */,
 				8D99A02E2046A3F9005ADE6D /* BSStringUtil.m in Sources */,
+				8D8F5990204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m in Sources */,
+				8D8F597A204F8AEB00D99399 /* SCFilter+VideoComposition.m in Sources */,
 				8DD84B6B20492BF50047E125 /* AddMedalCollectionViewCell.m in Sources */,
+				8D8F5987204F8AEB00D99399 /* SCRecorderToolsView.m in Sources */,
 				8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */,
+				8D8F5983204F8AEB00D99399 /* SCProcessingQueue.m in Sources */,
 				8D999FDE20468209005ADE6D /* BSBaseRequest.m in Sources */,
+				8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */,
 				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
 				8D999FF020468A79005ADE6D /* UIColor+Hex.m in Sources */,
+				8D8F59FF204F8DC500D99399 /* TZImageManager.m in Sources */,
+				8D8F59FD204F8DC500D99399 /* TZGifPhotoPreviewController.m in Sources */,
 				8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */,
+				8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */,
+				8D8F5A05204F8DC500D99399 /* TZPhotoPreviewController.m in Sources */,
 				8D99A02F2046A3F9005ADE6D /* GTMNSString+HTML.m in Sources */,
 				8D999FF220468A79005ADE6D /* UIView+Additional.m in Sources */,
 				8D999FBD20464D31005ADE6D /* BSWebviewViewController.m in Sources */,
+				8D8F59FA204F8DC500D99399 /* NSBundle+TZImagePicker.m in Sources */,
 				8D999FEE20468A79005ADE6D /* ALAssetsLibrary+BSAssetsHelper.m in Sources */,
 				8D99A00520468CE2005ADE6D /* BSUrlArgumentsFilter.m in Sources */,
 				8DA1788520480637000D7B5B /* ChangePasswordApi.m in Sources */,
 				8DD84C2720493DD30047E125 /* MedalLibraryViewController.m in Sources */,
+				8D8F5976204F8AEB00D99399 /* SCAudioConfiguration.m in Sources */,
+				8D8F59AD204F8AFA00D99399 /* WechatShortVideoController.m in Sources */,
+				8D8F598B204F8AEB00D99399 /* SCSaveToCameraRollOperation.m in Sources */,
 				8D999FD520465A5B005ADE6D /* BSSettings.m in Sources */,
 				8DD84C2A20493E550047E125 /* BSMedalTableViewCell.m in Sources */,
 				8DA178722047A45C000D7B5B /* ForgetPasswordViewController.m in Sources */,
 				8D999FC220464D31005ADE6D /* BSLoginManager.m in Sources */,
+				8D8F5978204F8AEB00D99399 /* SCContext.m in Sources */,
 				8D999FBB20464D31005ADE6D /* BSLoginViewController.m in Sources */,
+				8D8F5A01204F8DC500D99399 /* TZImagePickerController.m in Sources */,
 				8DA178812047E4FD000D7B5B /* ChangePasswordViewController.m in Sources */,
 				8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */,
+				8D8F597B204F8AEB00D99399 /* SCFilter.m in Sources */,
 				8D99A0362046B80B005ADE6D /* SelectMedalViewController.m in Sources */,
 				8D99A0412046B886005ADE6D /* ReleaseRecordViewController.m in Sources */,
 				8D99A03D2046B866005ADE6D /* PersonCenterViewController.m in Sources */,
 				8D999FEF20468A79005ADE6D /* NSDictionary+SafeObject.m in Sources */,
 				8D999FF920468AC4005ADE6D /* BSErrorPage.m in Sources */,
+				8D8F59FC204F8DC500D99399 /* TZAssetModel.m in Sources */,
+				8D8F5980204F8AEB00D99399 /* SCMediaTypeConfiguration.m in Sources */,
 				8D999FDB2046814E005ADE6D /* LoginApi.m in Sources */,
 				8D999FC120464D31005ADE6D /* BSUserRelationshipModel.m in Sources */,
 				8D999FD120464D69005ADE6D /* BSViewController.m in Sources */,
+				8D8F5A07204F8DC500D99399 /* TZVideoPlayerController.m in Sources */,
 				8D999FF420468A79005ADE6D /* UIViewController+Addition.m in Sources */,
+				8D8F5A04204F8DC500D99399 /* TZPhotoPreviewCell.m in Sources */,
+				8D8F59FB204F8DC500D99399 /* TZAssetCell.m in Sources */,
+				8D8F597D204F8AEB00D99399 /* SCFilterImageView.m in Sources */,
+				8D8F597E204F8AEB00D99399 /* SCImageView.m in Sources */,
 				8D9D072A204E485200446775 /* AddAttachmentCell.m in Sources */,
 				8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */,
+				8D8F5973204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
