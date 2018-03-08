@@ -6,14 +6,16 @@
 //  Copyright © 2018年 bosheng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
 
 @interface BSAttachmentModel : NSObject
 
-@property (nonatomic, strong) NSString *thumnailUrl;
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, assign) BOOL isVideo;
+@property (nonatomic, strong) PHAsset   *asset; // 仅针对相册中图片
+@property (nonatomic, strong) UIImage   *image; // 图片对象或者视频缩略图
 
-@property (nonatomic, strong) NSNumber *videoLength;
+@property (nonatomic, assign) BOOL      isVideo;
+@property (nonatomic, strong) NSString  *videoPath;     // 视频路径
+@property (nonatomic, strong) NSNumber  *videoDuration; // 视频时长
 
 @end

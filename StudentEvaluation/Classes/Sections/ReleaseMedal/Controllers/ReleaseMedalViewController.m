@@ -15,8 +15,10 @@
 #import "WechatShortVideoController.h"
 #import "BSAttachmentModel.h"
 #import <Photos/Photos.h>
+#import "BSVideoUtil.h"
+#import "BSRecordView.h"
 
-@interface ReleaseMedalViewController ()
+@interface ReleaseMedalViewController ()<BSRecordViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *medalIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *medalName;
@@ -65,6 +67,11 @@
             [weakSelf addAttachment];
         };
         
+        self.collectionView.deletAttachmentHandler = ^(UICollectionView *collectionView, NSIndexPath *indexPath, id dataModel) {
+            [weakSelf.collectionView.dataArray removeObjectAtIndex:indexPath.row];
+            [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+        };
+        
         [self.collectionView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
         [self.collectionView reloadData];
     }
@@ -79,7 +86,9 @@
 
 - (IBAction)record:(id)sender
 {
-    
+    BSRecordView *recordView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BSRecordView class]) owner:nil options:nil][0];
+    recordView.delegate = self;
+    [recordView show];
 }
 
 - (IBAction)send:(id)sender
@@ -108,25 +117,80 @@
 
 - (void)addImage
 {
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:5 delegate:nil];
-    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
-        NSLog(@"%@",photos);
-        NSLog(@"%@",assets);
-        
-        NSMutableArray *items = [NSMutableArray array];
-        for (PHAsset *asset in assets) {
-            [[PHImageManager defaultManager] requestImageDataForAsset:asset options:NULL resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
-                NSLog(@"%@",info);
-            }];
-            BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
+    NSInteger videoCount = 0;
+    NSMutableArray *selectedAsset = [NSMutableArray array];
+    for (BSAttachmentModel *model in self.collectionView.dataArray) {
+        if (!model.isVideo) {
+            [selectedAsset addObject:model.asset];
+        } else {
+            videoCount++;
         }
-    }];;
+    }
+    
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:5 delegate:nil];
+    imagePickerVc.allowPickingVideo = NO;
+    imagePickerVc.maxImagesCount = 5 - videoCount;
+    imagePickerVc.selectedAssets = selectedAsset;
+    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        NSMutableArray *items = [NSMutableArray array];
+        
+        for (int i = 0; i < photos.count; i++) {
+            BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
+            model.image = photos[i];
+            model.asset = assets[i];
+            model.isVideo = NO;
+            [items addObject:model];
+        }
+        
+        // 去重
+        for (BSAttachmentModel *model in self.collectionView.dataArray.copy) {
+            if (model.isVideo) {
+                continue;
+            }
+            
+            BOOL exist = NO;
+            BSAttachmentModel *existAttachment = nil;
+            PHAsset *asset = model.asset;
+            for (BSAttachmentModel *attachment in items.copy) {
+                if ([asset.localIdentifier isEqualToString:attachment.asset.localIdentifier]) {
+                    exist = YES;
+                    existAttachment = attachment;
+                    break;
+                }
+            }
+            
+            if (exist) {
+                [items removeObject:existAttachment];
+            } else {
+                [self.collectionView.dataArray removeObject:model];
+            }
+        }
+        
+        [self.collectionView.dataArray addObjectsFromArray:items];
+        [self.collectionView reloadData];
+    }];
+    
     [self presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
 - (void)addVideo
 {
+    __weak typeof(self) weakSelf = self;
     WechatShortVideoController *wechatShortVideoController = [[WechatShortVideoController alloc] init];
+    wechatShortVideoController.didFinishRecordHandle = ^(NSError *error, NSURL *videoUrl) {
+        if (error) {
+            return ;
+        }
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
+        model.image = [BSVideoUtil screenShotImageFromVideoPath:videoUrl.absoluteString];
+        model.videoDuration = @([BSVideoUtil durationFromVideoPath:videoUrl.absoluteString]);
+        model.isVideo = YES;
+        [strongSelf.collectionView.dataArray addObject:model];
+        [strongSelf.collectionView reloadData];
+    };
+    
     [self presentViewController:wechatShortVideoController animated:YES completion:nil];
 }
 
@@ -136,6 +200,15 @@
     if ([keyPath isEqualToString:@"contentSize"]) {
         self.attachmentListHeight.constant = self.collectionView.contentSize.height;
     }
+}
+
+#pragma mark - BSRecordViewDelegate
+- (void)recordView:(BSRecordView *)recordView recordFinished:(NSString *)filePath error:(NSError *)error
+{
+    if (error) {
+        NSLog(@"%@",error.localizedDescription);
+    }
+    NSLog(@"=======");
 }
 
 @end

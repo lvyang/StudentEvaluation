@@ -127,6 +127,9 @@
     _recorder.previewView = nil;
     [_player pause];
     _player = nil;
+    
+    self.progressHUD.delegate = nil;
+    self.progressHUD = nil;
 }
 
 

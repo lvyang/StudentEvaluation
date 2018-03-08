@@ -24,12 +24,11 @@
 
 - (void)configureCellWithModel:(BSAttachmentModel *)aModel atIndexPath:(NSIndexPath *)indexPath
 {
-    NSURL *url = [NSURL fileURLWithPath:aModel.thumnailUrl];
-    [self.iconImageView sd_setImageWithURL:url];
+    self.iconImageView.image = aModel.image;
     
     if (aModel.isVideo) {
         self.videoBanner.hidden = NO;
-        self.videoLengthLabel.text = [BSStringUtil timeStringFromInterval:aModel.videoLength.floatValue];
+        self.videoLengthLabel.text = [BSStringUtil timeStringFromInterval:aModel.videoDuration.floatValue];
     } else {
         self.videoBanner.hidden = YES;
     }

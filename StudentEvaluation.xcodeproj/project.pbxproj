@@ -161,6 +161,17 @@
 		8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E32048DB1D00855392 /* SelectMedalCollectionView.m */; };
 		8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */; };
 		8DA1C3EA2048EC5000855392 /* BSMedalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E82048EC4F00855392 /* BSMedalModel.m */; };
+		8DA364BA2050E72300CEC6D7 /* BSVideoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */; };
+		8DB73A4820512D660082C78F /* BSRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB73A4720512D660082C78F /* BSRecordView.m */; };
+		8DB73A4A20512D770082C78F /* BSRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4920512D770082C78F /* BSRecordView.xib */; };
+		8DB73A51205131890082C78F /* ic_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4B205131860082C78F /* ic_record@2x.png */; };
+		8DB73A52205131890082C78F /* ic_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4C205131860082C78F /* ic_record@3x.png */; };
+		8DB73A53205131890082C78F /* ic_release_to_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4D205131870082C78F /* ic_release_to_cancel@2x.png */; };
+		8DB73A54205131890082C78F /* ic_record_ripple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4E205131880082C78F /* ic_record_ripple@3x.png */; };
+		8DB73A55205131890082C78F /* ic_release_to_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4F205131880082C78F /* ic_release_to_cancel@3x.png */; };
+		8DB73A56205131890082C78F /* ic_record_ripple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A50205131880082C78F /* ic_record_ripple@2x.png */; };
+		8DB73A5A2051348E0082C78F /* BSAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB73A592051348E0082C78F /* BSAudioRecorder.m */; };
+		8DB73A5E2051373B0082C78F /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB73A5D2051373A0082C78F /* libmp3lame.a */; };
 		8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A817204CF594006445E3 /* AddMedalToFrequentUsedApi.m */; };
 		8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A81A204D3314006445E3 /* ClassListViewController.m */; };
 		8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A81D204D333D006445E3 /* ClassListTableView.m */; };
@@ -524,6 +535,21 @@
 		8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FequentlyUsedMedalApi.m; sourceTree = "<group>"; };
 		8DA1C3E82048EC4F00855392 /* BSMedalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMedalModel.m; sourceTree = "<group>"; };
 		8DA1C3E92048EC5000855392 /* BSMedalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMedalModel.h; sourceTree = "<group>"; };
+		8DA364B82050E72300CEC6D7 /* BSVideoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSVideoUtil.h; sourceTree = "<group>"; };
+		8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSVideoUtil.m; sourceTree = "<group>"; };
+		8DB73A4620512D660082C78F /* BSRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSRecordView.h; sourceTree = "<group>"; };
+		8DB73A4720512D660082C78F /* BSRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSRecordView.m; sourceTree = "<group>"; };
+		8DB73A4920512D770082C78F /* BSRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSRecordView.xib; sourceTree = "<group>"; };
+		8DB73A4B205131860082C78F /* ic_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record@2x.png"; sourceTree = "<group>"; };
+		8DB73A4C205131860082C78F /* ic_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record@3x.png"; sourceTree = "<group>"; };
+		8DB73A4D205131870082C78F /* ic_release_to_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_release_to_cancel@2x.png"; sourceTree = "<group>"; };
+		8DB73A4E205131880082C78F /* ic_record_ripple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_ripple@3x.png"; sourceTree = "<group>"; };
+		8DB73A4F205131880082C78F /* ic_release_to_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_release_to_cancel@3x.png"; sourceTree = "<group>"; };
+		8DB73A50205131880082C78F /* ic_record_ripple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_ripple@2x.png"; sourceTree = "<group>"; };
+		8DB73A582051348E0082C78F /* BSAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAudioRecorder.h; sourceTree = "<group>"; };
+		8DB73A592051348E0082C78F /* BSAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAudioRecorder.m; sourceTree = "<group>"; };
+		8DB73A5C2051373A0082C78F /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		8DB73A5D2051373A0082C78F /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		8DB9A816204CF594006445E3 /* AddMedalToFrequentUsedApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMedalToFrequentUsedApi.h; sourceTree = "<group>"; };
 		8DB9A817204CF594006445E3 /* AddMedalToFrequentUsedApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMedalToFrequentUsedApi.m; sourceTree = "<group>"; };
 		8DB9A819204D3314006445E3 /* ClassListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListViewController.h; sourceTree = "<group>"; };
@@ -653,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491D396E9BB5B6CFA68D831C /* libPods-StudentEvaluation.a in Frameworks */,
+				8DB73A5E2051373B0082C78F /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +921,12 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DB73A50205131880082C78F /* ic_record_ripple@2x.png */,
+				8DB73A4E205131880082C78F /* ic_record_ripple@3x.png */,
+				8DB73A4B205131860082C78F /* ic_record@2x.png */,
+				8DB73A4C205131860082C78F /* ic_record@3x.png */,
+				8DB73A4D205131870082C78F /* ic_release_to_cancel@2x.png */,
+				8DB73A4F205131880082C78F /* ic_release_to_cancel@3x.png */,
 				8D9D071C204E3F2900446775 /* delete@2x.png */,
 				8D9D071D204E3F2900446775 /* delete@3x.png */,
 				8D9D0720204E412C00446775 /* video@2x.png */,
@@ -1177,6 +1210,8 @@
 				8D99A0232046A3F8005ADE6D /* BSParseUtil.m */,
 				8D99A0242046A3F8005ADE6D /* BSStringUtil.h */,
 				8D99A0252046A3F8005ADE6D /* BSStringUtil.m */,
+				8DA364B82050E72300CEC6D7 /* BSVideoUtil.h */,
+				8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */,
 				8D99A0272046A3F8005ADE6D /* vendors */,
 			);
 			path = BSUtil;
@@ -1196,6 +1231,7 @@
 		8D99A0312046B750005ADE6D /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8DB73A3F20512CD80082C78F /* Record */,
 				8DD84C30204941CC0047E125 /* Manager */,
 				8D999FA220464C8C005ADE6D /* Login */,
 				8D99A0322046B79B005ADE6D /* ReleaseMedal */,
@@ -1295,6 +1331,36 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8DB73A3F20512CD80082C78F /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				8DB73A572051348E0082C78F /* BSRecorder */,
+				8DB73A4620512D660082C78F /* BSRecordView.h */,
+				8DB73A4720512D660082C78F /* BSRecordView.m */,
+				8DB73A4920512D770082C78F /* BSRecordView.xib */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		8DB73A572051348E0082C78F /* BSRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				8DB73A5B2051373A0082C78F /* Lame */,
+				8DB73A582051348E0082C78F /* BSAudioRecorder.h */,
+				8DB73A592051348E0082C78F /* BSAudioRecorder.m */,
+			);
+			path = BSRecorder;
+			sourceTree = "<group>";
+		};
+		8DB73A5B2051373A0082C78F /* Lame */ = {
+			isa = PBXGroup;
+			children = (
+				8DB73A5C2051373A0082C78F /* lame.h */,
+				8DB73A5D2051373A0082C78F /* libmp3lame.a */,
+			);
+			path = Lame;
+			sourceTree = "<group>";
+		};
 		8DD84C30204941CC0047E125 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1379,6 +1445,7 @@
 				8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */,
 				8DD84BFF204936060047E125 /* LaunchImage.png in Resources */,
 				8DD84C05204936060047E125 /* chehuitankuang_button_cancel@3x.png in Resources */,
+				8DB73A52205131890082C78F /* ic_record@3x.png in Resources */,
 				8DD84BF2204936060047E125 /* bind_button_enter_nor@3x.png in Resources */,
 				8DD84BCE204936060047E125 /* xingaimima_icon_close_hig@2x.png in Resources */,
 				8DD84C1C204936060047E125 /* class_icon_selected@2x.png in Resources */,
@@ -1406,6 +1473,7 @@
 				8D9D0723204E412D00446775 /* video@3x.png in Resources */,
 				8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */,
 				8DD84BF1204936060047E125 /* luyinshi_icon_record_sel@3x.png in Resources */,
+				8DB73A54205131890082C78F /* ic_record_ripple@3x.png in Resources */,
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
 				8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */,
 				8D8F5972204F8AEB00D99399 /* LICENSE in Resources */,
@@ -1425,8 +1493,10 @@
 				8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				8DD84BCF204936060047E125 /* xingaimima_icon_close_hig@3x.png in Resources */,
 				8DD84BE2204936060047E125 /* password_button_verification_nor@3x.png in Resources */,
+				8DB73A4A20512D770082C78F /* BSRecordView.xib in Resources */,
 				8DD84BF6204936060047E125 /* login_dividing line_short@2x.png in Resources */,
 				8DD84BD6204936060047E125 /* lssued_icon_record_nor@3x.png in Resources */,
+				8DB73A56205131890082C78F /* ic_record_ripple@2x.png in Resources */,
 				8DA1789420480EBB000D7B5B /* class_icon_personal_nor@3x.png in Resources */,
 				8DD84BE5204936060047E125 /* success_icon_medal@3x.png in Resources */,
 				8D999FD720465A63005ADE6D /* Settings.plist in Resources */,
@@ -1448,6 +1518,7 @@
 				8DD84B6C20492BF50047E125 /* AddMedalCollectionViewCell.xib in Resources */,
 				8DD84C1B204936060047E125 /* bind_button_replace_nor@3x.png in Resources */,
 				8DD84C22204936060047E125 /* lssued_icon_score_nor@3x.png in Resources */,
+				8DB73A51205131890082C78F /* ic_record@2x.png in Resources */,
 				8DD84C13204936060047E125 /* personal_icon_new message_nor@3x.png in Resources */,
 				8DD84BD2204936060047E125 /* lssued_icon_fu score_sel@2x.png in Resources */,
 				8D8F5A11204FBC1600D99399 /* video_record_confirm@3x.png in Resources */,
@@ -1464,6 +1535,7 @@
 				8DD84C20204936060047E125 /* benji file_icon_unfolded_nor@3x.png in Resources */,
 				8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */,
 				8DD84BDC204936060047E125 /* password_button_verification_nor@2x.png in Resources */,
+				8DB73A55205131890082C78F /* ic_release_to_cancel@3x.png in Resources */,
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
 				8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */,
 				8DA1789E20480EBB000D7B5B /* class_icon_reward_sel@3x.png in Resources */,
@@ -1481,6 +1553,7 @@
 				8DA178AB204813FC000D7B5B /* xiugaimima_icon_mimakejian_sal@2x.png in Resources */,
 				8DD84BD9204936060047E125 /* xingaimima_icon_open_hig@2x.png in Resources */,
 				8DD84BDA204936060047E125 /* file_icon_audil_nor@2x.png in Resources */,
+				8DB73A53205131890082C78F /* ic_release_to_cancel@2x.png in Resources */,
 				8DA178AA204813FC000D7B5B /* uanzexunzhang_icon_incrcase_nor@2x.png in Resources */,
 				8DD84C15204936060047E125 /* xuanzexunzhang_icon_selected@3x.png in Resources */,
 				8DD84BEA204936060047E125 /* banfaxunzhang_icon_lssued_nor@3x.png in Resources */,
@@ -1625,6 +1698,7 @@
 				8D8F59A3204F8AFA00D99399 /* CALayer+AddUIColor.m in Sources */,
 				8D8F5981204F8AEB00D99399 /* SCPhotoConfiguration.m in Sources */,
 				8D8F5975204F8AEB00D99399 /* SCAssetExportSession.m in Sources */,
+				8DB73A5A2051348E0082C78F /* BSAudioRecorder.m in Sources */,
 				8D8F5989204F8AEB00D99399 /* SCRecordSessionSegment.m in Sources */,
 				8D999FF120468A79005ADE6D /* UIImage+ImageAddition.m in Sources */,
 				8D999FA920464C8C005ADE6D /* main.m in Sources */,
@@ -1650,6 +1724,8 @@
 				8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */,
 				8D8F5A05204F8DC500D99399 /* TZPhotoPreviewController.m in Sources */,
 				8D99A02F2046A3F9005ADE6D /* GTMNSString+HTML.m in Sources */,
+				8DB73A4820512D660082C78F /* BSRecordView.m in Sources */,
+				8DA364BA2050E72300CEC6D7 /* BSVideoUtil.m in Sources */,
 				8D999FF220468A79005ADE6D /* UIView+Additional.m in Sources */,
 				8D999FBD20464D31005ADE6D /* BSWebviewViewController.m in Sources */,
 				8D8F59FA204F8DC500D99399 /* NSBundle+TZImagePicker.m in Sources */,
@@ -1820,6 +1896,10 @@
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StudentEvaluation/Classes/Sections/Record/BSRecorder/Lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dodoedu.StudentEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1836,6 +1916,10 @@
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StudentEvaluation/Classes/Sections/Record/BSRecorder/Lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dodoedu.StudentEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

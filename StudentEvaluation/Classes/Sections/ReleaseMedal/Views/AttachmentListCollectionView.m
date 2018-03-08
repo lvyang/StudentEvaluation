@@ -12,7 +12,7 @@
 
 static NSInteger MAX_ATACHMENT_COUNT = 5;
 
-@interface AttachmentListCollectionView ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface AttachmentListCollectionView ()<UICollectionViewDataSource, UICollectionViewDelegate,AttachmentListCellDelegate>
 
 @end
 
@@ -40,14 +40,13 @@ static NSInteger MAX_ATACHMENT_COUNT = 5;
 - (UICollectionViewFlowLayout *) flowLayout
 {
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat width = (screenWidth - 5 * 2) / 3 - 1;
+    CGFloat width = (screenWidth - 5 * 4 - 4) / 3 - 1;
     CGFloat height = width;
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.itemSize = CGSizeMake(width, height);
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = 15;
-    layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5);
     
     return layout;
 }
@@ -74,7 +73,8 @@ static NSInteger MAX_ATACHMENT_COUNT = 5;
         return cell;
     } else {
         NSString *cellId = @"AttachmentListCell";
-        LYBaseCollectionCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+        AttachmentListCell  *cell = (AttachmentListCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+        cell.delegate = self;
         id                  item = self.dataArray[indexPath.row];
         
         if ([cell respondsToSelector:@selector(configureCellWithModel:atIndexPath:)]) {
@@ -98,6 +98,15 @@ static NSInteger MAX_ATACHMENT_COUNT = 5;
     
     if (self.cellSelectedHandler) {
         self.cellSelectedHandler(collectionView, indexPath, self.dataArray[indexPath.row]);
+    }
+}
+
+#pragma mark - AttachmentListCellDelegate
+- (void)deleteAttachment:(AttachmentListCell *)cell
+{
+    if (self.deletAttachmentHandler) {
+        NSIndexPath *indexPath = [self indexPathForCell:cell];
+        self.deletAttachmentHandler(self, indexPath, self.dataArray[indexPath.row]);
     }
 }
 

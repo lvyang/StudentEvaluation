@@ -10,9 +10,6 @@
 
 @implementation AddAttachmentCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
+
 
 @end
