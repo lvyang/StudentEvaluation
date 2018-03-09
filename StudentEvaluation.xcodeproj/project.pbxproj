@@ -162,6 +162,28 @@
 		8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */; };
 		8DA1C3EA2048EC5000855392 /* BSMedalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E82048EC4F00855392 /* BSMedalModel.m */; };
 		8DA364BA2050E72300CEC6D7 /* BSVideoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */; };
+		8DAF14FD2052330C0076EA91 /* BSBasePhotoBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF14FA2052330C0076EA91 /* BSBasePhotoBrowseViewController.m */; };
+		8DAF14FE2052330C0076EA91 /* BSPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF14FC2052330C0076EA91 /* BSPhotoModel.m */; };
+		8DAF1500205238A70076EA91 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF14FF205238A70076EA91 /* libiconv.tbd */; };
+		8DAF1502205238BC0076EA91 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF1501205238BC0076EA91 /* libz.tbd */; };
+		8DAF1504205238C60076EA91 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF1503205238C60076EA91 /* libbz2.tbd */; };
+		8DAF15072052407E0076EA91 /* arrow_backward_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF15052052407E0076EA91 /* arrow_backward_white@3x.png */; };
+		8DAF15082052407E0076EA91 /* arrow_backward_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF15062052407E0076EA91 /* arrow_backward_white@2x.png */; };
+		8DAF154C20525F1C0076EA91 /* BSMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF154920525F1C0076EA91 /* BSMusicPlayer.m */; };
+		8DAF154D20525F1C0076EA91 /* BSTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF154B20525F1C0076EA91 /* BSTrack.m */; };
+		8DAF155420526A040076EA91 /* VideoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF155220526A040076EA91 /* VideoPreviewViewController.m */; };
+		8DAF155520526A040076EA91 /* VideoPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF155320526A040076EA91 /* VideoPreviewViewController.xib */; };
+		8DAF155920526FBB0076EA91 /* VoiceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF155720526FBB0076EA91 /* VoiceListCell.m */; };
+		8DAF155A20526FBB0076EA91 /* VoiceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF155820526FBB0076EA91 /* VoiceListCell.xib */; };
+		8DAF155D205271ED0076EA91 /* voice_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF155B205271EC0076EA91 /* voice_close@3x.png */; };
+		8DAF155E205271ED0076EA91 /* voice_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF155C205271EC0076EA91 /* voice_close@2x.png */; };
+		8DAF1562205272A30076EA91 /* AddVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF1560205272A30076EA91 /* AddVoiceCell.m */; };
+		8DAF1563205272A30076EA91 /* AddVoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF1561205272A30076EA91 /* AddVoiceCell.xib */; };
+		8DAF1569205273DF0076EA91 /* VoiceListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF1568205273DF0076EA91 /* VoiceListTableView.m */; };
+		8DAF156C205276280076EA91 /* VoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF156B205276280076EA91 /* VoiceModel.m */; };
+		8DAF156F205283EA0076EA91 /* SelectStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF156E205283EA0076EA91 /* SelectStudentViewController.m */; };
+		8DAF1573205289860076EA91 /* StudentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF1571205289860076EA91 /* StudentListCell.m */; };
+		8DAF1574205289860076EA91 /* StudentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF1572205289860076EA91 /* StudentListCell.xib */; };
 		8DB73A4820512D660082C78F /* BSRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB73A4720512D660082C78F /* BSRecordView.m */; };
 		8DB73A4A20512D770082C78F /* BSRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4920512D770082C78F /* BSRecordView.xib */; };
 		8DB73A51205131890082C78F /* ic_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4B205131860082C78F /* ic_record@2x.png */; };
@@ -537,6 +559,39 @@
 		8DA1C3E92048EC5000855392 /* BSMedalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMedalModel.h; sourceTree = "<group>"; };
 		8DA364B82050E72300CEC6D7 /* BSVideoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSVideoUtil.h; sourceTree = "<group>"; };
 		8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSVideoUtil.m; sourceTree = "<group>"; };
+		8DAF14F92052330C0076EA91 /* BSBasePhotoBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBasePhotoBrowseViewController.h; sourceTree = "<group>"; };
+		8DAF14FA2052330C0076EA91 /* BSBasePhotoBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBasePhotoBrowseViewController.m; sourceTree = "<group>"; };
+		8DAF14FB2052330C0076EA91 /* BSPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoModel.h; sourceTree = "<group>"; };
+		8DAF14FC2052330C0076EA91 /* BSPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoModel.m; sourceTree = "<group>"; };
+		8DAF14FF205238A70076EA91 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		8DAF1501205238BC0076EA91 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8DAF1503205238C60076EA91 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		8DAF15052052407E0076EA91 /* arrow_backward_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_backward_white@3x.png"; sourceTree = "<group>"; };
+		8DAF15062052407E0076EA91 /* arrow_backward_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_backward_white@2x.png"; sourceTree = "<group>"; };
+		8DAF154820525F1C0076EA91 /* BSMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMusicPlayer.h; sourceTree = "<group>"; };
+		8DAF154920525F1C0076EA91 /* BSMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMusicPlayer.m; sourceTree = "<group>"; };
+		8DAF154A20525F1C0076EA91 /* BSTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTrack.h; sourceTree = "<group>"; };
+		8DAF154B20525F1C0076EA91 /* BSTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTrack.m; sourceTree = "<group>"; };
+		8DAF155120526A040076EA91 /* VideoPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPreviewViewController.h; sourceTree = "<group>"; };
+		8DAF155220526A040076EA91 /* VideoPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewViewController.m; sourceTree = "<group>"; };
+		8DAF155320526A040076EA91 /* VideoPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPreviewViewController.xib; sourceTree = "<group>"; };
+		8DAF155620526FBB0076EA91 /* VoiceListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceListCell.h; sourceTree = "<group>"; };
+		8DAF155720526FBB0076EA91 /* VoiceListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceListCell.m; sourceTree = "<group>"; };
+		8DAF155820526FBB0076EA91 /* VoiceListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceListCell.xib; sourceTree = "<group>"; };
+		8DAF155B205271EC0076EA91 /* voice_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_close@3x.png"; sourceTree = "<group>"; };
+		8DAF155C205271EC0076EA91 /* voice_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_close@2x.png"; sourceTree = "<group>"; };
+		8DAF155F205272A30076EA91 /* AddVoiceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddVoiceCell.h; sourceTree = "<group>"; };
+		8DAF1560205272A30076EA91 /* AddVoiceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddVoiceCell.m; sourceTree = "<group>"; };
+		8DAF1561205272A30076EA91 /* AddVoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVoiceCell.xib; sourceTree = "<group>"; };
+		8DAF1567205273DF0076EA91 /* VoiceListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceListTableView.h; sourceTree = "<group>"; };
+		8DAF1568205273DF0076EA91 /* VoiceListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceListTableView.m; sourceTree = "<group>"; };
+		8DAF156A205276280076EA91 /* VoiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceModel.h; sourceTree = "<group>"; };
+		8DAF156B205276280076EA91 /* VoiceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceModel.m; sourceTree = "<group>"; };
+		8DAF156D205283EA0076EA91 /* SelectStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectStudentViewController.h; sourceTree = "<group>"; };
+		8DAF156E205283EA0076EA91 /* SelectStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectStudentViewController.m; sourceTree = "<group>"; };
+		8DAF1570205289860076EA91 /* StudentListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListCell.h; sourceTree = "<group>"; };
+		8DAF1571205289860076EA91 /* StudentListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentListCell.m; sourceTree = "<group>"; };
+		8DAF1572205289860076EA91 /* StudentListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentListCell.xib; sourceTree = "<group>"; };
 		8DB73A4620512D660082C78F /* BSRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSRecordView.h; sourceTree = "<group>"; };
 		8DB73A4720512D660082C78F /* BSRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSRecordView.m; sourceTree = "<group>"; };
 		8DB73A4920512D770082C78F /* BSRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSRecordView.xib; sourceTree = "<group>"; };
@@ -678,6 +733,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAF1504205238C60076EA91 /* libbz2.tbd in Frameworks */,
+				8DAF1502205238BC0076EA91 /* libz.tbd in Frameworks */,
+				8DAF1500205238A70076EA91 /* libiconv.tbd in Frameworks */,
 				491D396E9BB5B6CFA68D831C /* libPods-StudentEvaluation.a in Frameworks */,
 				8DB73A5E2051373B0082C78F /* libmp3lame.a in Frameworks */,
 			);
@@ -698,6 +756,9 @@
 		53FD4F6D16BFAE7556E6268A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DAF1503205238C60076EA91 /* libbz2.tbd */,
+				8DAF1501205238BC0076EA91 /* libz.tbd */,
+				8DAF14FF205238A70076EA91 /* libiconv.tbd */,
 				5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */,
 			);
 			name = Frameworks;
@@ -921,6 +982,10 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DAF155C205271EC0076EA91 /* voice_close@2x.png */,
+				8DAF155B205271EC0076EA91 /* voice_close@3x.png */,
+				8DAF15062052407E0076EA91 /* arrow_backward_white@2x.png */,
+				8DAF15052052407E0076EA91 /* arrow_backward_white@3x.png */,
 				8DB73A50205131880082C78F /* ic_record_ripple@2x.png */,
 				8DB73A4E205131880082C78F /* ic_record_ripple@3x.png */,
 				8DB73A4B205131860082C78F /* ic_record@2x.png */,
@@ -1231,6 +1296,8 @@
 		8D99A0312046B750005ADE6D /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8DAF150B20525E390076EA91 /* Player */,
+				8DAF14F82052330C0076EA91 /* PhotoBrower */,
 				8DB73A3F20512CD80082C78F /* Record */,
 				8DD84C30204941CC0047E125 /* Manager */,
 				8D999FA220464C8C005ADE6D /* Login */,
@@ -1283,6 +1350,11 @@
 				8DCD0145204D4EFD000B93E1 /* ReleaseMedalViewController.h */,
 				8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */,
 				8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */,
+				8DAF155120526A040076EA91 /* VideoPreviewViewController.h */,
+				8DAF155220526A040076EA91 /* VideoPreviewViewController.m */,
+				8DAF155320526A040076EA91 /* VideoPreviewViewController.xib */,
+				8DAF156D205283EA0076EA91 /* SelectStudentViewController.h */,
+				8DAF156E205283EA0076EA91 /* SelectStudentViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1314,6 +1386,17 @@
 				8D9D0727204E485200446775 /* AddAttachmentCell.h */,
 				8D9D0728204E485200446775 /* AddAttachmentCell.m */,
 				8D9D0729204E485200446775 /* AddAttachmentCell.xib */,
+				8DAF155620526FBB0076EA91 /* VoiceListCell.h */,
+				8DAF155720526FBB0076EA91 /* VoiceListCell.m */,
+				8DAF155820526FBB0076EA91 /* VoiceListCell.xib */,
+				8DAF155F205272A30076EA91 /* AddVoiceCell.h */,
+				8DAF1560205272A30076EA91 /* AddVoiceCell.m */,
+				8DAF1561205272A30076EA91 /* AddVoiceCell.xib */,
+				8DAF1567205273DF0076EA91 /* VoiceListTableView.h */,
+				8DAF1568205273DF0076EA91 /* VoiceListTableView.m */,
+				8DAF1570205289860076EA91 /* StudentListCell.h */,
+				8DAF1571205289860076EA91 /* StudentListCell.m */,
+				8DAF1572205289860076EA91 /* StudentListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1327,8 +1410,40 @@
 				8DD84B662048FC450047E125 /* BSClassModel.m */,
 				8D9D0724204E44D100446775 /* BSAttachmentModel.h */,
 				8D9D0725204E44D100446775 /* BSAttachmentModel.m */,
+				8DAF156A205276280076EA91 /* VoiceModel.h */,
+				8DAF156B205276280076EA91 /* VoiceModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8DAF14F82052330C0076EA91 /* PhotoBrower */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF14F92052330C0076EA91 /* BSBasePhotoBrowseViewController.h */,
+				8DAF14FA2052330C0076EA91 /* BSBasePhotoBrowseViewController.m */,
+				8DAF14FB2052330C0076EA91 /* BSPhotoModel.h */,
+				8DAF14FC2052330C0076EA91 /* BSPhotoModel.m */,
+			);
+			path = PhotoBrower;
+			sourceTree = "<group>";
+		};
+		8DAF150B20525E390076EA91 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF154720525F1C0076EA91 /* BSMusicPlayer */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		8DAF154720525F1C0076EA91 /* BSMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF154820525F1C0076EA91 /* BSMusicPlayer.h */,
+				8DAF154920525F1C0076EA91 /* BSMusicPlayer.m */,
+				8DAF154A20525F1C0076EA91 /* BSTrack.h */,
+				8DAF154B20525F1C0076EA91 /* BSTrack.m */,
+			);
+			path = BSMusicPlayer;
 			sourceTree = "<group>";
 		};
 		8DB73A3F20512CD80082C78F /* Record */ = {
@@ -1440,9 +1555,11 @@
 				8DD84C23204936060047E125 /* photograph_button_determine_nor@2x.png in Resources */,
 				8D8F59A9204F8AFA00D99399 /* WechatShortVideo_scan_focus.png in Resources */,
 				8DD84C1E204936060047E125 /* lssued_icon_score_nor@2x.png in Resources */,
+				8DAF1574205289860076EA91 /* StudentListCell.xib in Resources */,
 				8D99A01220468ED6005ADE6D /* Info.plist in Resources */,
 				8DA1789820480EBB000D7B5B /* class_icon_reward_nor@2x.png in Resources */,
 				8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */,
+				8DAF155A20526FBB0076EA91 /* VoiceListCell.xib in Resources */,
 				8DD84BFF204936060047E125 /* LaunchImage.png in Resources */,
 				8DD84C05204936060047E125 /* chehuitankuang_button_cancel@3x.png in Resources */,
 				8DB73A52205131890082C78F /* ic_record@3x.png in Resources */,
@@ -1451,6 +1568,7 @@
 				8DD84C1C204936060047E125 /* class_icon_selected@2x.png in Resources */,
 				8DA1789920480EBB000D7B5B /* class_icon_comment_nor@3x.png in Resources */,
 				8DA1789620480EBB000D7B5B /* class_icon_personal_sal@2x.png in Resources */,
+				8DAF155520526A040076EA91 /* VideoPreviewViewController.xib in Resources */,
 				8DD84BD8204936060047E125 /* tab_button_nav_normal@2x.png in Resources */,
 				8D999FBC20464D31005ADE6D /* BSLoginViewController.xib in Resources */,
 				8D99A01B20469435005ADE6D /* login_icon_account_default@3x.png in Resources */,
@@ -1484,6 +1602,7 @@
 				8D999FFA20468AC4005ADE6D /* BSErrorPage.xib in Resources */,
 				8D8F5A00204F8DC500D99399 /* TZImagePickerController.bundle in Resources */,
 				8D8F5A10204FBC1600D99399 /* video_record_cancel@2x.png in Resources */,
+				8DAF15072052407E0076EA91 /* arrow_backward_white@3x.png in Resources */,
 				8DA1789A20480EBB000D7B5B /* class_icon_reward_nor@3x.png in Resources */,
 				8DD84BCA204936060047E125 /* personal_icon_notice_nor@2x.png in Resources */,
 				8DD84C10204936060047E125 /* lssued_icon_fu score_sel@3x.png in Resources */,
@@ -1507,6 +1626,7 @@
 				8DD84C00204936060047E125 /* login_dividing line_short@3x.png in Resources */,
 				8DD84C16204936060047E125 /* success_icon_medal@2x.png in Resources */,
 				8DD84BFE204936060047E125 /* banfaxunzhang_icon_sound_nor@2x.png in Resources */,
+				8DAF15082052407E0076EA91 /* arrow_backward_white@2x.png in Resources */,
 				8DA1789D20480EBB000D7B5B /* class_icon_personal_sal@3x.png in Resources */,
 				8DD84C11204936060047E125 /* lssued_icon_score_sel@2x.png in Resources */,
 				8DD84BE6204936060047E125 /* password_button_getback_onr@2x.png in Resources */,
@@ -1529,6 +1649,7 @@
 				8D8F59A4204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark.png in Resources */,
 				8DD84C09204936060047E125 /* photograph_button_camera_nor@2x.png in Resources */,
 				8DD84BFC204936060047E125 /* photograph_button_determine_nor@3x.png in Resources */,
+				8DAF155D205271ED0076EA91 /* voice_close@3x.png in Resources */,
 				8D99A01A20469435005ADE6D /* login_icon_avatar_default@2x.png in Resources */,
 				8DA1789B20480EBB000D7B5B /* class_icon_reward_sel@2x.png in Resources */,
 				8DD84BEE204936060047E125 /* file_icon_audil_nor@3x.png in Resources */,
@@ -1539,6 +1660,7 @@
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
 				8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */,
 				8DA1789E20480EBB000D7B5B /* class_icon_reward_sel@3x.png in Resources */,
+				8DAF1563205272A30076EA91 /* AddVoiceCell.xib in Resources */,
 				8DD84BD3204936060047E125 /* xuanzexunzhang_icon_selected@2x.png in Resources */,
 				8DD84C1A204936060047E125 /* record_button_withdraw_sal@2x.png in Resources */,
 				8DA1789C20480EBB000D7B5B /* class_icon_comment_nor@2x.png in Resources */,
@@ -1550,6 +1672,7 @@
 				8DD84C0F204936060047E125 /* password_button_getback_onr@3x.png in Resources */,
 				8DD84BD5204936060047E125 /* login_button_login_normal@3x.png in Resources */,
 				8DD84C0E204936060047E125 /* login_dividing line@2x.png in Resources */,
+				8DAF155E205271ED0076EA91 /* voice_close@2x.png in Resources */,
 				8DA178AB204813FC000D7B5B /* xiugaimima_icon_mimakejian_sal@2x.png in Resources */,
 				8DD84BD9204936060047E125 /* xingaimima_icon_open_hig@2x.png in Resources */,
 				8DD84BDA204936060047E125 /* file_icon_audil_nor@2x.png in Resources */,
@@ -1640,10 +1763,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudentEvaluation/Pods-StudentEvaluation-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1659,11 +1784,14 @@
 			files = (
 				8D99A02D2046A3F9005ADE6D /* BSParseUtil.m in Sources */,
 				8D99A0302046A3F9005ADE6D /* NSString+HTML.m in Sources */,
+				8DAF1562205272A30076EA91 /* AddVoiceCell.m in Sources */,
 				8DD84B672048FC450047E125 /* BSClassModel.m in Sources */,
 				8D8F5A03204F8DC500D99399 /* TZPhotoPickerController.m in Sources */,
 				8D999FF320468A79005ADE6D /* UIView+LayoutMethods.m in Sources */,
 				8DB9A818204CF594006445E3 /* AddMedalToFrequentUsedApi.m in Sources */,
 				8D9D0726204E44D100446775 /* BSAttachmentModel.m in Sources */,
+				8DAF1573205289860076EA91 /* StudentListCell.m in Sources */,
+				8DAF155420526A040076EA91 /* VideoPreviewViewController.m in Sources */,
 				8D8F598C204F8AEB00D99399 /* SCSwipeableFilterView.m in Sources */,
 				8D8F5986204F8AEB00D99399 /* SCRecorderTools.m in Sources */,
 				8D8F597F204F8AEB00D99399 /* SCIOPixelBuffers.m in Sources */,
@@ -1674,6 +1802,7 @@
 				8D8F5984204F8AEB00D99399 /* SCRecorder.m in Sources */,
 				8D8F598D204F8AEB00D99399 /* SCVideoConfiguration.m in Sources */,
 				8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */,
+				8DAF14FE2052330C0076EA91 /* BSPhotoModel.m in Sources */,
 				8D8F5A02204F8DC500D99399 /* TZLocationManager.m in Sources */,
 				8D999FCD20464D69005ADE6D /* BSNavigationViewController.m in Sources */,
 				8DD84C2F20493FAB0047E125 /* MedalLibraryApi.m in Sources */,
@@ -1715,10 +1844,12 @@
 				8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */,
 				8D8F5983204F8AEB00D99399 /* SCProcessingQueue.m in Sources */,
 				8D999FDE20468209005ADE6D /* BSBaseRequest.m in Sources */,
+				8DAF154C20525F1C0076EA91 /* BSMusicPlayer.m in Sources */,
 				8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */,
 				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
 				8D999FF020468A79005ADE6D /* UIColor+Hex.m in Sources */,
 				8D8F59FF204F8DC500D99399 /* TZImageManager.m in Sources */,
+				8DAF156F205283EA0076EA91 /* SelectStudentViewController.m in Sources */,
 				8D8F59FD204F8DC500D99399 /* TZGifPhotoPreviewController.m in Sources */,
 				8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */,
 				8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */,
@@ -1742,7 +1873,9 @@
 				8D999FC220464D31005ADE6D /* BSLoginManager.m in Sources */,
 				8D8F5978204F8AEB00D99399 /* SCContext.m in Sources */,
 				8D999FBB20464D31005ADE6D /* BSLoginViewController.m in Sources */,
+				8DAF155920526FBB0076EA91 /* VoiceListCell.m in Sources */,
 				8D8F5A01204F8DC500D99399 /* TZImagePickerController.m in Sources */,
+				8DAF14FD2052330C0076EA91 /* BSBasePhotoBrowseViewController.m in Sources */,
 				8DA178812047E4FD000D7B5B /* ChangePasswordViewController.m in Sources */,
 				8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */,
 				8D8F597B204F8AEB00D99399 /* SCFilter.m in Sources */,
@@ -1754,6 +1887,8 @@
 				8D8F59FC204F8DC500D99399 /* TZAssetModel.m in Sources */,
 				8D8F5980204F8AEB00D99399 /* SCMediaTypeConfiguration.m in Sources */,
 				8D999FDB2046814E005ADE6D /* LoginApi.m in Sources */,
+				8DAF1569205273DF0076EA91 /* VoiceListTableView.m in Sources */,
+				8DAF154D20525F1C0076EA91 /* BSTrack.m in Sources */,
 				8D999FC120464D31005ADE6D /* BSUserRelationshipModel.m in Sources */,
 				8D999FD120464D69005ADE6D /* BSViewController.m in Sources */,
 				8D8F5A07204F8DC500D99399 /* TZVideoPlayerController.m in Sources */,
@@ -1764,6 +1899,7 @@
 				8D8F597E204F8AEB00D99399 /* SCImageView.m in Sources */,
 				8D9D072A204E485200446775 /* AddAttachmentCell.m in Sources */,
 				8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */,
+				8DAF156C205276280076EA91 /* VoiceModel.m in Sources */,
 				8D8F5973204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1891,8 +2027,11 @@
 			baseConfigurationReference = CF8BA5EFC2B99E38CE3F88E3 /* Pods-StudentEvaluation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZL98DYCYY;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1911,8 +2050,11 @@
 			baseConfigurationReference = CCA8F7E4C21902A3CC55F4F4 /* Pods-StudentEvaluation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZL98DYCYY;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

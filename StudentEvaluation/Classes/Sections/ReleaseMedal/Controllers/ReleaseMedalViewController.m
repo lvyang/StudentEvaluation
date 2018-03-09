@@ -17,6 +17,9 @@
 #import <Photos/Photos.h>
 #import "BSVideoUtil.h"
 #import "BSRecordView.h"
+#import "BSBasePhotoBrowseViewController.h"
+#import "VideoPreviewViewController.h"
+#import "VoiceListTableView.h"
 
 @interface ReleaseMedalViewController ()<BSRecordViewDelegate>
 
@@ -29,6 +32,10 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *scoreButtons;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 
+@property (weak, nonatomic) IBOutlet UIView *voiceListBackgroundView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *voiceListBackgroundViewHeight;
+@property (nonatomic, strong) VoiceListTableView *tableView;
+
 @property (nonatomic, strong) AttachmentListCollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentListHeight;
@@ -40,16 +47,36 @@
 - (void)dealloc
 {
     [self.collectionView removeObserver:self forKeyPath:@"contentSize"];
+    [self.tableView removeObserver:self forKeyPath:@"contentSize"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"颁发奖章";
     NSURL *url = [NSURL URLWithString:self.model.medalIcon ? : @""];
     [self.medalIconImageView sd_setImageWithURL:url];
     self.medalName.text = self.model.medalName;
     
     __weak typeof(self) weakSelf = self;
+    {
+        self.tableView = [[VoiceListTableView alloc] initWithFrame:self.voiceListBackgroundView.bounds];
+        [self.voiceListBackgroundView addSubview:self.tableView];
+        [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.voiceListBackgroundView.mas_top).with.offset(0);
+            make.bottom.equalTo(self.voiceListBackgroundView.mas_bottom).with.offset(0);
+            make.left.equalTo(self.voiceListBackgroundView.mas_left).with.offset(0);
+            make.right.equalTo(self.voiceListBackgroundView.mas_right).with.offset(0);
+        }];
+        
+        self.tableView.addVoiceHandler = ^{
+            [weakSelf addRecord];
+        } ;
+        
+        [self.tableView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)(self.tableView)];
+        [self.tableView reloadData];
+    }
+    
     {
         self.collectionView = [[AttachmentListCollectionView alloc] initWithFrame:self.attachmentListBackgroundView.bounds];
         [self.attachmentListBackgroundView addSubview:self.collectionView];
@@ -61,22 +88,24 @@
         }];
         
         self.collectionView.cellSelectedHandler = ^(UICollectionView *collectionView, NSIndexPath *indexPath, id dataModel) {
+            [weakSelf browseAttachments:dataModel atIndex:indexPath.row];
         };
         
         self.collectionView.addAttachmentHandler = ^{
             [weakSelf addAttachment];
         };
         
-        self.collectionView.deletAttachmentHandler = ^(UICollectionView *collectionView, NSIndexPath *indexPath, id dataModel) {
-            [weakSelf.collectionView.dataArray removeObjectAtIndex:indexPath.row];
-            [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-        };
-        
-        [self.collectionView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+        [self.collectionView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)(self.collectionView)];
         [self.collectionView reloadData];
     }
     
     self.textView.placeholder = @"请在这里填写事件描述";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (IBAction)selectStudent:(id)sender
@@ -84,8 +113,13 @@
     
 }
 
-- (IBAction)record:(id)sender
+- (void)addRecord
 {
+    if (self.tableView.items.count >= 3) {
+        [self showPrompt:@"最多可添加3个录音"];
+        return;
+    }
+    
     BSRecordView *recordView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BSRecordView class]) owner:nil options:nil][0];
     recordView.delegate = self;
     [recordView show];
@@ -113,6 +147,23 @@
     [alertViewController addAction:cancelAction];
     
     [self presentViewController:alertViewController animated:YES completion:nil];
+}
+
+- (void)browseAttachments:(BSAttachmentModel *)model atIndex:(NSInteger)index
+{
+    if (model.isVideo) {
+        VideoPreviewViewController *vc = [[VideoPreviewViewController alloc] init];
+        vc.url = [NSURL fileURLWithPath:model.videoPath];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        NSMutableArray *images = [NSMutableArray array];
+        for (BSAttachmentModel *model in self.collectionView.dataArray) {
+            [images addObject:model.image];
+        }
+        
+        BSBasePhotoBrowseViewController *vc = [[BSBasePhotoBrowseViewController alloc] initWithImages:images];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)addImage
@@ -186,6 +237,7 @@
         BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
         model.image = [BSVideoUtil screenShotImageFromVideoPath:videoUrl.absoluteString];
         model.videoDuration = @([BSVideoUtil durationFromVideoPath:videoUrl.absoluteString]);
+        model.videoPath = videoUrl.path;
         model.isVideo = YES;
         [strongSelf.collectionView.dataArray addObject:model];
         [strongSelf.collectionView reloadData];
@@ -194,21 +246,33 @@
     [self presentViewController:wechatShortVideoController animated:YES completion:nil];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
-    if ([keyPath isEqualToString:@"contentSize"]) {
+    if (context == (__bridge void * _Nullable)(self.tableView)) {
+        self.voiceListBackgroundViewHeight.constant = self.tableView.contentSize.height;
+    } else if (context == (__bridge void * _Nullable)(self.collectionView)) {
         self.attachmentListHeight.constant = self.collectionView.contentSize.height;
     }
 }
 
 #pragma mark - BSRecordViewDelegate
-- (void)recordView:(BSRecordView *)recordView recordFinished:(NSString *)filePath error:(NSError *)error
+- (void)recordView:(BSRecordView *)recordView recordModel:(VoiceModel *)model error:(NSError *)error;
 {
+    [recordView hide];
+    
     if (error) {
-        NSLog(@"%@",error.localizedDescription);
+        [self showPrompt:error.localizedDescription];
+        return;
     }
-    NSLog(@"=======");
+    
+    [self.tableView.items addObject:model];
+    [self.tableView reloadData];
 }
 
 @end

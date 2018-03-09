@@ -16,6 +16,5 @@ typedef void (^ CollectionViewCellDidSelectedHandler)(UICollectionView *collecti
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, copy) CollectionViewCellDidSelectedHandler cellSelectedHandler;
 @property (nonatomic, copy) void(^addAttachmentHandler)(void);
-@property (nonatomic, copy) CollectionViewCellDidSelectedHandler deletAttachmentHandler;
 
 @end

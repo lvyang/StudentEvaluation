@@ -143,23 +143,26 @@
 {
     if (self.cancelled) {
         [[NSFileManager defaultManager] removeItemAtPath:self.recorder.filePath error:nil];
-        if ([self.delegate respondsToSelector:@selector(recordView:recordFinished:error:)]) {
+        if ([self.delegate respondsToSelector:@selector(recordView:recordModel:error:)]) {
             NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:888 userInfo:@{NSLocalizedDescriptionKey : @"取消录音"}];
-            [self.delegate recordView:self recordFinished:nil error:error];
+            [self.delegate recordView:self recordModel:nil error:error];
             return;
         }
     }
     if (self.duration < 2) {
         [[NSFileManager defaultManager] removeItemAtPath:self.recorder.filePath error:nil];
-        if ([self.delegate respondsToSelector:@selector(recordView:recordFinished:error:)]) {
+        if ([self.delegate respondsToSelector:@selector(recordView:recordModel:error:)]) {
             NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:888 userInfo:@{NSLocalizedDescriptionKey : @"说话时间太短"}];
-            [self.delegate recordView:self recordFinished:nil error:error];
+            [self.delegate recordView:self recordModel:nil error:error];
             return;
         }
     }
     
-    if ([self.delegate respondsToSelector:@selector(recordView:recordFinished:error:)]) {
-        [self.delegate recordView:self recordFinished:filePath error:nil];
+    if ([self.delegate respondsToSelector:@selector(recordView:recordModel:error:)]) {
+        VoiceModel *model = [[VoiceModel alloc] init];
+        model.duration = @(self.duration);
+        model.path = filePath;
+        [self.delegate recordView:self recordModel:model error:nil];
     }
 }
 

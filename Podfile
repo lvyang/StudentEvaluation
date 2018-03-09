@@ -11,5 +11,8 @@ pod 'Masonry', '~> 1.1.0'
 pod 'MJRefresh', '~> 3.1.12'
 
 pod 'LYComponents', '~> 0.0.1'
+pod 'MWPhotoBrowser', '~> 2.1.2'
+
+pod 'DOUAudioStreamer', '~> 0.2.15'
 
 end

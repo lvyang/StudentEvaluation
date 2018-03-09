@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VoiceModel.h"
 @class BSRecordView;
 
 @protocol BSRecordViewDelegate <NSObject>
 
-- (void)recordView:(BSRecordView *)recordView recordFinished:(NSString *)filePath error:(NSError *)error;
+- (void)recordView:(BSRecordView *)recordView recordModel:(VoiceModel *)model error:(NSError *)error;
 
 @end
 

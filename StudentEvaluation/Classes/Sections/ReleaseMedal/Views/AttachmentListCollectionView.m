@@ -9,6 +9,7 @@
 #import "AttachmentListCollectionView.h"
 #import "AttachmentListCell.h"
 #import "AddAttachmentCell.h"
+#import "BSAttachmentModel.h"
 
 static NSInteger MAX_ATACHMENT_COUNT = 5;
 
@@ -104,9 +105,14 @@ static NSInteger MAX_ATACHMENT_COUNT = 5;
 #pragma mark - AttachmentListCellDelegate
 - (void)deleteAttachment:(AttachmentListCell *)cell
 {
-    if (self.deletAttachmentHandler) {
-        NSIndexPath *indexPath = [self indexPathForCell:cell];
-        self.deletAttachmentHandler(self, indexPath, self.dataArray[indexPath.row]);
+    NSIndexPath *indexPath = [self indexPathForCell:cell];
+    BSAttachmentModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    [self deleteItemsAtIndexPaths:@[indexPath]];
+    
+    if (model.isVideo) {
+        [[NSFileManager defaultManager] removeItemAtPath:model.videoPath error:nil];
     }
 }
 
