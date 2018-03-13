@@ -310,7 +310,8 @@
     exportSession.videoConfiguration.preset = SCPresetHighestQuality;
     exportSession.audioConfiguration.preset = SCPresetHighestQuality;
     exportSession.videoConfiguration.maxFrameRate = 35;
-    exportSession.outputUrl = VIDEO_OUTPUTFILE;
+    NSString *fileName = [NSString stringWithFormat:@"%ld.mp4",(long)[[NSDate date] timeIntervalSince1970]];
+    exportSession.outputUrl = [NSURL fileURLWithPath:[PATH_OF_DOCUMENT stringByAppendingPathComponent:fileName]];
     exportSession.outputFileType = AVFileTypeMPEG4;
     exportSession.delegate = self;
     

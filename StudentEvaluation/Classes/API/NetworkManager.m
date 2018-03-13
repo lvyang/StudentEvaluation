@@ -16,6 +16,13 @@
 #import "BSMedalModel.h"
 #import "MedalLibraryApi.h"
 #import "AddMedalToFrequentUsedApi.h"
+#import "StudentListApi.h"
+#import "StudentModel.h"
+#import "BSStringUtil.h"
+#import "ReleaseMedalApi.h"
+#import "MedalRecordApi.h"
+#import "MedalRecordModel.h"
+#import "RevokeMedalApi.h"
 
 @implementation NetworkManager
 
@@ -129,6 +136,110 @@
 + (void)addMedalToFrequent:(NSString *)medalId teacherId:(NSString *)teacherId completed:(void(^)(NSError *error))completed
 {
     AddMedalToFrequentUsedApi *api = [[AddMedalToFrequentUsedApi alloc] initWithTeacherId:teacherId medalId:medalId];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
+    }];
+}
+
++ (void)loadStudentsList:(NSString *)classId completed:(void(^)(NSError *error,NSArray *result, NSArray *keys))completed
+{
+    StudentListApi *api = [[StudentListApi alloc] initWithClassId:classId];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = nil;
+        NSArray * array = [BSParseUtil parseObjectFromJson:request.responseJSONObject modelClass:[StudentModel class] error:&error];
+        
+        NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+        NSArray *characters = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"];
+        for (NSString *str in characters) {
+            [dictionary setObject:[NSMutableArray array] forKey:str];
+        }
+
+        // 归类
+        for (StudentModel *model in array) {
+            NSString *pinyin = [BSStringUtil pinyinFromChinese:model.studentName lowercase:NO];
+            model.pinyinString = pinyin;
+            
+            if (pinyin.length == 0) {
+                continue;
+            }
+            
+            char character = [pinyin characterAtIndex:0];
+            character = (character >= 'A' && character <= 'Z') ? character : '#';
+            NSString *key = [NSString stringWithFormat:@"%c",character];
+            
+            NSMutableArray *arr = [dictionary objectForKey:key];
+            [arr addObject:model];
+        }
+        
+        // section 内部排序
+        for (NSString *key in dictionary.allKeys.copy) {
+            NSArray *array = [dictionary objectForKey:key];
+            NSArray *res = [array sortedArrayUsingComparator:^NSComparisonResult(StudentModel *obj1, StudentModel *obj2) {
+                return [obj1.pinyinString compare:obj2.pinyinString];
+            }];
+            [dictionary setObject:res forKey:key];
+        }
+        
+        // section 排序
+        NSMutableArray *list = [NSMutableArray array];
+        NSMutableArray *keys = [NSMutableArray array];
+        for (NSString *key in characters) {
+            NSArray *array = [dictionary objectForKey:key];
+            if (array.count) {
+                [list addObject:array];
+                [keys addObject:key];
+            }
+        }
+        
+        completed(error, list, keys);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(request.error, nil, nil);
+    }];
+}
+
++ (void)releaseMedal:(NSString *)medalId
+           toStudent:(NSArray <StudentModel *> *)students
+               class:(BSClassModel *)class
+               score:(NSNumber *)score
+             teacher:(NSString *)teacherId
+                desc:(NSString *)desc
+               voice:(NSArray <VoiceModel *> *)voices
+         attachments:(NSArray <BSAttachmentModel *> *)attachments
+           completed:(void(^)(NSError *error))completed
+{
+    NSMutableArray *studentsId = [NSMutableArray array];
+    for (StudentModel *student in students) {
+        [studentsId addObject:student.identifier];
+    }
+    NSString *studentIdString = [studentsId componentsJoinedByString:@","];
+    
+    ReleaseMedalApi *api = [[ReleaseMedalApi alloc] initWithTeacherId:teacherId medalId:medalId studentIds:studentIdString classId:class.classId score:score desc:desc voices:voices photos:attachments];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
+    }];
+}
+
++ (void)medalRecordForClass:(NSString *)classId teacher:(NSString *)teacherId page:(NSNumber *)page count:(NSNumber *)count completed:(void(^)(NSError *error,NSArray *result))completed
+{
+    MedalRecordApi *api = [[MedalRecordApi alloc] initWithClassId:classId teacherId:teacherId page:page pageSize:count];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = nil;
+        NSArray * array = [BSParseUtil parseObjectFromJson:request.responseJSONObject modelClass:[MedalRecordModel class] error:&error];
+        completed(error, array);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(request.error, nil);
+    }];
+}
+
++ (void)revokeMedalRecord:(NSString *)medalRecordId teacherId:(NSString *)teacherId completed:(void(^)(NSError *error))completed
+{
+    RevokeMedalApi *api = [[RevokeMedalApi alloc] initWithMedalRecordId:medalRecordId teacherId:teacherId];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
         NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
         completed(error);

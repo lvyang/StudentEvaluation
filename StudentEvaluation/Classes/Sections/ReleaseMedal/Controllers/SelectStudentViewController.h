@@ -7,7 +7,16 @@
 //
 
 #import "LYBaseViewController.h"
+#import "BSViewController.h"
 
-@interface SelectStudentViewController : LYBaseViewController
+@protocol SelectStudentViewControllerDelegate<NSObject>
+
+- (void)didSelectedStudent:(NSArray *)students;
+
+@end
+
+@interface SelectStudentViewController : BSViewController
+
+@property (nonatomic, weak) id <SelectStudentViewControllerDelegate> delegate;
 
 @end

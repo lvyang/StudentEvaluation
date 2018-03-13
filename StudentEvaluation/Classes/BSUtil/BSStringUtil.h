@@ -154,4 +154,9 @@
  */
 + (NSString *)chineseNumberStringFromArabNumberString:(NSString *)ArabNumberString;
 
+/**
+ *  @description 汉字转拼音
+ */
++ (NSString *)pinyinFromChinese:(NSString *)chinese lowercase:(BOOL)lowercase;
+
 @end

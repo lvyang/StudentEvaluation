@@ -15,8 +15,12 @@
                 <outlet property="attachmentListHeight" destination="B7H-Rl-JmZ" id="Ck2-9b-EKx"/>
                 <outlet property="medalIconImageView" destination="hpc-XL-JEY" id="KQa-Xb-6N0"/>
                 <outlet property="medalName" destination="0Po-cN-OI4" id="kgi-ek-Vf0"/>
+                <outlet property="releaseButton" destination="7zn-Qh-rze" id="mLi-w2-6zL"/>
+                <outlet property="scrollView" destination="tE7-Uf-LBw" id="47j-m1-kWd"/>
+                <outlet property="scrollViewBottom" destination="drY-cg-95T" id="qHP-ca-K0O"/>
                 <outlet property="selectStudentButton" destination="OLo-Sg-sgp" id="Nbi-q1-wzt"/>
                 <outlet property="sendButton" destination="7zn-Qh-rze" id="Q2B-6e-rlD"/>
+                <outlet property="studentsNameLabel" destination="hQL-mu-Ecl" id="aua-uU-lpP"/>
                 <outlet property="textCountLabel" destination="Z2A-wG-82t" id="ItS-A7-YHs"/>
                 <outlet property="textView" destination="HLM-it-pJa" id="YDd-3v-aZx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -63,12 +67,18 @@
                                         <constraint firstAttribute="height" constant="0.5" id="mY3-sb-3KZ"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-mu-Ecl">
+                                    <rect key="frame" x="100" y="95.5" width="247" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLo-Sg-sgp">
                                     <rect key="frame" x="20" y="95.5" width="355" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="HgN-EO-dVP"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="选择学生">
                                         <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -87,6 +97,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="136" id="Ix5-yl-TCH"/>
+                                <constraint firstItem="hQL-mu-Ecl" firstAttribute="bottom" secondItem="OLo-Sg-sgp" secondAttribute="bottom" id="LCa-Uk-tqt"/>
                                 <constraint firstItem="hpc-XL-JEY" firstAttribute="top" secondItem="EFE-GN-c5l" secondAttribute="top" constant="18" id="MTD-TU-LZN"/>
                                 <constraint firstItem="0Po-cN-OI4" firstAttribute="leading" secondItem="hpc-XL-JEY" secondAttribute="trailing" constant="15" id="Pjj-kQ-qGs"/>
                                 <constraint firstItem="aPf-Im-VK0" firstAttribute="centerY" secondItem="OLo-Sg-sgp" secondAttribute="centerY" id="Q0R-Mx-MqD"/>
@@ -97,9 +108,12 @@
                                 <constraint firstItem="aPf-Im-VK0" firstAttribute="trailing" secondItem="OLo-Sg-sgp" secondAttribute="trailing" constant="-13" id="YAI-JQ-kau"/>
                                 <constraint firstItem="BBi-Dk-cBw" firstAttribute="leading" secondItem="hpc-XL-JEY" secondAttribute="leading" id="c7O-mh-leE"/>
                                 <constraint firstItem="BBi-Dk-cBw" firstAttribute="top" secondItem="hpc-XL-JEY" secondAttribute="bottom" constant="10" id="d66-nZ-buK"/>
+                                <constraint firstItem="aPf-Im-VK0" firstAttribute="leading" secondItem="hQL-mu-Ecl" secondAttribute="trailing" constant="5" id="huP-5D-Nc4"/>
                                 <constraint firstAttribute="trailing" secondItem="0Po-cN-OI4" secondAttribute="trailing" constant="15" id="jaV-DX-61H"/>
                                 <constraint firstItem="0Po-cN-OI4" firstAttribute="top" secondItem="EFE-GN-c5l" secondAttribute="top" constant="18" id="lIM-cF-d5c"/>
                                 <constraint firstItem="hpc-XL-JEY" firstAttribute="leading" secondItem="EFE-GN-c5l" secondAttribute="leading" constant="10" id="pAR-cF-Pnk"/>
+                                <constraint firstItem="hQL-mu-Ecl" firstAttribute="leading" secondItem="OLo-Sg-sgp" secondAttribute="leading" constant="80" id="wRp-8Y-Az1"/>
+                                <constraint firstItem="hQL-mu-Ecl" firstAttribute="top" secondItem="OLo-Sg-sgp" secondAttribute="top" id="y5o-Kq-YaE"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70q-Z9-ZVz">
@@ -186,7 +200,7 @@
                                     <color key="textColor" red="0.31764705879999999" green="0.74117647060000003" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm2-jT-gUx">
+                                <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm2-jT-gUx">
                                     <rect key="frame" x="10" y="358" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="Omu-cf-DsY"/>
@@ -200,8 +214,11 @@
                                     <state key="selected" backgroundImage="lssued_icon_score_sel.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="scoreButtonClick:" destination="-1" eventType="touchUpInside" id="ePz-S4-qhO"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrL-T6-c8c">
+                                <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrL-T6-c8c">
                                     <rect key="frame" x="53" y="358" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="2ea-fg-VOA"/>
@@ -215,8 +232,11 @@
                                     <state key="selected" backgroundImage="lssued_icon_score_sel.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="scoreButtonClick:" destination="-1" eventType="touchUpInside" id="xbj-5D-tH9"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kro-Yu-aiF">
+                                <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kro-Yu-aiF">
                                     <rect key="frame" x="96" y="358" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="1DT-sk-Hrf"/>
@@ -230,8 +250,11 @@
                                     <state key="selected" backgroundImage="lssued_icon_score_sel.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="scoreButtonClick:" destination="-1" eventType="touchUpInside" id="UjZ-Bh-drJ"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaY-Rv-RDt">
+                                <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaY-Rv-RDt">
                                     <rect key="frame" x="139" y="358" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="Nja-eT-T13"/>
@@ -245,8 +268,11 @@
                                     <state key="selected" backgroundImage="lssued_icon_score_sel.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="scoreButtonClick:" destination="-1" eventType="touchUpInside" id="d6u-h0-8Qm"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-ae-bgC">
+                                <button opaque="NO" tag="5" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-ae-bgC">
                                     <rect key="frame" x="182" y="358" width="35" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="6lO-fS-tI0"/>
@@ -260,6 +286,9 @@
                                     <state key="selected" backgroundImage="lssued_icon_score_sel.png">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="scoreButtonClick:" destination="-1" eventType="touchUpInside" id="vci-nG-0A1"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zn-Qh-rze">
                                     <rect key="frame" x="288" y="403" width="72" height="35"/>

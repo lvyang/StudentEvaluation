@@ -7,22 +7,32 @@
 //
 
 #import "StudentListCell.h"
+#import "StudentModel.h"
+#import <UIImageView+WebCache.h>
 
 static NSString *SELECTECD_TITLE_COLOR = @"56becc";
 static NSString *NORMAL_TITLE_COLOR = @"aaaaaa";
 
 @interface StudentListCell()
 
+@property (weak, nonatomic) IBOutlet UIImageView *indicator;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 @end
 
 @implementation StudentListCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (void)configureCellWithModel:(StudentModel *)aModel atIndexPath:(NSIndexPath *)indexPath
+{
+    NSURL *url = [NSURL URLWithString:aModel.iconUrl ? : @""];
+    [self.iconImageView sd_setImageWithURL:url];
+    self.nameLabel.text = aModel.studentName;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)indicatorHidden:(BOOL)hidden
+{
+    self.indicator.hidden = hidden;
 }
 
 @end

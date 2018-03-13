@@ -10,4 +10,6 @@
 
 @interface StudentListCell : LYBaseTableViewCell
 
+- (void)indicatorHidden:(BOOL)hidden;
+
 @end

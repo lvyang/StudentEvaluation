@@ -20,8 +20,18 @@
 #import "BSBasePhotoBrowseViewController.h"
 #import "VideoPreviewViewController.h"
 #import "VoiceListTableView.h"
+#import "SelectStudentViewController.h"
+#import "StudentModel.h"
+#import "NetworkManager.h"
+#import "DataManager.h"
+#import "BSLoginManager.h"
 
-@interface ReleaseMedalViewController ()<BSRecordViewDelegate>
+static NSInteger TEXT_LIMIT = 150;
+
+@interface ReleaseMedalViewController ()<BSRecordViewDelegate,SelectStudentViewControllerDelegate, UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottom;
 
 @property (weak, nonatomic) IBOutlet UIImageView *medalIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *medalName;
@@ -39,6 +49,12 @@
 @property (nonatomic, strong) AttachmentListCollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentListHeight;
+
+@property (weak, nonatomic) IBOutlet UIButton *releaseButton;
+@property (weak, nonatomic) IBOutlet UILabel *studentsNameLabel;
+@property (nonatomic, strong ) NSArray *selectedStudents;
+
+@property (nonatomic, assign) NSInteger score;
 
 @end
 
@@ -100,6 +116,25 @@
     }
     
     self.textView.placeholder = @"请在这里填写事件描述";
+    self.textView.delegate = self;
+    self.textCountLabel.text = [NSString stringWithFormat:@"0/%ld",(long)TEXT_LIMIT];
+    
+    self.releaseButton.layer.cornerRadius = 5;
+    
+    [self scoreButtonClick:self.scoreButtons.firstObject];
+    
+    // Add notifications
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillShow:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillHide:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -110,7 +145,9 @@
 
 - (IBAction)selectStudent:(id)sender
 {
-    
+    SelectStudentViewController *vc = [[SelectStudentViewController alloc] init];
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addRecord
@@ -127,7 +164,41 @@
 
 - (IBAction)send:(id)sender
 {
+    if (!self.selectedStudents.count) {
+        [self showPrompt:@"请选择学生"];
+        return;
+    }
     
+    BSClassModel *class = [DataManager shareManager].currentClass;
+    NSString *teacherId = [BSLoginManager shareManager].userModel.userId;
+    
+    [self showLoadingProgress:nil];
+    [NetworkManager releaseMedal:self.model.identifier toStudent:self.selectedStudents class:class score:@(self.score) teacher:teacherId desc:self.textView.text voice:self.tableView.items attachments:self.collectionView.dataArray completed:^(NSError *error) {
+        [self hideLoadingProgress];
+        
+        if (error) {
+            [self showPrompt:error.localizedDescription];
+            return ;
+        }
+        
+        UIView *successView = [[NSBundle mainBundle] loadNibNamed:@"ReleaseSuccessView" owner:nil options:nil][0];
+        successView.frame = self.view.bounds;
+        [self.view addSubview:successView];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [successView removeFromSuperview];
+            [self.navigationController popViewControllerAnimated:YES];
+            
+            for (BSAttachmentModel *model in self.collectionView.dataArray) {
+                if (model.isVideo) {
+                    [[NSFileManager defaultManager] removeItemAtPath:model.videoPath error:nil];
+                }
+            }
+            
+            for (VoiceModel *model in self.tableView.items) {
+                [[NSFileManager defaultManager] removeItemAtPath:model.path error:nil];
+            }
+        });
+    }];
 }
 
 - (void)addAttachment
@@ -246,6 +317,21 @@
     [self presentViewController:wechatShortVideoController animated:YES completion:nil];
 }
 
+- (IBAction)scoreButtonClick:(UIButton *)sender
+{
+    for (int i = 0; i < self.scoreButtons.count; i++) {
+        UIButton *button = self.scoreButtons[i];
+        button.selected = (button.tag <= sender.tag);
+        if (self.model.medalType == MedalTypePraise) {
+            [button setTitle:[NSString stringWithFormat:@"+%ld",(long)button.tag] forState:UIControlStateNormal];
+        } else {
+            [button setTitle:[NSString stringWithFormat:@"-%ld",(long)button.tag] forState:UIControlStateNormal];
+        }
+    }
+    
+    self.score = (self.model.medalType == MedalTypePraise) ? sender.tag: -sender.tag;
+}
+
 - (BOOL)prefersStatusBarHidden
 {
     return NO;
@@ -273,6 +359,81 @@
     
     [self.tableView.items addObject:model];
     [self.tableView reloadData];
+}
+
+#pragma mark - SelectStudentViewControllerDelegate
+- (void)didSelectedStudent:(NSArray *)students
+{
+    self.selectedStudents = students;
+    NSMutableArray *names = [NSMutableArray array];
+    for (int i = 0; i < students.count; i++) {
+        StudentModel *model = students[i];
+        [names addObject:model.studentName];
+    }
+    
+    self.studentsNameLabel.text = [names componentsJoinedByString:@","];
+}
+
+#pragma mark - UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    NSString *str = [textView.text stringByReplacingCharactersInRange:range withString:text];
+    if (str.length > TEXT_LIMIT) {
+        return NO;
+    }
+
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    NSDictionary *defaultAttribute = @{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"ABABAB"],
+                                       NSFontAttributeName : [UIFont systemFontOfSize:13.f]};
+    NSDictionary *hightAttribute = @{NSForegroundColorAttributeName : [UIColor redColor],
+                                     NSFontAttributeName : [UIFont systemFontOfSize:13.f]};
+    NSString *text = [NSString stringWithFormat:@"%ld/%ld", MIN(textView.text.length, TEXT_LIMIT), TEXT_LIMIT];
+    NSMutableAttributedString   *attributeString = [[NSMutableAttributedString alloc] initWithString:text attributes:defaultAttribute];
+    
+    if (textView.text.length >= TEXT_LIMIT) {
+        NSString *str = [text componentsSeparatedByString:@"/"].firstObject;
+        [attributeString addAttributes:hightAttribute range:NSMakeRange(0, str.length)];
+    }
+    
+    self.textCountLabel.attributedText = attributeString;
+}
+
+#pragma mark - NSNotification method
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSTimeInterval animationDuration;
+    NSValue *animationDurationValue = [notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    [animationDurationValue getValue:&animationDuration];
+    
+    CGRect endRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    endRect = [self.view convertRect:endRect fromView:[UIApplication sharedApplication].keyWindow];
+    CGFloat keyboardHeight = endRect.size.height;
+    
+    self.scrollViewBottom.constant = keyboardHeight;
+
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        CGRect rect = [self.scrollView convertRect:self.textView.frame fromView:self.textView.superview];
+        [self.scrollView scrollRectToVisible:rect animated:YES];
+    }];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    NSTimeInterval animationDuration;
+    NSValue *animationDurationValue = [notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    [animationDurationValue getValue:&animationDuration];
+    
+    self.scrollViewBottom.constant = 0;
+
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end

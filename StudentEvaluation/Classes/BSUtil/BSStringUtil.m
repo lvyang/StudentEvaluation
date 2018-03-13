@@ -433,4 +433,18 @@
     return result;
 }
 
++ (NSString *)pinyinFromChinese:(NSString *)chinese lowercase:(BOOL)lowercase
+{
+    NSMutableString *pinyin = [chinese mutableCopy];
+    
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);
+    
+    if (lowercase) {
+        return [pinyin lowercaseString];
+    }
+    
+    return [pinyin uppercaseString];
+}
+
 @end
