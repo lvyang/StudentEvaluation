@@ -44,4 +44,10 @@
 // 撤回勋章
 + (void)revokeMedalRecord:(NSString *)medalRecordId teacherId:(NSString *)teacherId completed:(void(^)(NSError *error))completed;
 
+// 扫码
++ (void)scanQrCode:(NSString *)text userId:(NSString *)userId completed:(void(^)(NSError *error))completed;
+
+// 获取未读通知
++ (void)loadUnreadNotice:(NSString *)userId completed:(void(^)(NSError *error,NSNumber *result))completed;
+
 @end

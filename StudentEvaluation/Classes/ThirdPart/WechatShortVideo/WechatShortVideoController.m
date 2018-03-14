@@ -59,9 +59,6 @@
     
     //Preview
     SCPlayer *_player;
-    
-    //Video filepath
-    NSURL *VIDEO_OUTPUTFILE;
 }
 
 @synthesize delegate;
@@ -79,8 +76,6 @@
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    VIDEO_OUTPUTFILE = [NSURL fileURLWithPath:[PATH_OF_DOCUMENT stringByAppendingPathComponent:VIDEO_DEFAULTNAME]];
     
     captureValidFlag = NO;
     
@@ -369,12 +364,12 @@
         [self removePreviewMode];
         [self doNextWhenVideoSavedSuccess];
         
+        NSURL *url = [NSURL fileURLWithPath:videoPath ? : @""];
         if ([delegate respondsToSelector:@selector(finishWechatShortVideoCapture:)]) {
-            [delegate finishWechatShortVideoCapture:VIDEO_OUTPUTFILE];
+            [delegate finishWechatShortVideoCapture:url];
         }
         
         if (self.didFinishRecordHandle) {
-            NSURL *url = [NSURL fileURLWithPath:videoPath ? : @""];
             self.didFinishRecordHandle(error, url);
             [self dismissViewControllerAnimated:YES completion:nil];
         }

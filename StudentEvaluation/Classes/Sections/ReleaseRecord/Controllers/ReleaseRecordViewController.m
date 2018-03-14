@@ -15,10 +15,13 @@
 #import "BSLoginManager.h"
 #import "NetworkManager.h"
 #import "MedalRecordDetailViewController.h"
+#import "QRCodeViewController.h"
+#import "ClassListViewController.h"
+#import "UIImage+ImageAddition.h"
 
 static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
 
-@interface ReleaseRecordViewController ()
+@interface ReleaseRecordViewController ()<QRCodeViewControllerDelegate>
 
 @property (nonatomic, strong) MedalRecordTableView *tableView;
 @property (nonatomic, assign) NSInteger page;
@@ -32,6 +35,18 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"颁发记录";
+    
+    // add bar button item
+    {
+        UIImage *image = [[UIImage imageNamed:@"class_icon_sweep_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(scan:)];
+        self.navigationItem.leftBarButtonItem = leftItem;
+        NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                                    NSForegroundColorAttributeName : [UIColor whiteColor]};
+        [self.navigationItem.rightBarButtonItem setTitleTextAttributes:attribute forState:UIControlStateNormal];
+        
+        [self addRightBarButtonItem];
+    }
     
     __weak typeof(self) weakSelf = self;
     {
@@ -56,12 +71,28 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
             [weakSelf loadData:NO];
         }];
         
-        self.tableView.revokeMedalHandler = ^(MedalRecordModel *model) {
-            [weakSelf revokeMedalRecord:model];
+        self.tableView.revokeMedalHandler = ^(MedalRecordModel *model, NSIndexPath *indexPath) {
+            [weakSelf revokeMedalRecord:model atIndexPath:indexPath];
         };
     }
     
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:@"didReleaseMedal" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedClassChanged:) name:SELECTED_CLASS_CHANGED object:nil];
+    }
+    
     [self reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[UIColor colorWithHexString:@"54bfca"]] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:18],
+                                NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationController.navigationBar setTitleTextAttributes:attribute];
 }
 
 - (void)reloadData
@@ -104,7 +135,7 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)revokeMedalRecord:(MedalRecordModel *)medalRecord
+- (void)revokeMedalRecord:(MedalRecordModel *)medalRecord atIndexPath:(NSIndexPath *)indexPath
 {
     [self showLoadingProgress:nil];
     [NetworkManager revokeMedalRecord:medalRecord.medalScoreId teacherId:medalRecord.teacherId completed:^(NSError *error) {
@@ -115,7 +146,57 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
             return ;
         }
         
-        [self reloadData];
+        [self.tableView.items removeObject:medalRecord];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    }];
+}
+
+- (void)addRightBarButtonItem
+{
+    NSString *className = [DataManager shareManager].currentClass.className;
+    if (!className) {
+        className = @"选择班级";
+    }
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:className style:UIBarButtonItemStylePlain target:self action:@selector(classList)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                                NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:attribute forState:UIControlStateNormal];
+}
+
+- (void)scan:(id)sender
+{
+    QRCodeViewController *vc = [[QRCodeViewController alloc] initWithNibName:nil bundle:nil];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)selectedClassChanged:(NSNotification *)notification
+{
+    [self addRightBarButtonItem];
+    [self reloadData];
+}
+
+- (void)classList
+{
+    ClassListViewController *vc = [[ClassListViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - QRCodeViewControllerDelegate
+- (void)didScanCode:(NSString *)code
+{
+    NSString *userId = [BSLoginManager shareManager].userModel.userId;
+    [NetworkManager scanQrCode:code userId:userId completed:^(NSError *error) {
+        if (error) {
+            [self showPrompt:error.localizedDescription];
+            return ;
+        }
+        
+        [self showPrompt:@"调用扫码成功"];
     }];
 }
 

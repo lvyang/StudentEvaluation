@@ -76,7 +76,7 @@
         for (BSAttachmentModel *model in _attachment) {
             if (model.isVideo) {
                 NSString *name = [NSString stringWithFormat:@"%lu.mp4",(unsigned long)model.videoPath.hash];
-                NSString *type = @"audio/mp4";
+                NSString *type = @"video/mp4";
                 NSData *fileData = [NSData dataWithContentsOfFile:model.videoPath];
                 [formData appendPartWithFileData:fileData name:name fileName:name mimeType:type];
             } else {

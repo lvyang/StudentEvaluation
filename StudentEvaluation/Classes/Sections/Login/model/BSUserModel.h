@@ -28,7 +28,7 @@ typedef NS_ENUM (NSInteger, BSUserRoleType) {
 @property (nonatomic, strong) NSString  *userId;                            // 用户ID
 @property (nonatomic, strong) NSString  *userName;                          // 用户账号
 @property (nonatomic, strong) NSString  *nickName;                          // 昵称
-@property (nonatomic, strong) UIImage   *userIcon;                          // 用户头像
+@property (nonatomic, strong) NSString  *userIcon;                          // 用户头像
 @property (nonatomic, strong) NSNumber  *roleId;                            // 角色
 @property (nonatomic, strong) NSString  *sex;                               // 性别
 @property (nonatomic, strong) NSString  *phone;                             // 电话

@@ -13,7 +13,7 @@
 
 @interface MedalRecordDetailViewController ()
 
-@property (nonatomic, strong) LYBaseWebView *webView;
+@property (nonatomic, strong) UIWebView *webView;
 
 @end
 
@@ -27,8 +27,7 @@
 
     // web view
     {
-        self.webView = [[LYBaseWebView alloc] initWithFrame:self.view.bounds];
-        self.webView.adjustHeight = NO;
+        self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:self.webView];
         [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view.mas_top).with.offset(0);

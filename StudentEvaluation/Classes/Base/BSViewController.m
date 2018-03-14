@@ -57,6 +57,12 @@
     _backButton.enabled = YES;
 }
 
+/** @override */
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - getter
 - (BSErrorPage *)errorPage
 {

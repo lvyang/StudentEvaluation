@@ -46,7 +46,7 @@
 {
     if (self.revokeMedalHandler) {
         NSIndexPath *indexPath = [self indexPathForCell:cell];
-        self.revokeMedalHandler([self itemAtIndexPath:indexPath]);
+        self.revokeMedalHandler([self itemAtIndexPath:indexPath], indexPath);
     }
 }
 

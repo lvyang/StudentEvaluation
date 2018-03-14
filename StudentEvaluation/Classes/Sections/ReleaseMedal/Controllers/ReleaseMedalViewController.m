@@ -197,6 +197,8 @@ static NSInteger TEXT_LIMIT = 150;
             for (VoiceModel *model in self.tableView.items) {
                 [[NSFileManager defaultManager] removeItemAtPath:model.path error:nil];
             }
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"didReleaseMedal" object:nil userInfo:nil];
         });
     }];
 }

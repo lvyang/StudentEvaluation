@@ -17,8 +17,10 @@
 #import "MedalLibraryViewController.h"
 #import "ClassListViewController.h"
 #import "ReleaseMedalViewController.h"
+#import "QRCodeViewController.h"
+#import "UIImage+ImageAddition.h"
 
-@interface SelectMedalViewController ()<MedalLibraryViewControllerDelegate>
+@interface SelectMedalViewController ()<MedalLibraryViewControllerDelegate, QRCodeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 @property (nonatomic, strong) SelectMedalCollectionView *collectionView;
@@ -33,6 +35,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"选择勋章";
     [self removeBackButtonItem];
+    
+    // left item
+    {
+        UIImage *image = [[UIImage imageNamed:@"class_icon_sweep_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(scan:)];
+        self.navigationItem.leftBarButtonItem = leftItem;
+        NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                                    NSForegroundColorAttributeName : [UIColor whiteColor]};
+        [self.navigationItem.rightBarButtonItem setTitleTextAttributes:attribute forState:UIControlStateNormal];
+    }
         
     __weak typeof(self) weakSelf = self;
     {
@@ -57,6 +69,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedClassChanged:) name:SELECTED_CLASS_CHANGED object:nil];
     
     [self loadClassList];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:[UIColor colorWithHexString:@"54bfca"]] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont systemFontOfSize:18],
+                                NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [self.navigationController.navigationBar setTitleTextAttributes:attribute];
 }
 
 - (void)loadClassList
@@ -147,6 +170,15 @@
 - (void)classList
 {
     ClassListViewController *vc = [[ClassListViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)scan:(id)sender
+{
+    QRCodeViewController *vc = [[QRCodeViewController alloc] initWithNibName:nil bundle:nil];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -154,6 +186,20 @@
 - (void)frequentMedalChanged:(MedalType)type
 {
     [self valueChanged:self.segment];
+}
+
+#pragma mark - QRCodeViewControllerDelegate
+- (void)didScanCode:(NSString *)code
+{
+    NSString *userId = [BSLoginManager shareManager].userModel.userId;
+    [NetworkManager scanQrCode:code userId:userId completed:^(NSError *error) {
+        if (error) {
+            [self showPrompt:error.localizedDescription];
+            return ;
+        }
+        
+        [self showPrompt:@"调用扫码成功"];
+    }];
 }
 
 @end

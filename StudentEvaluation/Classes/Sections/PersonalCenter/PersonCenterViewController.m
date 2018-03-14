@@ -7,8 +7,21 @@
 //
 
 #import "PersonCenterViewController.h"
+#import <UIImageView+WebCache.h>
+#import "BSLoginManager.h"
+#import "BSStringUtil.h"
+#import "NetworkManager.h"
 
 @interface PersonCenterViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userNamerLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *sexImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *noticeCountLabel;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *userNameLabelWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *noticeCountLabelWidth;
 
 @end
 
@@ -16,22 +29,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UIImage *image = [UIImage imageNamed:@"login_icon_avatar_default.png"];
+    NSString *userIcon = [BSLoginManager shareManager].userModel.userIcon;
+    NSURL *url = [NSURL URLWithString:userIcon ? : @""];
+    [self.iconImageView sd_setImageWithURL:url placeholderImage:image];
+    
+    self.userNamerLabel.text = [BSLoginManager shareManager].userModel.nickName;
+    self.userNameLabelWidth.constant = [BSStringUtil sizeForString:self.userNamerLabel.text font:self.userNamerLabel.font limitWidth:0].width +5;
+    
+    self.noticeCountLabel.layer.cornerRadius = 3;
+    self.noticeCountLabel.layer.masksToBounds = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadNoticeCount];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loadNoticeCount
+{
+    NSString *userId = [BSLoginManager shareManager].userModel.userId;
+    [NetworkManager loadUnreadNotice:userId completed:^(NSError *error, NSNumber *result) {
+        if (!result || result.integerValue == 0) {
+            self.noticeCountLabelWidth.constant = 0;
+            return ;
+        }
+        
+        self.noticeCountLabel.text = result.stringValue;
+        self.noticeCountLabelWidth.constant = [BSStringUtil sizeForString:self.noticeCountLabel.text font:self.noticeCountLabel.font limitWidth:0].width + 15;
+    }];
 }
-*/
 
+- (IBAction)noticeList:(id)sender
+{
+    
+}
+
+- (IBAction)settings:(id)sender
+{
+    
+}
 @end

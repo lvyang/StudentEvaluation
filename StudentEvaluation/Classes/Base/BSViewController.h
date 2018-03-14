@@ -11,6 +11,8 @@
 #import "BSErrorPage.h"
 #import <Masonry.h>
 
+static NSString *SELECTED_CLASS_CHANGED = @"selected_class_changed";
+
 /**
  * 针对本App进行个性化定制的基础 controller
  */

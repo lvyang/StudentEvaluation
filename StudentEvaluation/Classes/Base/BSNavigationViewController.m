@@ -31,4 +31,10 @@
     [self.navigationBar setTitleTextAttributes:attribute];
 }
 
+/** @override */
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 @end

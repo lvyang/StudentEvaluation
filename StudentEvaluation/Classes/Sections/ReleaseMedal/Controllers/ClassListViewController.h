@@ -8,8 +8,6 @@
 
 #import "BSViewController.h"
 
-static NSString *SELECTED_CLASS_CHANGED = @"selected_class_changed";
-
 @interface ClassListViewController : BSViewController
 
 @end

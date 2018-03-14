@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		491D396E9BB5B6CFA68D831C /* libPods-StudentEvaluation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */; };
+		8D2F0BEC2059257100268E31 /* sex_male@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BE82059256F00268E31 /* sex_male@3x.png */; };
+		8D2F0BED2059257100268E31 /* sex_female@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BE92059257000268E31 /* sex_female@3x.png */; };
+		8D2F0BEE2059257100268E31 /* sex_female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BEA2059257000268E31 /* sex_female@2x.png */; };
+		8D2F0BEF2059257100268E31 /* sex_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BEB2059257000268E31 /* sex_male@2x.png */; };
+		8D2F0BF220592CFB00268E31 /* UnreadNoticeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */; };
 		8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */; };
 		8D8F5972204F8AEB00D99399 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5931204F8AEB00D99399 /* LICENSE */; };
 		8D8F5973204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5933204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m */; };
@@ -162,6 +167,11 @@
 		8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */; };
 		8DA1C3EA2048EC5000855392 /* BSMedalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1C3E82048EC4F00855392 /* BSMedalModel.m */; };
 		8DA364BA2050E72300CEC6D7 /* BSVideoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */; };
+		8DA8D1022058CEAC00575729 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA8D0FF2058CEAB00575729 /* QRCodeViewController.xib */; };
+		8DA8D1032058CEAC00575729 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8D1012058CEAC00575729 /* QRCodeViewController.m */; };
+		8DA8D1052058CF4300575729 /* qujing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA8D1042058CF4300575729 /* qujing@3x.png */; };
+		8DA8D1072058CF5800575729 /* qujing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA8D1062058CF5800575729 /* qujing@2x.png */; };
+		8DA8D10A2058FAF300575729 /* ScanQrCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8D1092058FAF300575729 /* ScanQrCodeApi.m */; };
 		8DA95DB120576431006C2FCE /* ReleaseSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA95DB020576431006C2FCE /* ReleaseSuccessView.xib */; };
 		8DA95DB620576D83006C2FCE /* MedalRecordTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA95DB520576D83006C2FCE /* MedalRecordTableView.m */; };
 		8DA95DBA20576DA0006C2FCE /* MedalRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA95DB820576DA0006C2FCE /* MedalRecordCell.m */; };
@@ -320,6 +330,12 @@
 
 /* Begin PBXFileReference section */
 		5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StudentEvaluation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2F0BE82059256F00268E31 /* sex_male@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_male@3x.png"; sourceTree = "<group>"; };
+		8D2F0BE92059257000268E31 /* sex_female@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_female@3x.png"; sourceTree = "<group>"; };
+		8D2F0BEA2059257000268E31 /* sex_female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_female@2x.png"; sourceTree = "<group>"; };
+		8D2F0BEB2059257000268E31 /* sex_male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_male@2x.png"; sourceTree = "<group>"; };
+		8D2F0BF020592CFB00268E31 /* UnreadNoticeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnreadNoticeApi.h; sourceTree = "<group>"; };
+		8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnreadNoticeApi.m; sourceTree = "<group>"; };
 		8D8F592E204F8AEB00D99399 /* CIImageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRenderer.h; sourceTree = "<group>"; };
 		8D8F592F204F8AEB00D99399 /* CIImageRendererUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRendererUtils.h; sourceTree = "<group>"; };
 		8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIImageRendererUtils.m; sourceTree = "<group>"; };
@@ -574,6 +590,13 @@
 		8DA1C3E92048EC5000855392 /* BSMedalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMedalModel.h; sourceTree = "<group>"; };
 		8DA364B82050E72300CEC6D7 /* BSVideoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSVideoUtil.h; sourceTree = "<group>"; };
 		8DA364B92050E72300CEC6D7 /* BSVideoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSVideoUtil.m; sourceTree = "<group>"; };
+		8DA8D0FF2058CEAB00575729 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		8DA8D1002058CEAC00575729 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		8DA8D1012058CEAC00575729 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		8DA8D1042058CF4300575729 /* qujing@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qujing@3x.png"; sourceTree = "<group>"; };
+		8DA8D1062058CF5800575729 /* qujing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qujing@2x.png"; sourceTree = "<group>"; };
+		8DA8D1082058FAF300575729 /* ScanQrCodeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanQrCodeApi.h; sourceTree = "<group>"; };
+		8DA8D1092058FAF300575729 /* ScanQrCodeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanQrCodeApi.m; sourceTree = "<group>"; };
 		8DA95DB020576431006C2FCE /* ReleaseSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseSuccessView.xib; sourceTree = "<group>"; };
 		8DA95DB420576D83006C2FCE /* MedalRecordTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedalRecordTableView.h; sourceTree = "<group>"; };
 		8DA95DB520576D83006C2FCE /* MedalRecordTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedalRecordTableView.m; sourceTree = "<group>"; };
@@ -1025,6 +1048,8 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DA8D1062058CF5800575729 /* qujing@2x.png */,
+				8DA8D1042058CF4300575729 /* qujing@3x.png */,
 				8DAF155C205271EC0076EA91 /* voice_close@2x.png */,
 				8DAF155B205271EC0076EA91 /* voice_close@3x.png */,
 				8DAF15062052407E0076EA91 /* arrow_backward_white@2x.png */,
@@ -1047,6 +1072,10 @@
 				8D99A01720469434005ADE6D /* login_icon_password_default@3x.png */,
 				8DA178752047A956000D7B5B /* arrow_back_w@2x.png */,
 				8DA178742047A956000D7B5B /* arrow_back_w@3x.png */,
+				8D2F0BEA2059257000268E31 /* sex_female@2x.png */,
+				8D2F0BE92059257000268E31 /* sex_female@3x.png */,
+				8D2F0BEB2059257000268E31 /* sex_male@2x.png */,
+				8D2F0BE82059256F00268E31 /* sex_male@3x.png */,
 				8DA1789020480EBA000D7B5B /* class_icon_comment_nor@2x.png */,
 				8DA1788D20480EBA000D7B5B /* class_icon_comment_nor@3x.png */,
 				8DA1788B20480EB9000D7B5B /* class_icon_comment_sel@2x.png */,
@@ -1251,6 +1280,10 @@
 				8DA95DBD2057B9AE006C2FCE /* MedalRecordApi.m */,
 				8DA95DCB2057D244006C2FCE /* RevokeMedalApi.h */,
 				8DA95DCC2057D244006C2FCE /* RevokeMedalApi.m */,
+				8DA8D1082058FAF300575729 /* ScanQrCodeApi.h */,
+				8DA8D1092058FAF300575729 /* ScanQrCodeApi.m */,
+				8D2F0BF020592CFB00268E31 /* UnreadNoticeApi.h */,
+				8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1353,6 +1386,7 @@
 		8D99A0312046B750005ADE6D /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8DA8D0FE2058CE7700575729 /* QRCode */,
 				8DAF150B20525E390076EA91 /* Player */,
 				8DAF14F82052330C0076EA91 /* PhotoBrower */,
 				8DB73A3F20512CD80082C78F /* Record */,
@@ -1478,6 +1512,16 @@
 				8DA95DC02057C233006C2FCE /* MedalRecordModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8DA8D0FE2058CE7700575729 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8DA8D1002058CEAC00575729 /* QRCodeViewController.h */,
+				8DA8D1012058CEAC00575729 /* QRCodeViewController.m */,
+				8DA8D0FF2058CEAB00575729 /* QRCodeViewController.xib */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		8DA95DB220576D4B006C2FCE /* Controllers */ = {
@@ -1682,7 +1726,9 @@
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
 				8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */,
 				8D8F5972204F8AEB00D99399 /* LICENSE in Resources */,
+				8D2F0BEF2059257100268E31 /* sex_male@2x.png in Resources */,
 				8DD84BFA204936060047E125 /* class_icon_sweep_nor@3x.png in Resources */,
+				8D2F0BEE2059257100268E31 /* sex_female@2x.png in Resources */,
 				8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */,
 				8DD84C21204936060047E125 /* lssued_icon_camera_nor@2x.png in Resources */,
 				8D9D0722204E412D00446775 /* video@2x.png in Resources */,
@@ -1698,6 +1744,7 @@
 				8DA1789520480EBB000D7B5B /* class_icon_comment_sel@3x.png in Resources */,
 				8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				8DD84BCF204936060047E125 /* xingaimima_icon_close_hig@3x.png in Resources */,
+				8D2F0BED2059257100268E31 /* sex_female@3x.png in Resources */,
 				8DD84BE2204936060047E125 /* password_button_verification_nor@3x.png in Resources */,
 				8DB73A4A20512D770082C78F /* BSRecordView.xib in Resources */,
 				8DD84BF6204936060047E125 /* login_dividing line_short@2x.png in Resources */,
@@ -1711,7 +1758,9 @@
 				8D99A01D20469435005ADE6D /* login_icon_password_default@3x.png in Resources */,
 				8DD84C07204936060047E125 /* personal_icon_set up_nor@3x.png in Resources */,
 				8DD84C18204936060047E125 /* banfaxunzhang_icon_sound_nor@3x.png in Resources */,
+				8DA8D1022058CEAC00575729 /* QRCodeViewController.xib in Resources */,
 				8DD84C00204936060047E125 /* login_dividing line_short@3x.png in Resources */,
+				8D2F0BEC2059257100268E31 /* sex_male@3x.png in Resources */,
 				8DD84C16204936060047E125 /* success_icon_medal@2x.png in Resources */,
 				8DD84BFE204936060047E125 /* banfaxunzhang_icon_sound_nor@2x.png in Resources */,
 				8DAF15082052407E0076EA91 /* arrow_backward_white@2x.png in Resources */,
@@ -1781,6 +1830,7 @@
 				8DD84C24204936060047E125 /* benji file_icon_pack up_nor@3x.png in Resources */,
 				8D9D072B204E485200446775 /* AddAttachmentCell.xib in Resources */,
 				8DD84C06204936060047E125 /* password_button_get back_nor@2x.png in Resources */,
+				8DA8D1072058CF5800575729 /* qujing@2x.png in Resources */,
 				8DD84C14204936060047E125 /* tab_icon_back_nor@2x.png in Resources */,
 				8DD84BE7204936060047E125 /* class_icon_more_nor@3x.png in Resources */,
 				8DD84BF8204936060047E125 /* file_button_underline_sel@2x.png in Resources */,
@@ -1789,6 +1839,7 @@
 				8D99A03E2046B866005ADE6D /* PersonCenterViewController.xib in Resources */,
 				8DA1789720480EBB000D7B5B /* class_icon_comment_sel@2x.png in Resources */,
 				8DD84BCD204936060047E125 /* photograph_button_progress rate_sel@2x.png in Resources */,
+				8DA8D1052058CF4300575729 /* qujing@3x.png in Resources */,
 				8D8F5974204F8AEB00D99399 /* README.md in Resources */,
 				8D999FBE20464D31005ADE6D /* BSWebviewViewController.xib in Resources */,
 				8D9D071B204E3CC100446775 /* AttachmentListCell.xib in Resources */,
@@ -1894,6 +1945,7 @@
 				8D8F598D204F8AEB00D99399 /* SCVideoConfiguration.m in Sources */,
 				8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */,
 				8DAF14FE2052330C0076EA91 /* BSPhotoModel.m in Sources */,
+				8D2F0BF220592CFB00268E31 /* UnreadNoticeApi.m in Sources */,
 				8D8F5A02204F8DC500D99399 /* TZLocationManager.m in Sources */,
 				8D999FCD20464D69005ADE6D /* BSNavigationViewController.m in Sources */,
 				8DD84C2F20493FAB0047E125 /* MedalLibraryApi.m in Sources */,
@@ -1942,6 +1994,7 @@
 				8D8F5983204F8AEB00D99399 /* SCProcessingQueue.m in Sources */,
 				8D999FDE20468209005ADE6D /* BSBaseRequest.m in Sources */,
 				8DAF154C20525F1C0076EA91 /* BSMusicPlayer.m in Sources */,
+				8DA8D10A2058FAF300575729 /* ScanQrCodeApi.m in Sources */,
 				8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */,
 				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
 				8D999FF020468A79005ADE6D /* UIColor+Hex.m in Sources */,
@@ -1996,6 +2049,7 @@
 				8DA95DC12057C233006C2FCE /* MedalRecordModel.m in Sources */,
 				8D8F5A04204F8DC500D99399 /* TZPhotoPreviewCell.m in Sources */,
 				8D8F59FB204F8DC500D99399 /* TZAssetCell.m in Sources */,
+				8DA8D1032058CEAC00575729 /* QRCodeViewController.m in Sources */,
 				8D8F597D204F8AEB00D99399 /* SCFilterImageView.m in Sources */,
 				8D8F597E204F8AEB00D99399 /* SCImageView.m in Sources */,
 				8D9D072A204E485200446775 /* AddAttachmentCell.m in Sources */,

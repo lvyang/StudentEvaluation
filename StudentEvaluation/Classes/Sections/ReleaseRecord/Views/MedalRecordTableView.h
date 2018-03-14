@@ -11,6 +11,6 @@
 
 @interface MedalRecordTableView : LYBaseTableView
 
-@property (nonatomic,copy) void(^revokeMedalHandler)(MedalRecordModel *model);
+@property (nonatomic,copy) void(^revokeMedalHandler)(MedalRecordModel *model, NSIndexPath *indexPath);
 
 @end

@@ -23,6 +23,8 @@
 #import "MedalRecordApi.h"
 #import "MedalRecordModel.h"
 #import "RevokeMedalApi.h"
+#import "ScanQrCodeApi.h"
+#import "UnreadNoticeApi.h"
 
 @implementation NetworkManager
 
@@ -245,6 +247,38 @@
         completed(error);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         completed(nil);
+    }];
+}
+
++ (void)scanQrCode:(NSString *)text userId:(NSString *)userId completed:(void(^)(NSError *error))completed
+{
+    ScanQrCodeApi *api = [[ScanQrCodeApi alloc] initWithText:text userId:userId];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
+    }];
+}
+
++ (void)loadUnreadNotice:(NSString *)userId completed:(void(^)(NSError *error,NSNumber *result))completed
+{
+    UnreadNoticeApi *api = [[UnreadNoticeApi alloc] initWithUserId:userId];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSDictionary *json = request.responseJSONObject;
+        NSInteger   errorCode = [[json objectForKey:@"code"] integerValue];
+        
+        if (errorCode != 200) {
+            NSString *errorMessage = [json objectForKey:@"msg"] ? : @"操作失败";
+            NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
+            completed(error, nil);
+            return ;
+        }
+        
+        NSNumber *count = [[json objectForKey:@"content"] objectForKey:@"noticeCount"];
+        completed(nil, count);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil, nil);
     }];
 }
 
