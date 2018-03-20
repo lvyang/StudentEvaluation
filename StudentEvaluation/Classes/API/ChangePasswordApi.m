@@ -2,7 +2,7 @@
 //  ChangePasswordApi.m
 //  StudentEvaluation
 //
-//  Created by Yang.Lv on 2018/3/1.
+//  Created by Yang.Lv on 2018/3/20.
 //  Copyright © 2018年 bosheng. All rights reserved.
 //
 
@@ -11,19 +11,19 @@
 
 @implementation ChangePasswordApi
 {
-    NSString *_phoneNumber;
-    NSString *_code;
-    NSString *_password;
+    NSString *_userName;
+    NSString *_oldPassword;
+    NSString *_newPassword;
 }
 
-- (id)initPhoneNumber:(NSString *)phoneNumber verifyCode:(NSString *)code password:(NSString *)password
+- (id)initWithUserName:(NSString *)userName oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword
 {
     self = [super init];
     
     if (self) {
-        _phoneNumber = phoneNumber;
-        _code = code;
-        _password = password;
+        _userName = userName;
+        _oldPassword = oldPassword;
+        _newPassword = newPassword;
     }
     
     return self;
@@ -31,16 +31,17 @@
 
 - (NSString *)requestUrl
 {
-    return @"appapi/phoneSms/resetPassword";
+    return @"accountApi/changePwd";
 }
 
 - (id)requestArgument
 {
     return @{@"appid": ([BSSettings appId] ? : @""),
              @"appkey": ([BSSettings appKey] ? : @""),
-             @"phone": _phoneNumber ? : @"",
-             @"identifyCode": _code ? : @"",
-             @"newPwd": _password ? : @""};
+             @"username": _userName ? : @"",
+             @"oldpwd": _oldPassword ? : @"",
+             @"newpwd": _newPassword ? : @""};
 }
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import "BSViewController.h"
 
-@interface ChangePasswordViewController : BSViewController
+@interface ResetPasswordViewController : BSViewController
 
 @property (nonatomic, strong) NSString *verifyCode;
 @property (nonatomic, strong) NSString *phone;

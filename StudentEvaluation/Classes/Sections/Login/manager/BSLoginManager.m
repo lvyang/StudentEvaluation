@@ -115,6 +115,13 @@ static NSString *ACCESS_TOKEN = @"token";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (void)updateCurrentUser:(BSUserModel *)userModel
+{
+    NSDictionary *dic = [userModel yy_modelToJSONObject];
+    [[NSUserDefaults standardUserDefaults] setObject:dic forKey:USER_INFO];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 // 检查是否是未认证用户
 - (BOOL)isCertified:(NSNumber *)userStatus
 {

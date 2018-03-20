@@ -9,7 +9,7 @@
 #import "ForgetPasswordViewController.h"
 #import "NetworkManager.h"
 #import "BSStringUtil.h"
-#import "ChangePasswordViewController.h"
+#import "ResetPasswordViewController.h"
 
 @interface ForgetPasswordViewController ()<UITextFieldDelegate>
 
@@ -111,13 +111,14 @@
         return;
     }
     
-    ChangePasswordViewController *vc = [[ChangePasswordViewController alloc] initWithNibName:@"ChangePasswordViewController" bundle:nil];
+    ResetPasswordViewController *vc = [[ResetPasswordViewController alloc] initWithNibName:@"ResetPasswordViewController" bundle:nil];
     vc.phone = self.phoneNumberTextField.text;
     vc.verifyCode = self.verifyTextField.text;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)tapped:(id)sender
+
 {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
 }

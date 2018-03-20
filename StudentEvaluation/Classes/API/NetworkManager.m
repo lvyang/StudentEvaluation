@@ -9,7 +9,7 @@
 #import "NetworkManager.h"
 #import "GetVerifyCodeApi.h"
 #import "BSParseUtil.h"
-#import "ChangePasswordApi.h"
+#import "ResetPasswordApi.h"
 #import "FequentlyUsedMedalApi.h"
 #import "ClassListApi.h"
 #import "BSClassModel.h"
@@ -25,6 +25,11 @@
 #import "RevokeMedalApi.h"
 #import "ScanQrCodeApi.h"
 #import "UnreadNoticeApi.h"
+#import "NoticeListApi.h"
+#import "NoticeModel.h"
+#import "ConfirmSelfAproveApi.h"
+#import "BindPhoneApi.h"
+#import "ChangePasswordApi.h"
 
 @implementation NetworkManager
 
@@ -53,7 +58,7 @@
 
 + (void)resetPassword:(NSString *)password verifyCode:(NSString *)verifyCode phone:(NSString *)phone completed:(void(^)(NSError *error))completed
 {
-    ChangePasswordApi *api = [[ChangePasswordApi alloc] initPhoneNumber:phone verifyCode:verifyCode password:password];
+    ResetPasswordApi *api = [[ResetPasswordApi alloc] initPhoneNumber:phone verifyCode:verifyCode password:password];
     [api startWithCompletionBlockWithSuccess:^(YTKBaseRequest * _Nonnull request) {
         NSDictionary *json = request.responseJSONObject;
         NSInteger   errorCode = [[json objectForKey:@"code"] integerValue];
@@ -68,6 +73,28 @@
         
         completed(nil);
 
+    } failure:^(YTKBaseRequest * _Nonnull request) {
+        completed(request.error);
+    }];
+}
+
++ (void)changePasswordForUser:(NSString *)userName passowrd:(NSString *)password oldPassword:(NSString *)oldPassword completed:(void(^)(NSError *error))completed
+{
+    ChangePasswordApi *api = [[ChangePasswordApi alloc] initWithUserName:userName oldPassword:oldPassword newPassword:password];
+    [api startWithCompletionBlockWithSuccess:^(YTKBaseRequest * _Nonnull request) {
+        NSDictionary *json = request.responseJSONObject;
+        NSInteger   errorCode = [[json objectForKey:@"code"] integerValue];
+        
+        if (errorCode != 200) {
+            NSString *errorMessage = [json objectForKey:@"msg"] ? : @"操作失败";
+            
+            NSError *error = [NSError errorWithDomain:@"com.dodoedu" code:errorCode userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
+            completed(error);
+            return ;
+        }
+        
+        completed(nil);
+        
     } failure:^(YTKBaseRequest * _Nonnull request) {
         completed(request.error);
     }];
@@ -279,6 +306,47 @@
         completed(nil, count);
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         completed(nil, nil);
+    }];
+}
+
++ (void)loadNoticeListForUser:(NSString *)userId page:(NSNumber *)page count:(NSNumber *)count completed:(void(^)(NSError *error,NSArray *result))completed
+{
+    NoticeListApi *api = [[NoticeListApi alloc] initWithUserId:userId page:page count:count];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = nil;
+        NSArray * array = [BSParseUtil parseObjectFromJson:request.responseJSONObject modelClass:[NoticeModel class] error:&error];
+        completed(error, array);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil, nil);
+    }];
+}
+
++ (void)confirmSelfAprove:(NSString *)studentSelfId
+                toStudent:(NSString *)studentId
+                    score:(NSNumber *)score
+                  teacher:(NSString *)teacherId
+                     desc:(NSString *)desc
+                    voice:(NSArray <VoiceModel *> *)voices
+              attachments:(NSArray <BSAttachmentModel *> *)attachments
+                completed:(void(^)(NSError *error))completed
+{
+    ConfirmSelfAproveApi *api = [[ConfirmSelfAproveApi alloc] initWithTeacherId:teacherId comment:desc studentId:studentId score:score studentSelfId:studentSelfId voices:voices photos:attachments];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
+    }];
+}
+
++ (void)bindPhone:(NSString *)phone identifyCode:(NSString *)identifyCode userId:(NSString *)userId completed:(void(^)(NSError *error))completed
+{
+    BindPhoneApi *api = [[BindPhoneApi alloc] initWithUserId:userId phone:phone identifyCode:identifyCode];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *error = [BSParseUtil parseStatusFromJson:request.responseJSONObject errorMessage:nil];
+        completed(error);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        completed(nil);
     }];
 }
 

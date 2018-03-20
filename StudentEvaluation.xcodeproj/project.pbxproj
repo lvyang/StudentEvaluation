@@ -13,6 +13,9 @@
 		8D2F0BEE2059257100268E31 /* sex_female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BEA2059257000268E31 /* sex_female@2x.png */; };
 		8D2F0BEF2059257100268E31 /* sex_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BEB2059257000268E31 /* sex_male@2x.png */; };
 		8D2F0BF220592CFB00268E31 /* UnreadNoticeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */; };
+		8D41C50C2060BA9A00ED6B7C /* ChangePasswordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D41C50B2060BA9A00ED6B7C /* ChangePasswordApi.m */; };
+		8D41C5112060DF0700ED6B7C /* NoticeAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D41C50F2060DF0700ED6B7C /* NoticeAlertViewController.m */; };
+		8D41C5122060DF0700ED6B7C /* NoticeAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D41C5102060DF0700ED6B7C /* NoticeAlertViewController.xib */; };
 		8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */; };
 		8D8F5972204F8AEB00D99399 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5931204F8AEB00D99399 /* LICENSE */; };
 		8D8F5973204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5933204F8AEB00D99399 /* NSURL+SCSaveToCameraRoll.m */; };
@@ -79,6 +82,8 @@
 		8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */; };
 		8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */; };
 		8D8F5A17204FC66700D99399 /* camera_transfer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */; };
+		8D91D231205BB96E00E4A4ED /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D91D22F205BB96E00E4A4ED /* BindingPhoneViewController.m */; };
+		8D91D232205BB96E00E4A4ED /* BindingPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D91D230205BB96E00E4A4ED /* BindingPhoneViewController.xib */; };
 		8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999F9920464C8C005ADE6D /* AppDelegate.m */; };
 		8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D999F9A20464C8C005ADE6D /* Assets.xcassets */; };
 		8D999FA920464C8C005ADE6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999FA020464C8C005ADE6D /* main.m */; };
@@ -142,9 +147,9 @@
 		8DA178772047A957000D7B5B /* arrow_back_w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA178752047A956000D7B5B /* arrow_back_w@2x.png */; };
 		8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA178792047AE77000D7B5B /* GetVerifyCodeApi.m */; };
 		8DA1787D2047B1A8000D7B5B /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1787C2047B1A8000D7B5B /* NetworkManager.m */; };
-		8DA178812047E4FD000D7B5B /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1787F2047E4FD000D7B5B /* ChangePasswordViewController.m */; };
-		8DA178822047E4FD000D7B5B /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA178802047E4FD000D7B5B /* ChangePasswordViewController.xib */; };
-		8DA1788520480637000D7B5B /* ChangePasswordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1788420480637000D7B5B /* ChangePasswordApi.m */; };
+		8DA178812047E4FD000D7B5B /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1787F2047E4FD000D7B5B /* ResetPasswordViewController.m */; };
+		8DA178822047E4FD000D7B5B /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA178802047E4FD000D7B5B /* ResetPasswordViewController.xib */; };
+		8DA1788520480637000D7B5B /* ResetPasswordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA1788420480637000D7B5B /* ResetPasswordApi.m */; };
 		8DA1789320480EBB000D7B5B /* class_icon_personal_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA1788720480EB8000D7B5B /* class_icon_personal_nor@2x.png */; };
 		8DA1789420480EBB000D7B5B /* class_icon_personal_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA1788820480EB9000D7B5B /* class_icon_personal_nor@3x.png */; };
 		8DA1789520480EBB000D7B5B /* class_icon_comment_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA1788920480EB9000D7B5B /* class_icon_comment_sel@3x.png */; };
@@ -209,6 +214,13 @@
 		8DB128E9205633AE00D0D593 /* StudentListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128E8205633AE00D0D593 /* StudentListTableView.m */; };
 		8DB128EC205654E400D0D593 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128EB205654E300D0D593 /* StudentModel.m */; };
 		8DB128EF20568C6600D0D593 /* ReleaseMedalApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128EE20568C6600D0D593 /* ReleaseMedalApi.m */; };
+		8DB3D52720609E7700DBC092 /* BindPhoneApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3D52620609E7700DBC092 /* BindPhoneApi.m */; };
+		8DB3D52E2060AC8100DBC092 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3D52C2060AC8100DBC092 /* ChangePasswordViewController.m */; };
+		8DB3D52F2060AC8100DBC092 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3D52D2060AC8100DBC092 /* ChangePasswordViewController.xib */; };
+		8DB3D5362060B43900DBC092 /* password_visible_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3D5322060B43800DBC092 /* password_visible_normal@2x.png */; };
+		8DB3D5372060B43900DBC092 /* password_visible_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3D5332060B43800DBC092 /* password_visible_selected@2x.png */; };
+		8DB3D5382060B43900DBC092 /* password_visible_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3D5342060B43900DBC092 /* password_visible_normal@3x.png */; };
+		8DB3D5392060B43900DBC092 /* password_visible_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3D5352060B43900DBC092 /* password_visible_selected@3x.png */; };
 		8DB73A4820512D660082C78F /* BSRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB73A4720512D660082C78F /* BSRecordView.m */; };
 		8DB73A4A20512D770082C78F /* BSRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4920512D770082C78F /* BSRecordView.xib */; };
 		8DB73A51205131890082C78F /* ic_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB73A4B205131860082C78F /* ic_record@2x.png */; };
@@ -224,6 +236,19 @@
 		8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A81D204D333D006445E3 /* ClassListTableView.m */; };
 		8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9A820204D3351006445E3 /* ClassListCell.m */; };
 		8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9A821204D3351006445E3 /* ClassListCell.xib */; };
+		8DBD9EC6205B542500B83802 /* NoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9EC5205B542500B83802 /* NoticeListViewController.m */; };
+		8DBD9ECC205B547D00B83802 /* NoticeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9ECA205B547D00B83802 /* NoticeListCell.m */; };
+		8DBD9ECD205B547D00B83802 /* NoticeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD9ECB205B547D00B83802 /* NoticeListCell.xib */; };
+		8DBD9ED0205B5A6200B83802 /* NoticeListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9ECF205B5A6200B83802 /* NoticeListApi.m */; };
+		8DBD9ED3205B5C3400B83802 /* NoticeListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9ED2205B5C3400B83802 /* NoticeListTableView.m */; };
+		8DBD9ED6205B61E300B83802 /* NoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9ED5205B61E300B83802 /* NoticeModel.m */; };
+		8DBD9EDA205B683300B83802 /* SelfProveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9ED8205B683300B83802 /* SelfProveViewController.m */; };
+		8DBD9EDB205B683300B83802 /* SelfProveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD9ED9205B683300B83802 /* SelfProveViewController.xib */; };
+		8DBD9EDE205B799900B83802 /* ConfirmSelfAproveApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9EDD205B799900B83802 /* ConfirmSelfAproveApi.m */; };
+		8DBD9EE2205B9B1F00B83802 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9EE0205B9B1F00B83802 /* SettingsViewController.m */; };
+		8DBD9EE3205B9B1F00B83802 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD9EE1205B9B1F00B83802 /* SettingsViewController.xib */; };
+		8DBD9EE7205BB5FA00B83802 /* AccountSafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD9EE5205BB5FA00B83802 /* AccountSafeViewController.m */; };
+		8DBD9EE8205BB5FA00B83802 /* AccountSafeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD9EE6205BB5FA00B83802 /* AccountSafeViewController.xib */; };
 		8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */; };
 		8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */; };
 		8DD84B642048F80D0047E125 /* ClassListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD84B632048F80D0047E125 /* ClassListApi.m */; };
@@ -336,6 +361,11 @@
 		8D2F0BEB2059257000268E31 /* sex_male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_male@2x.png"; sourceTree = "<group>"; };
 		8D2F0BF020592CFB00268E31 /* UnreadNoticeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnreadNoticeApi.h; sourceTree = "<group>"; };
 		8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnreadNoticeApi.m; sourceTree = "<group>"; };
+		8D41C50B2060BA9A00ED6B7C /* ChangePasswordApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordApi.m; sourceTree = "<group>"; };
+		8D41C50D2060BAB900ED6B7C /* ChangePasswordApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordApi.h; sourceTree = "<group>"; };
+		8D41C50E2060DF0700ED6B7C /* NoticeAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeAlertViewController.h; sourceTree = "<group>"; };
+		8D41C50F2060DF0700ED6B7C /* NoticeAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeAlertViewController.m; sourceTree = "<group>"; };
+		8D41C5102060DF0700ED6B7C /* NoticeAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeAlertViewController.xib; sourceTree = "<group>"; };
 		8D8F592E204F8AEB00D99399 /* CIImageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRenderer.h; sourceTree = "<group>"; };
 		8D8F592F204F8AEB00D99399 /* CIImageRendererUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIImageRendererUtils.h; sourceTree = "<group>"; };
 		8D8F5930204F8AEB00D99399 /* CIImageRendererUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIImageRendererUtils.m; sourceTree = "<group>"; };
@@ -456,6 +486,9 @@
 		8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_cancel@3x.png"; sourceTree = "<group>"; };
 		8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@2x.png"; sourceTree = "<group>"; };
 		8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@3x.png"; sourceTree = "<group>"; };
+		8D91D22E205BB96E00E4A4ED /* BindingPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingPhoneViewController.h; sourceTree = "<group>"; };
+		8D91D22F205BB96E00E4A4ED /* BindingPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingPhoneViewController.m; sourceTree = "<group>"; };
+		8D91D230205BB96E00E4A4ED /* BindingPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindingPhoneViewController.xib; sourceTree = "<group>"; };
 		8D999F7A20464775005ADE6D /* StudentEvaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentEvaluation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D999F9820464C8C005ADE6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D999F9920464C8C005ADE6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -558,11 +591,11 @@
 		8DA178792047AE77000D7B5B /* GetVerifyCodeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetVerifyCodeApi.m; sourceTree = "<group>"; };
 		8DA1787B2047B1A8000D7B5B /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		8DA1787C2047B1A8000D7B5B /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		8DA1787E2047E4FD000D7B5B /* ChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		8DA1787F2047E4FD000D7B5B /* ChangePasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
-		8DA178802047E4FD000D7B5B /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
-		8DA1788320480637000D7B5B /* ChangePasswordApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordApi.h; sourceTree = "<group>"; };
-		8DA1788420480637000D7B5B /* ChangePasswordApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordApi.m; sourceTree = "<group>"; };
+		8DA1787E2047E4FD000D7B5B /* ResetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		8DA1787F2047E4FD000D7B5B /* ResetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		8DA178802047E4FD000D7B5B /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		8DA1788320480637000D7B5B /* ResetPasswordApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPasswordApi.h; sourceTree = "<group>"; };
+		8DA1788420480637000D7B5B /* ResetPasswordApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordApi.m; sourceTree = "<group>"; };
 		8DA1788720480EB8000D7B5B /* class_icon_personal_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "class_icon_personal_nor@2x.png"; sourceTree = "<group>"; };
 		8DA1788820480EB9000D7B5B /* class_icon_personal_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "class_icon_personal_nor@3x.png"; sourceTree = "<group>"; };
 		8DA1788920480EB9000D7B5B /* class_icon_comment_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "class_icon_comment_sel@3x.png"; sourceTree = "<group>"; };
@@ -658,6 +691,15 @@
 		8DB128EB205654E300D0D593 /* StudentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 		8DB128ED20568C6600D0D593 /* ReleaseMedalApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseMedalApi.h; sourceTree = "<group>"; };
 		8DB128EE20568C6600D0D593 /* ReleaseMedalApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseMedalApi.m; sourceTree = "<group>"; };
+		8DB3D52520609E7700DBC092 /* BindPhoneApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindPhoneApi.h; sourceTree = "<group>"; };
+		8DB3D52620609E7700DBC092 /* BindPhoneApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindPhoneApi.m; sourceTree = "<group>"; };
+		8DB3D52B2060AC8100DBC092 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		8DB3D52C2060AC8100DBC092 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		8DB3D52D2060AC8100DBC092 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		8DB3D5322060B43800DBC092 /* password_visible_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_visible_normal@2x.png"; sourceTree = "<group>"; };
+		8DB3D5332060B43800DBC092 /* password_visible_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_visible_selected@2x.png"; sourceTree = "<group>"; };
+		8DB3D5342060B43900DBC092 /* password_visible_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_visible_normal@3x.png"; sourceTree = "<group>"; };
+		8DB3D5352060B43900DBC092 /* password_visible_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_visible_selected@3x.png"; sourceTree = "<group>"; };
 		8DB73A4620512D660082C78F /* BSRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSRecordView.h; sourceTree = "<group>"; };
 		8DB73A4720512D660082C78F /* BSRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSRecordView.m; sourceTree = "<group>"; };
 		8DB73A4920512D770082C78F /* BSRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BSRecordView.xib; sourceTree = "<group>"; };
@@ -680,6 +722,28 @@
 		8DB9A81F204D3351006445E3 /* ClassListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassListCell.h; sourceTree = "<group>"; };
 		8DB9A820204D3351006445E3 /* ClassListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassListCell.m; sourceTree = "<group>"; };
 		8DB9A821204D3351006445E3 /* ClassListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassListCell.xib; sourceTree = "<group>"; };
+		8DBD9EC4205B542500B83802 /* NoticeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeListViewController.h; sourceTree = "<group>"; };
+		8DBD9EC5205B542500B83802 /* NoticeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeListViewController.m; sourceTree = "<group>"; };
+		8DBD9EC9205B547D00B83802 /* NoticeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeListCell.h; sourceTree = "<group>"; };
+		8DBD9ECA205B547D00B83802 /* NoticeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeListCell.m; sourceTree = "<group>"; };
+		8DBD9ECB205B547D00B83802 /* NoticeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeListCell.xib; sourceTree = "<group>"; };
+		8DBD9ECE205B5A6200B83802 /* NoticeListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeListApi.h; sourceTree = "<group>"; };
+		8DBD9ECF205B5A6200B83802 /* NoticeListApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeListApi.m; sourceTree = "<group>"; };
+		8DBD9ED1205B5C3400B83802 /* NoticeListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeListTableView.h; sourceTree = "<group>"; };
+		8DBD9ED2205B5C3400B83802 /* NoticeListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeListTableView.m; sourceTree = "<group>"; };
+		8DBD9ED4205B61E300B83802 /* NoticeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeModel.h; sourceTree = "<group>"; };
+		8DBD9ED5205B61E300B83802 /* NoticeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeModel.m; sourceTree = "<group>"; };
+		8DBD9ED7205B683300B83802 /* SelfProveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfProveViewController.h; sourceTree = "<group>"; };
+		8DBD9ED8205B683300B83802 /* SelfProveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfProveViewController.m; sourceTree = "<group>"; };
+		8DBD9ED9205B683300B83802 /* SelfProveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfProveViewController.xib; sourceTree = "<group>"; };
+		8DBD9EDC205B799900B83802 /* ConfirmSelfAproveApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmSelfAproveApi.h; sourceTree = "<group>"; };
+		8DBD9EDD205B799900B83802 /* ConfirmSelfAproveApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmSelfAproveApi.m; sourceTree = "<group>"; };
+		8DBD9EDF205B9B1F00B83802 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8DBD9EE0205B9B1F00B83802 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8DBD9EE1205B9B1F00B83802 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		8DBD9EE4205BB5FA00B83802 /* AccountSafeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSafeViewController.h; sourceTree = "<group>"; };
+		8DBD9EE5205BB5FA00B83802 /* AccountSafeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSafeViewController.m; sourceTree = "<group>"; };
+		8DBD9EE6205BB5FA00B83802 /* AccountSafeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSafeViewController.xib; sourceTree = "<group>"; };
 		8DCD0145204D4EFD000B93E1 /* ReleaseMedalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseMedalViewController.h; sourceTree = "<group>"; };
 		8DCD0146204D4EFD000B93E1 /* ReleaseMedalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseMedalViewController.m; sourceTree = "<group>"; };
 		8DCD0147204D4EFD000B93E1 /* ReleaseMedalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseMedalViewController.xib; sourceTree = "<group>"; };
@@ -1048,6 +1112,10 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8DB3D5322060B43800DBC092 /* password_visible_normal@2x.png */,
+				8DB3D5342060B43900DBC092 /* password_visible_normal@3x.png */,
+				8DB3D5332060B43800DBC092 /* password_visible_selected@2x.png */,
+				8DB3D5352060B43900DBC092 /* password_visible_selected@3x.png */,
 				8DA8D1062058CF5800575729 /* qujing@2x.png */,
 				8DA8D1042058CF4300575729 /* qujing@3x.png */,
 				8DAF155C205271EC0076EA91 /* voice_close@2x.png */,
@@ -1199,9 +1267,9 @@
 				8DA1786F2047A45C000D7B5B /* ForgetPasswordViewController.h */,
 				8DA178702047A45C000D7B5B /* ForgetPasswordViewController.m */,
 				8DA178712047A45C000D7B5B /* ForgetPasswordViewController.xib */,
-				8DA1787E2047E4FD000D7B5B /* ChangePasswordViewController.h */,
-				8DA1787F2047E4FD000D7B5B /* ChangePasswordViewController.m */,
-				8DA178802047E4FD000D7B5B /* ChangePasswordViewController.xib */,
+				8DA1787E2047E4FD000D7B5B /* ResetPasswordViewController.h */,
+				8DA1787F2047E4FD000D7B5B /* ResetPasswordViewController.m */,
+				8DA178802047E4FD000D7B5B /* ResetPasswordViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1262,8 +1330,8 @@
 				8D999FDA2046814E005ADE6D /* LoginApi.m */,
 				8DA178782047AE77000D7B5B /* GetVerifyCodeApi.h */,
 				8DA178792047AE77000D7B5B /* GetVerifyCodeApi.m */,
-				8DA1788320480637000D7B5B /* ChangePasswordApi.h */,
-				8DA1788420480637000D7B5B /* ChangePasswordApi.m */,
+				8DA1788320480637000D7B5B /* ResetPasswordApi.h */,
+				8DA1788420480637000D7B5B /* ResetPasswordApi.m */,
 				8DA1C3E52048EA0B00855392 /* FequentlyUsedMedalApi.h */,
 				8DA1C3E62048EA0B00855392 /* FequentlyUsedMedalApi.m */,
 				8DD84B622048F80D0047E125 /* ClassListApi.h */,
@@ -1284,6 +1352,14 @@
 				8DA8D1092058FAF300575729 /* ScanQrCodeApi.m */,
 				8D2F0BF020592CFB00268E31 /* UnreadNoticeApi.h */,
 				8D2F0BF120592CFB00268E31 /* UnreadNoticeApi.m */,
+				8DBD9ECE205B5A6200B83802 /* NoticeListApi.h */,
+				8DBD9ECF205B5A6200B83802 /* NoticeListApi.m */,
+				8DBD9EDC205B799900B83802 /* ConfirmSelfAproveApi.h */,
+				8DBD9EDD205B799900B83802 /* ConfirmSelfAproveApi.m */,
+				8DB3D52520609E7700DBC092 /* BindPhoneApi.h */,
+				8DB3D52620609E7700DBC092 /* BindPhoneApi.m */,
+				8D41C50D2060BAB900ED6B7C /* ChangePasswordApi.h */,
+				8D41C50B2060BA9A00ED6B7C /* ChangePasswordApi.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1421,9 +1497,8 @@
 		8D99A0392046B83E005ADE6D /* PersonalCenter */ = {
 			isa = PBXGroup;
 			children = (
-				8D99A03A2046B866005ADE6D /* PersonCenterViewController.h */,
-				8D99A03B2046B866005ADE6D /* PersonCenterViewController.m */,
-				8D99A03C2046B866005ADE6D /* PersonCenterViewController.xib */,
+				8DBD9EC8205B545200B83802 /* Views */,
+				8DBD9EC7205B544200B83802 /* Controllers */,
 			);
 			path = PersonalCenter;
 			sourceTree = "<group>";
@@ -1510,6 +1585,8 @@
 				8DB128EB205654E300D0D593 /* StudentModel.m */,
 				8DA95DBF2057C233006C2FCE /* MedalRecordModel.h */,
 				8DA95DC02057C233006C2FCE /* MedalRecordModel.m */,
+				8DBD9ED4205B61E300B83802 /* NoticeModel.h */,
+				8DBD9ED5205B61E300B83802 /* NoticeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1607,6 +1684,48 @@
 			path = Lame;
 			sourceTree = "<group>";
 		};
+		8DBD9EC7205B544200B83802 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D99A03A2046B866005ADE6D /* PersonCenterViewController.h */,
+				8D99A03B2046B866005ADE6D /* PersonCenterViewController.m */,
+				8D99A03C2046B866005ADE6D /* PersonCenterViewController.xib */,
+				8DBD9EC4205B542500B83802 /* NoticeListViewController.h */,
+				8DBD9EC5205B542500B83802 /* NoticeListViewController.m */,
+				8DBD9ED7205B683300B83802 /* SelfProveViewController.h */,
+				8DBD9ED8205B683300B83802 /* SelfProveViewController.m */,
+				8DBD9ED9205B683300B83802 /* SelfProveViewController.xib */,
+				8DBD9EDF205B9B1F00B83802 /* SettingsViewController.h */,
+				8DBD9EE0205B9B1F00B83802 /* SettingsViewController.m */,
+				8DBD9EE1205B9B1F00B83802 /* SettingsViewController.xib */,
+				8DBD9EE4205BB5FA00B83802 /* AccountSafeViewController.h */,
+				8DBD9EE5205BB5FA00B83802 /* AccountSafeViewController.m */,
+				8DBD9EE6205BB5FA00B83802 /* AccountSafeViewController.xib */,
+				8D91D22E205BB96E00E4A4ED /* BindingPhoneViewController.h */,
+				8D91D22F205BB96E00E4A4ED /* BindingPhoneViewController.m */,
+				8D91D230205BB96E00E4A4ED /* BindingPhoneViewController.xib */,
+				8DB3D52B2060AC8100DBC092 /* ChangePasswordViewController.h */,
+				8DB3D52C2060AC8100DBC092 /* ChangePasswordViewController.m */,
+				8DB3D52D2060AC8100DBC092 /* ChangePasswordViewController.xib */,
+				8D41C50E2060DF0700ED6B7C /* NoticeAlertViewController.h */,
+				8D41C50F2060DF0700ED6B7C /* NoticeAlertViewController.m */,
+				8D41C5102060DF0700ED6B7C /* NoticeAlertViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8DBD9EC8205B545200B83802 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DBD9EC9205B547D00B83802 /* NoticeListCell.h */,
+				8DBD9ECA205B547D00B83802 /* NoticeListCell.m */,
+				8DBD9ECB205B547D00B83802 /* NoticeListCell.xib */,
+				8DBD9ED1205B5C3400B83802 /* NoticeListTableView.h */,
+				8DBD9ED2205B5C3400B83802 /* NoticeListTableView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8DD84C30204941CC0047E125 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1700,6 +1819,7 @@
 				8DA1789920480EBB000D7B5B /* class_icon_comment_nor@3x.png in Resources */,
 				8DA1789620480EBB000D7B5B /* class_icon_personal_sal@2x.png in Resources */,
 				8DAF155520526A040076EA91 /* VideoPreviewViewController.xib in Resources */,
+				8DB3D5372060B43900DBC092 /* password_visible_selected@2x.png in Resources */,
 				8DD84BD8204936060047E125 /* tab_button_nav_normal@2x.png in Resources */,
 				8D999FBC20464D31005ADE6D /* BSLoginViewController.xib in Resources */,
 				8D99A01B20469435005ADE6D /* login_icon_account_default@3x.png in Resources */,
@@ -1708,6 +1828,7 @@
 				8DD84BD4204936060047E125 /* password_button_get back_nor@3x.png in Resources */,
 				8DD84BE0204936060047E125 /* personal_icon_set up_nor@2x.png in Resources */,
 				8DD84BED204936060047E125 /* bind_button_enter_nor@2x.png in Resources */,
+				8DBD9EDB205B683300B83802 /* SelfProveViewController.xib in Resources */,
 				8DD84C0A204936060047E125 /* benji file_icon_pack up_nor@2x.png in Resources */,
 				8D8F59A7204F8AFA00D99399 /* WechatShortVideo_close@2x.png in Resources */,
 				8DD84C2C20493E630047E125 /* BSMedalTableViewCell.xib in Resources */,
@@ -1720,16 +1841,19 @@
 				8DD84BDE204936060047E125 /* photograph_button_progress rate_sel@3x.png in Resources */,
 				8D99A01C20469435005ADE6D /* login_icon_avatar_default@3x.png in Resources */,
 				8D9D0723204E412D00446775 /* video@3x.png in Resources */,
+				8D41C5122060DF0700ED6B7C /* NoticeAlertViewController.xib in Resources */,
 				8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */,
 				8DD84BF1204936060047E125 /* luyinshi_icon_record_sel@3x.png in Resources */,
 				8DB73A54205131890082C78F /* ic_record_ripple@3x.png in Resources */,
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
 				8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */,
+				8DB3D5362060B43900DBC092 /* password_visible_normal@2x.png in Resources */,
 				8D8F5972204F8AEB00D99399 /* LICENSE in Resources */,
 				8D2F0BEF2059257100268E31 /* sex_male@2x.png in Resources */,
 				8DD84BFA204936060047E125 /* class_icon_sweep_nor@3x.png in Resources */,
 				8D2F0BEE2059257100268E31 /* sex_female@2x.png in Resources */,
 				8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */,
+				8DBD9ECD205B547D00B83802 /* NoticeListCell.xib in Resources */,
 				8DD84C21204936060047E125 /* lssued_icon_camera_nor@2x.png in Resources */,
 				8D9D0722204E412D00446775 /* video@2x.png in Resources */,
 				8D999FFA20468AC4005ADE6D /* BSErrorPage.xib in Resources */,
@@ -1754,6 +1878,7 @@
 				8DA1789420480EBB000D7B5B /* class_icon_personal_nor@3x.png in Resources */,
 				8DD84BE5204936060047E125 /* success_icon_medal@3x.png in Resources */,
 				8D999FD720465A63005ADE6D /* Settings.plist in Resources */,
+				8DBD9EE8205BB5FA00B83802 /* AccountSafeViewController.xib in Resources */,
 				8DD84C02204936060047E125 /* personal_icon_notice_nor@3x.png in Resources */,
 				8D99A01D20469435005ADE6D /* login_icon_password_default@3x.png in Resources */,
 				8DD84C07204936060047E125 /* personal_icon_set up_nor@3x.png in Resources */,
@@ -1792,12 +1917,15 @@
 				8DA1789B20480EBB000D7B5B /* class_icon_reward_sel@2x.png in Resources */,
 				8DD84BEE204936060047E125 /* file_icon_audil_nor@3x.png in Resources */,
 				8DD84C20204936060047E125 /* benji file_icon_unfolded_nor@3x.png in Resources */,
+				8DBD9EE3205B9B1F00B83802 /* SettingsViewController.xib in Resources */,
 				8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */,
 				8DD84BDC204936060047E125 /* password_button_verification_nor@2x.png in Resources */,
 				8DB73A55205131890082C78F /* ic_release_to_cancel@3x.png in Resources */,
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
+				8D91D232205BB96E00E4A4ED /* BindingPhoneViewController.xib in Resources */,
 				8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */,
 				8DA1789E20480EBB000D7B5B /* class_icon_reward_sel@3x.png in Resources */,
+				8DB3D5382060B43900DBC092 /* password_visible_normal@3x.png in Resources */,
 				8DAF1563205272A30076EA91 /* AddVoiceCell.xib in Resources */,
 				8DD84BD3204936060047E125 /* xuanzexunzhang_icon_selected@2x.png in Resources */,
 				8DD84C1A204936060047E125 /* record_button_withdraw_sal@2x.png in Resources */,
@@ -1822,7 +1950,7 @@
 				8D8F59AE204F8AFA00D99399 /* WechatShortVideoController.xib in Resources */,
 				8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */,
 				8D99A0372046B80B005ADE6D /* SelectMedalViewController.xib in Resources */,
-				8DA178822047E4FD000D7B5B /* ChangePasswordViewController.xib in Resources */,
+				8DA178822047E4FD000D7B5B /* ResetPasswordViewController.xib in Resources */,
 				8DD84BDF204936060047E125 /* banfajiangli_button_annex_sal@2x.png in Resources */,
 				8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */,
 				8DD84C1F204936060047E125 /* lssued_icon_camera_nor@3x.png in Resources */,
@@ -1831,9 +1959,11 @@
 				8D9D072B204E485200446775 /* AddAttachmentCell.xib in Resources */,
 				8DD84C06204936060047E125 /* password_button_get back_nor@2x.png in Resources */,
 				8DA8D1072058CF5800575729 /* qujing@2x.png in Resources */,
+				8DB3D5392060B43900DBC092 /* password_visible_selected@3x.png in Resources */,
 				8DD84C14204936060047E125 /* tab_icon_back_nor@2x.png in Resources */,
 				8DD84BE7204936060047E125 /* class_icon_more_nor@3x.png in Resources */,
 				8DD84BF8204936060047E125 /* file_button_underline_sel@2x.png in Resources */,
+				8DB3D52F2060AC8100DBC092 /* ChangePasswordViewController.xib in Resources */,
 				8DD84C01204936060047E125 /* set up_button_quit_nor@3x.png in Resources */,
 				8DD84BFB204936060047E125 /* file_button_underline_sel@3x.png in Resources */,
 				8D99A03E2046B866005ADE6D /* PersonCenterViewController.xib in Resources */,
@@ -1936,19 +2066,26 @@
 				8DA95DCD2057D244006C2FCE /* RevokeMedalApi.m in Sources */,
 				8D8F598C204F8AEB00D99399 /* SCSwipeableFilterView.m in Sources */,
 				8D8F5986204F8AEB00D99399 /* SCRecorderTools.m in Sources */,
+				8D41C5112060DF0700ED6B7C /* NoticeAlertViewController.m in Sources */,
 				8D8F597F204F8AEB00D99399 /* SCIOPixelBuffers.m in Sources */,
 				8D99A00220468C04005ADE6D /* NJKWebViewProgressView.m in Sources */,
 				8D8F5985204F8AEB00D99399 /* SCRecorderFocusTargetView.m in Sources */,
 				8D999FBF20464D31005ADE6D /* BSSubjectModel.m in Sources */,
+				8DBD9EDE205B799900B83802 /* ConfirmSelfAproveApi.m in Sources */,
+				8DB3D52E2060AC8100DBC092 /* ChangePasswordViewController.m in Sources */,
 				8DB9A81E204D333D006445E3 /* ClassListTableView.m in Sources */,
+				8D41C50C2060BA9A00ED6B7C /* ChangePasswordApi.m in Sources */,
 				8D8F5984204F8AEB00D99399 /* SCRecorder.m in Sources */,
 				8D8F598D204F8AEB00D99399 /* SCVideoConfiguration.m in Sources */,
 				8DA1787A2047AE77000D7B5B /* GetVerifyCodeApi.m in Sources */,
 				8DAF14FE2052330C0076EA91 /* BSPhotoModel.m in Sources */,
 				8D2F0BF220592CFB00268E31 /* UnreadNoticeApi.m in Sources */,
 				8D8F5A02204F8DC500D99399 /* TZLocationManager.m in Sources */,
+				8DB3D52720609E7700DBC092 /* BindPhoneApi.m in Sources */,
 				8D999FCD20464D69005ADE6D /* BSNavigationViewController.m in Sources */,
+				8DBD9EC6205B542500B83802 /* NoticeListViewController.m in Sources */,
 				8DD84C2F20493FAB0047E125 /* MedalLibraryApi.m in Sources */,
+				8DBD9ED3205B5C3400B83802 /* NoticeListTableView.m in Sources */,
 				8D8F598E204F8AEB00D99399 /* SCVideoPlayerView.m in Sources */,
 				8DA95DCA2057CD4C006C2FCE /* MJRefreshAutoNormalFooter+stateDecChange.m in Sources */,
 				8DD84B642048F80D0047E125 /* ClassListApi.m in Sources */,
@@ -1959,6 +2096,7 @@
 				8D8F5A0B204F929600D99399 /* ProgressView.m in Sources */,
 				8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */,
 				8D8F597C204F8AEB00D99399 /* SCFilterAnimation.m in Sources */,
+				8DBD9ECC205B547D00B83802 /* NoticeListCell.m in Sources */,
 				8D9D0716204E3C9200446775 /* AttachmentListCollectionView.m in Sources */,
 				8D99A00120468C04005ADE6D /* NJKWebViewProgress.m in Sources */,
 				8D8F598A204F8AEB00D99399 /* SCSampleBufferHolder.m in Sources */,
@@ -1993,17 +2131,22 @@
 				8DB9A822204D3351006445E3 /* ClassListCell.m in Sources */,
 				8D8F5983204F8AEB00D99399 /* SCProcessingQueue.m in Sources */,
 				8D999FDE20468209005ADE6D /* BSBaseRequest.m in Sources */,
+				8DBD9EDA205B683300B83802 /* SelfProveViewController.m in Sources */,
+				8D91D231205BB96E00E4A4ED /* BindingPhoneViewController.m in Sources */,
 				8DAF154C20525F1C0076EA91 /* BSMusicPlayer.m in Sources */,
 				8DA8D10A2058FAF300575729 /* ScanQrCodeApi.m in Sources */,
 				8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */,
 				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
 				8D999FF020468A79005ADE6D /* UIColor+Hex.m in Sources */,
+				8DBD9EE7205BB5FA00B83802 /* AccountSafeViewController.m in Sources */,
 				8D8F59FF204F8DC500D99399 /* TZImageManager.m in Sources */,
 				8DAF156F205283EA0076EA91 /* SelectStudentViewController.m in Sources */,
 				8D8F59FD204F8DC500D99399 /* TZGifPhotoPreviewController.m in Sources */,
 				8DA1C3E42048DB1D00855392 /* SelectMedalCollectionView.m in Sources */,
+				8DBD9ED6205B61E300B83802 /* NoticeModel.m in Sources */,
 				8D8F5971204F8AEB00D99399 /* CIImageRendererUtils.m in Sources */,
 				8D8F5A05204F8DC500D99399 /* TZPhotoPreviewController.m in Sources */,
+				8DBD9ED0205B5A6200B83802 /* NoticeListApi.m in Sources */,
 				8D99A02F2046A3F9005ADE6D /* GTMNSString+HTML.m in Sources */,
 				8DB73A4820512D660082C78F /* BSRecordView.m in Sources */,
 				8DA364BA2050E72300CEC6D7 /* BSVideoUtil.m in Sources */,
@@ -2012,7 +2155,7 @@
 				8D8F59FA204F8DC500D99399 /* NSBundle+TZImagePicker.m in Sources */,
 				8D999FEE20468A79005ADE6D /* ALAssetsLibrary+BSAssetsHelper.m in Sources */,
 				8D99A00520468CE2005ADE6D /* BSUrlArgumentsFilter.m in Sources */,
-				8DA1788520480637000D7B5B /* ChangePasswordApi.m in Sources */,
+				8DA1788520480637000D7B5B /* ResetPasswordApi.m in Sources */,
 				8DD84C2720493DD30047E125 /* MedalLibraryViewController.m in Sources */,
 				8D8F5976204F8AEB00D99399 /* SCAudioConfiguration.m in Sources */,
 				8D8F59AD204F8AFA00D99399 /* WechatShortVideoController.m in Sources */,
@@ -2028,7 +2171,7 @@
 				8D8F5A01204F8DC500D99399 /* TZImagePickerController.m in Sources */,
 				8DB128EF20568C6600D0D593 /* ReleaseMedalApi.m in Sources */,
 				8DAF14FD2052330C0076EA91 /* BSBasePhotoBrowseViewController.m in Sources */,
-				8DA178812047E4FD000D7B5B /* ChangePasswordViewController.m in Sources */,
+				8DA178812047E4FD000D7B5B /* ResetPasswordViewController.m in Sources */,
 				8DA1C3E72048EA0B00855392 /* FequentlyUsedMedalApi.m in Sources */,
 				8D8F597B204F8AEB00D99399 /* SCFilter.m in Sources */,
 				8D99A0362046B80B005ADE6D /* SelectMedalViewController.m in Sources */,
@@ -2044,6 +2187,7 @@
 				8D999FC120464D31005ADE6D /* BSUserRelationshipModel.m in Sources */,
 				8D999FD120464D69005ADE6D /* BSViewController.m in Sources */,
 				8DA95DBA20576DA0006C2FCE /* MedalRecordCell.m in Sources */,
+				8DBD9EE2205B9B1F00B83802 /* SettingsViewController.m in Sources */,
 				8D8F5A07204F8DC500D99399 /* TZVideoPlayerController.m in Sources */,
 				8D999FF420468A79005ADE6D /* UIViewController+Addition.m in Sources */,
 				8DA95DC12057C233006C2FCE /* MedalRecordModel.m in Sources */,

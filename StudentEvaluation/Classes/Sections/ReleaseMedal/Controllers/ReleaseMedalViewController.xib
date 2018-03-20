@@ -19,7 +19,6 @@
                 <outlet property="scrollView" destination="tE7-Uf-LBw" id="47j-m1-kWd"/>
                 <outlet property="scrollViewBottom" destination="drY-cg-95T" id="qHP-ca-K0O"/>
                 <outlet property="selectStudentButton" destination="OLo-Sg-sgp" id="Nbi-q1-wzt"/>
-                <outlet property="sendButton" destination="7zn-Qh-rze" id="Q2B-6e-rlD"/>
                 <outlet property="studentsNameLabel" destination="hQL-mu-Ecl" id="aua-uU-lpP"/>
                 <outlet property="textCountLabel" destination="Z2A-wG-82t" id="ItS-A7-YHs"/>
                 <outlet property="textView" destination="HLM-it-pJa" id="YDd-3v-aZx"/>

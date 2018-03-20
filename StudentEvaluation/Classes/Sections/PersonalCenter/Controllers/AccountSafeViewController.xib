@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountSafeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri7-Wq-tya">
+                    <rect key="frame" x="0.0" y="30" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="绑定手机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-VH-k7B">
+                            <rect key="frame" x="15" y="0.0" width="340" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="class_icon_more_nor.png" translatesAutoresizingMaskIntoConstraints="NO" id="ji7-gc-zK7">
+                            <rect key="frame" x="355" y="16" width="10" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="Bd0-is-TUQ"/>
+                                <constraint firstAttribute="width" constant="10" id="l3v-8Y-Qqu"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gc-Qr-6Kq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <connections>
+                                <action selector="bindPhone:" destination="-1" eventType="touchUpInside" id="kk2-eb-VbY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6gc-Qr-6Kq" secondAttribute="bottom" id="2XI-OV-GpQ"/>
+                        <constraint firstItem="6gc-Qr-6Kq" firstAttribute="leading" secondItem="ri7-Wq-tya" secondAttribute="leading" id="9P3-Vh-hsE"/>
+                        <constraint firstAttribute="trailing" secondItem="ji7-gc-zK7" secondAttribute="trailing" constant="10" id="Eoe-bl-EM6"/>
+                        <constraint firstItem="ji7-gc-zK7" firstAttribute="leading" secondItem="Yr8-VH-k7B" secondAttribute="trailing" id="KMO-aG-Izx"/>
+                        <constraint firstItem="Yr8-VH-k7B" firstAttribute="top" secondItem="ri7-Wq-tya" secondAttribute="top" id="KfD-oz-mhp"/>
+                        <constraint firstAttribute="bottom" secondItem="Yr8-VH-k7B" secondAttribute="bottom" id="a3g-Id-yaf"/>
+                        <constraint firstItem="ji7-gc-zK7" firstAttribute="centerY" secondItem="ri7-Wq-tya" secondAttribute="centerY" id="dKe-UE-xgK"/>
+                        <constraint firstAttribute="trailing" secondItem="6gc-Qr-6Kq" secondAttribute="trailing" id="exh-l1-5Zk"/>
+                        <constraint firstItem="6gc-Qr-6Kq" firstAttribute="top" secondItem="ri7-Wq-tya" secondAttribute="top" id="fr4-lL-5Kp"/>
+                        <constraint firstItem="Yr8-VH-k7B" firstAttribute="leading" secondItem="ri7-Wq-tya" secondAttribute="leading" constant="15" id="kVp-cK-c6e"/>
+                        <constraint firstAttribute="height" constant="50" id="qIK-3F-4gI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fA8-aw-ReE">
+                    <rect key="frame" x="0.0" y="88" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR9-3F-vWg">
+                            <rect key="frame" x="15" y="0.0" width="340" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="class_icon_more_nor.png" translatesAutoresizingMaskIntoConstraints="NO" id="aih-NI-d2W">
+                            <rect key="frame" x="355" y="16" width="10" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="clN-9C-C2J"/>
+                                <constraint firstAttribute="width" constant="10" id="fG8-Jk-4Qz"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zec-g4-9tP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <connections>
+                                <action selector="changePassword:" destination="-1" eventType="touchUpInside" id="tyQ-1Q-Mbl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0ph-u0-giG"/>
+                        <constraint firstAttribute="bottom" secondItem="zec-g4-9tP" secondAttribute="bottom" id="1B3-Rc-s1V"/>
+                        <constraint firstItem="zec-g4-9tP" firstAttribute="top" secondItem="fA8-aw-ReE" secondAttribute="top" id="99e-JU-hlJ"/>
+                        <constraint firstAttribute="trailing" secondItem="aih-NI-d2W" secondAttribute="trailing" constant="10" id="ARK-tz-gU0"/>
+                        <constraint firstAttribute="bottom" secondItem="yR9-3F-vWg" secondAttribute="bottom" id="EwO-7d-q5H"/>
+                        <constraint firstItem="aih-NI-d2W" firstAttribute="centerY" secondItem="fA8-aw-ReE" secondAttribute="centerY" id="JLV-ot-dI3"/>
+                        <constraint firstItem="aih-NI-d2W" firstAttribute="leading" secondItem="yR9-3F-vWg" secondAttribute="trailing" id="MvY-dP-yFT"/>
+                        <constraint firstItem="yR9-3F-vWg" firstAttribute="leading" secondItem="fA8-aw-ReE" secondAttribute="leading" constant="15" id="NrW-N2-nvZ"/>
+                        <constraint firstItem="yR9-3F-vWg" firstAttribute="top" secondItem="fA8-aw-ReE" secondAttribute="top" id="Slb-aw-Gtf"/>
+                        <constraint firstItem="zec-g4-9tP" firstAttribute="leading" secondItem="fA8-aw-ReE" secondAttribute="leading" id="fik-OW-52p"/>
+                        <constraint firstAttribute="trailing" secondItem="zec-g4-9tP" secondAttribute="trailing" id="xx8-lT-aOb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="fA8-aw-ReE" secondAttribute="trailing" id="CIm-q8-704"/>
+                <constraint firstItem="ri7-Wq-tya" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="H1f-4j-Yub"/>
+                <constraint firstItem="fA8-aw-ReE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="VCo-CQ-AxZ"/>
+                <constraint firstItem="fA8-aw-ReE" firstAttribute="top" secondItem="ri7-Wq-tya" secondAttribute="bottom" constant="8" id="q1d-7y-kU7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ri7-Wq-tya" secondAttribute="trailing" id="r1g-ju-MM3"/>
+                <constraint firstItem="ri7-Wq-tya" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="sds-PR-oR2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="class_icon_more_nor.png" width="10" height="18"/>
+    </resources>
+</document>

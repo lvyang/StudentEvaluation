@@ -33,4 +33,8 @@ typedef NS_ENUM (NSInteger, BSUserRoleType) {
 @property (nonatomic, strong) NSString  *sex;                               // 性别
 @property (nonatomic, strong) NSString  *phone;                             // 电话
 
+@property (nonatomic, strong) NSString *appId;
+@property (nonatomic, strong) NSString *appkey;
+
+
 @end

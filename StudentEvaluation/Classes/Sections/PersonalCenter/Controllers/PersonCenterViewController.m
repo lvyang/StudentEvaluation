@@ -11,6 +11,8 @@
 #import "BSLoginManager.h"
 #import "BSStringUtil.h"
 #import "NetworkManager.h"
+#import "NoticeListViewController.h"
+#import "SettingsViewController.h"
 
 @interface PersonCenterViewController ()
 
@@ -65,11 +67,15 @@
 
 - (IBAction)noticeList:(id)sender
 {
-    
+    NoticeListViewController *vc = [[NoticeListViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)settings:(id)sender
 {
-    
+    SettingsViewController *vc = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -1,12 +1,12 @@
 //
-//  ReleaseMedalViewController.m
+//  SelfProveViewController.m
 //  StudentEvaluation
 //
-//  Created by Yang.Lv on 2018/3/5.
+//  Created by Yang.Lv on 2018/3/16.
 //  Copyright © 2018年 bosheng. All rights reserved.
 //
 
-#import "ReleaseMedalViewController.h"
+#import "SelfProveViewController.h"
 #import "LYPlaceholderTextView.h"
 #import <UIImageView+WebCache.h>
 #import "AttachmentListCollectionView.h"
@@ -25,17 +25,17 @@
 #import "NetworkManager.h"
 #import "DataManager.h"
 #import "BSLoginManager.h"
+#import "BSSettings.h"
 
 static NSInteger TEXT_LIMIT = 150;
 
-@interface ReleaseMedalViewController ()<BSRecordViewDelegate,SelectStudentViewControllerDelegate, UITextViewDelegate>
+@interface SelfProveViewController ()<BSRecordViewDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottom;
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *webViewHeight;
 
-@property (weak, nonatomic) IBOutlet UIImageView *medalIconImageView;
-@property (weak, nonatomic) IBOutlet UILabel *medalName;
-@property (weak, nonatomic) IBOutlet UIButton *selectStudentButton;
 @property (weak, nonatomic) IBOutlet UIView *attachmentListBackgroundView;
 @property (weak, nonatomic) IBOutlet LYPlaceholderTextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *textCountLabel;
@@ -50,28 +50,31 @@ static NSInteger TEXT_LIMIT = 150;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *attachmentListHeight;
 
 @property (weak, nonatomic) IBOutlet UIButton *releaseButton;
-@property (weak, nonatomic) IBOutlet UILabel *studentsNameLabel;
-@property (nonatomic, strong ) NSArray *selectedStudents;
 
 @property (nonatomic, assign) NSInteger score;
 
 @end
 
-@implementation ReleaseMedalViewController
+@implementation SelfProveViewController
 
 - (void)dealloc
 {
     [self.collectionView removeObserver:self forKeyPath:@"contentSize"];
     [self.tableView removeObserver:self forKeyPath:@"contentSize"];
+    [self.webview.scrollView removeObserver:self forKeyPath:@"contentSize"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"颁发奖章";
-    NSURL *url = [NSURL URLWithString:self.model.medalIcon ? : @""];
-    [self.medalIconImageView sd_setImageWithURL:url];
-    self.medalName.text = self.model.medalName;
+    self.title = @"自证详情";
+    self.medalType = MedalTypePraise;
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@appapi/wapPage/selfProve/detail?studentSelfId=%@",[BSSettings baseUrl],self.model.identifier];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webview loadRequest:request];
+    [self.webview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:(__bridge void * _Nullable)(self.webview)];
     
     __weak typeof(self) weakSelf = self;
     {
@@ -142,13 +145,6 @@ static NSInteger TEXT_LIMIT = 150;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-- (IBAction)selectStudent:(id)sender
-{
-    SelectStudentViewController *vc = [[SelectStudentViewController alloc] init];
-    vc.delegate = self;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 - (void)addRecord
 {
     if (self.tableView.items.count >= 3) {
@@ -163,16 +159,8 @@ static NSInteger TEXT_LIMIT = 150;
 
 - (IBAction)send:(id)sender
 {
-    if (!self.selectedStudents.count) {
-        [self showPrompt:@"请选择学生"];
-        return;
-    }
-    
-    BSClassModel *class = [DataManager shareManager].currentClass;
     NSString *teacherId = [BSLoginManager shareManager].userModel.userId;
-    
-    [self showLoadingProgress:nil];
-    [NetworkManager releaseMedal:self.model.identifier toStudent:self.selectedStudents class:class score:@(self.score) teacher:teacherId desc:self.textView.text voice:self.tableView.items attachments:self.collectionView.dataArray completed:^(NSError *error) {
+    [NetworkManager confirmSelfAprove:self.model.identifier toStudent:self.model.studentId score:@(self.score) teacher:teacherId desc:self.textView.text voice:self.tableView.items attachments:self.collectionView.dataArray completed:^(NSError *error) {
         [self hideLoadingProgress];
         
         if (error) {
@@ -197,7 +185,7 @@ static NSInteger TEXT_LIMIT = 150;
                 [[NSFileManager defaultManager] removeItemAtPath:model.path error:nil];
             }
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"didReleaseMedal" object:nil userInfo:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"didConfirmMedal" object:nil userInfo:nil];
         });
     }];
 }
@@ -323,14 +311,14 @@ static NSInteger TEXT_LIMIT = 150;
     for (int i = 0; i < self.scoreButtons.count; i++) {
         UIButton *button = self.scoreButtons[i];
         button.selected = (button.tag <= sender.tag);
-        if (self.model.medalType == MedalTypePraise) {
+        if (self.medalType == MedalTypePraise) {
             [button setTitle:[NSString stringWithFormat:@"+%ld",(long)button.tag] forState:UIControlStateNormal];
         } else {
             [button setTitle:[NSString stringWithFormat:@"-%ld",(long)button.tag] forState:UIControlStateNormal];
         }
     }
-    
-    self.score = (self.model.medalType == MedalTypePraise) ? sender.tag: -sender.tag;
+
+    self.score = (self.medalType == MedalTypePraise) ? sender.tag: -sender.tag;
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -345,6 +333,8 @@ static NSInteger TEXT_LIMIT = 150;
         self.voiceListBackgroundViewHeight.constant = self.tableView.contentSize.height;
     } else if (context == (__bridge void * _Nullable)(self.collectionView)) {
         self.attachmentListHeight.constant = self.collectionView.contentSize.height;
+    } else if (context == (__bridge void * _Nullable)(self.webview)) {
+        self.webViewHeight.constant = self.webview.scrollView.contentSize.height;
     }
 }
 
@@ -362,19 +352,6 @@ static NSInteger TEXT_LIMIT = 150;
     [self.tableView reloadData];
 }
 
-#pragma mark - SelectStudentViewControllerDelegate
-- (void)didSelectedStudent:(NSArray *)students
-{
-    self.selectedStudents = students;
-    NSMutableArray *names = [NSMutableArray array];
-    for (int i = 0; i < students.count; i++) {
-        StudentModel *model = students[i];
-        [names addObject:model.studentName];
-    }
-    
-    self.studentsNameLabel.text = [names componentsJoinedByString:@","];
-}
-
 #pragma mark - UITextViewDelegate
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
@@ -382,7 +359,7 @@ static NSInteger TEXT_LIMIT = 150;
     if (str.length > TEXT_LIMIT) {
         return NO;
     }
-
+    
     return YES;
 }
 
@@ -415,7 +392,7 @@ static NSInteger TEXT_LIMIT = 150;
     CGFloat keyboardHeight = endRect.size.height;
     
     self.scrollViewBottom.constant = keyboardHeight;
-
+    
     [UIView animateWithDuration:animationDuration animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
@@ -431,7 +408,7 @@ static NSInteger TEXT_LIMIT = 150;
     [animationDurationValue getValue:&animationDuration];
     
     self.scrollViewBottom.constant = 0;
-
+    
     [UIView animateWithDuration:animationDuration animations:^{
         [self.view layoutIfNeeded];
     }];

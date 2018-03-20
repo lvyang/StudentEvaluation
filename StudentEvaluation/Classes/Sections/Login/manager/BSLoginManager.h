@@ -46,4 +46,14 @@ static NSInteger USER_NOT_CERTIFICATE_ERROR_CODE = 415;
  */
 - (void)loginWithUserName:(NSString *)userName password:(NSString *)password completed:(void(^)(NSError *error, NSDictionary *response))completed;
 
+/**
+ *  @description 删除当前用户信息
+ */
+- (void)removerCurrentUserInfo;
+
+/**
+ *  @description 更新当前用户信息
+ */
+- (void)updateCurrentUser:(BSUserModel *)userModel;
+
 @end

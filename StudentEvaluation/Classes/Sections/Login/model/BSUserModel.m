@@ -14,12 +14,15 @@
 + (NSDictionary *)modelCustomPropertyMapper
 {
     return @{@"userId":@"userid",
-             @"userName":@"user_name",
+             @"userName":@"username",
              @"nickName":@"nickname",
              @"userIcon":@"imgurl",
              @"roleId":@"user_status",
              @"sex":@"sex",
-             @"phone":@"phone"};
+             @"phone":@"phone",
+             
+             @"appId":@"appid",
+             @"appkey":@"appkey"};
 }
 
 @end

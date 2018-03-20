@@ -8,8 +8,8 @@
 
 #import "BSBaseRequest.h"
 
-@interface ChangePasswordApi : BSBaseRequest
+@interface ResetPasswordApi : BSBaseRequest
 
-- (id)initWithUserName:(NSString *)userName oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword;
+- (id)initPhoneNumber:(NSString *)phoneNumber verifyCode:(NSString *)code password:(NSString *)password;
 
 @end

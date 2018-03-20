@@ -6,17 +6,17 @@
 //  Copyright © 2018年 bosheng. All rights reserved.
 //
 
-#import "ChangePasswordViewController.h"
+#import "ResetPasswordViewController.h"
 #import "NetworkManager.h"
 
-@interface ChangePasswordViewController ()<UITextFieldDelegate>
+@interface ResetPasswordViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
 @end
 
-@implementation ChangePasswordViewController
+@implementation ResetPasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
