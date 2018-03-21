@@ -18,6 +18,8 @@
 #import "QRCodeViewController.h"
 #import "ClassListViewController.h"
 #import "UIImage+ImageAddition.h"
+#import "BSWebviewViewController.h"
+#import "BSSettings.h"
 
 static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
 

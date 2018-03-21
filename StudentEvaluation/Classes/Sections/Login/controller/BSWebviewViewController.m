@@ -11,9 +11,9 @@
 #import "BSLoginViewController.h"
 
 static NSString *completeRPCURLPath = @"/njkwebviewprogressproxy/complete";
-const float NJKInitialProgressValue = 0.1f;
-const float NJKInteractiveProgressValue = 0.5f;
-const float NJKFinalProgressValue = 0.9f;
+static float NJKInitialProgressValue = 0.1f;
+static float NJKInteractiveProgressValue = 0.5f;
+static float NJKFinalProgressValue = 0.9f;
 
 @interface BSWebviewViewController ()<UIWebViewDelegate>
 

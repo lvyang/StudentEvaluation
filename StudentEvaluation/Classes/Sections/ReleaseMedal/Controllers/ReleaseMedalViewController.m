@@ -73,6 +73,14 @@ static NSInteger TEXT_LIMIT = 150;
     [self.medalIconImageView sd_setImageWithURL:url];
     self.medalName.text = self.model.medalName;
     
+    for (UIButton *button in self.scoreButtons) {
+        if (self.model.medalType == MedalTypePraise) {
+            [button setBackgroundImage:[UIImage imageNamed:@"lssued_icon_score_sel.png"] forState:UIControlStateSelected];
+        } else {
+            [button setBackgroundImage:[UIImage imageNamed:@"lssued_icon_fu_score_sel.png"] forState:UIControlStateSelected];
+        }
+    }
+    
     __weak typeof(self) weakSelf = self;
     {
         self.tableView = [[VoiceListTableView alloc] initWithFrame:self.voiceListBackgroundView.bounds];
@@ -252,6 +260,7 @@ static NSInteger TEXT_LIMIT = 150;
     
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:5 delegate:nil];
     imagePickerVc.allowPickingVideo = NO;
+    imagePickerVc.allowPickingOriginalPhoto = NO;
     imagePickerVc.maxImagesCount = 5 - videoCount;
     imagePickerVc.selectedAssets = selectedAsset;
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
