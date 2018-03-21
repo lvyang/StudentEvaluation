@@ -48,18 +48,6 @@
 		8D8F598E204F8AEB00D99399 /* SCVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F596C204F8AEB00D99399 /* SCVideoPlayerView.m */; };
 		8D8F598F204F8AEB00D99399 /* SCWeakSelectorTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F596E204F8AEB00D99399 /* SCWeakSelectorTarget.m */; };
 		8D8F5990204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5970204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m */; };
-		8D8F59A3204F8AFA00D99399 /* CALayer+AddUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */; };
-		8D8F59A4204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */; };
-		8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */; };
-		8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */; };
-		8D8F59A7204F8AFA00D99399 /* WechatShortVideo_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */; };
-		8D8F59A8204F8AFA00D99399 /* WechatShortVideo_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */; };
-		8D8F59A9204F8AFA00D99399 /* WechatShortVideo_scan_focus.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */; };
-		8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */; };
-		8D8F59AB204F8AFA00D99399 /* WechatShortVideo_scan_focus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */; };
-		8D8F59AC204F8AFA00D99399 /* SCRecordSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */; };
-		8D8F59AD204F8AFA00D99399 /* WechatShortVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */; };
-		8D8F59AE204F8AFA00D99399 /* WechatShortVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */; };
 		8D8F59FA204F8DC500D99399 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59DE204F8DC500D99399 /* NSBundle+TZImagePicker.m */; };
 		8D8F59FB204F8DC500D99399 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E0204F8DC500D99399 /* TZAssetCell.m */; };
 		8D8F59FC204F8DC500D99399 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59E2204F8DC500D99399 /* TZAssetModel.m */; };
@@ -75,15 +63,24 @@
 		8D8F5A06204F8DC500D99399 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F5204F8DC500D99399 /* TZProgressView.m */; };
 		8D8F5A07204F8DC500D99399 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F7204F8DC500D99399 /* TZVideoPlayerController.m */; };
 		8D8F5A08204F8DC500D99399 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F59F9204F8DC500D99399 /* UIView+Layout.m */; };
-		8D8F5A0B204F929600D99399 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0A204F929600D99399 /* ProgressView.m */; };
-		8D8F5A10204FBC1600D99399 /* video_record_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */; };
-		8D8F5A11204FBC1600D99399 /* video_record_confirm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */; };
-		8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */; };
-		8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */; };
-		8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */; };
-		8D8F5A17204FC66700D99399 /* camera_transfer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */; };
 		8D91D231205BB96E00E4A4ED /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D91D22F205BB96E00E4A4ED /* BindingPhoneViewController.m */; };
 		8D91D232205BB96E00E4A4ED /* BindingPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D91D230205BB96E00E4A4ED /* BindingPhoneViewController.xib */; };
+		8D98E0EC20620BA4002E1DD9 /* XFCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98E0E820620BA4002E1DD9 /* XFCameraButton.m */; };
+		8D98E0ED20620BA4002E1DD9 /* XFCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98E0EA20620BA4002E1DD9 /* XFCameraController.m */; };
+		8D98E0EE20620BA4002E1DD9 /* XFCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0EB20620BA4002E1DD9 /* XFCameraController.xib */; };
+		8D98E0F220620CC8002E1DD9 /* XFPhotoLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D98E0F120620CC7002E1DD9 /* XFPhotoLibraryManager.m */; };
+		8D98E0F620620D41002E1DD9 /* sight_video_focus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0F420620D40002E1DD9 /* sight_video_focus@3x.png */; };
+		8D98E0F720620D41002E1DD9 /* sight_video_focus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0F520620D40002E1DD9 /* sight_video_focus@2x.png */; };
+		8D98E0FA20620D46002E1DD9 /* icon_return_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0F820620D45002E1DD9 /* icon_return_p@3x.png */; };
+		8D98E0FB20620D46002E1DD9 /* icon_return_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0F920620D46002E1DD9 /* icon_return_p@2x.png */; };
+		8D98E0FE20620D4B002E1DD9 /* icon_return_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0FC20620D4B002E1DD9 /* icon_return_n@2x.png */; };
+		8D98E0FF20620D4B002E1DD9 /* icon_return_n@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E0FD20620D4B002E1DD9 /* icon_return_n@3x.png */; };
+		8D98E10220620D50002E1DD9 /* icon_finish_p@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10020620D50002E1DD9 /* icon_finish_p@2x.png */; };
+		8D98E10320620D50002E1DD9 /* icon_finish_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10120620D50002E1DD9 /* icon_finish_p@3x.png */; };
+		8D98E10620620D56002E1DD9 /* icon_close_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10420620D55002E1DD9 /* icon_close_@3x.png */; };
+		8D98E10720620D56002E1DD9 /* icon_close_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10520620D56002E1DD9 /* icon_close_@2x.png */; };
+		8D98E10A20620D5B002E1DD9 /* icon_change@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10820620D5B002E1DD9 /* icon_change@3x.png */; };
+		8D98E10B20620D5B002E1DD9 /* icon_change@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D98E10920620D5B002E1DD9 /* icon_change@2x.png */; };
 		8D999FA420464C8C005ADE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999F9920464C8C005ADE6D /* AppDelegate.m */; };
 		8D999FA520464C8C005ADE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D999F9A20464C8C005ADE6D /* Assets.xcassets */; };
 		8D999FA920464C8C005ADE6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D999FA020464C8C005ADE6D /* main.m */; };
@@ -433,22 +430,6 @@
 		8D8F596E204F8AEB00D99399 /* SCWeakSelectorTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWeakSelectorTarget.m; sourceTree = "<group>"; };
 		8D8F596F204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCSaveToCameraRoll.h"; sourceTree = "<group>"; };
 		8D8F5970204F8AEB00D99399 /* UIImage+SCSaveToCameraRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCSaveToCameraRoll.m"; sourceTree = "<group>"; };
-		8D8F5992204F8AF900D99399 /* CALayer+AddUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+AddUIColor.h"; sourceTree = "<group>"; };
-		8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+AddUIColor.m"; sourceTree = "<group>"; };
-		8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_37x-Checkmark.png"; sourceTree = "<group>"; };
-		8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_37x-Checkmark@2x.png"; sourceTree = "<group>"; };
-		8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WechatShortVideo_close.png; sourceTree = "<group>"; };
-		8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_close@2x.png"; sourceTree = "<group>"; };
-		8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_close@3x.png"; sourceTree = "<group>"; };
-		8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WechatShortVideo_scan_focus.png; sourceTree = "<group>"; };
-		8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_scan_focus@2x.png"; sourceTree = "<group>"; };
-		8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WechatShortVideo_scan_focus@3x.png"; sourceTree = "<group>"; };
-		8D8F599D204F8AF900D99399 /* SCRecordSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSessionManager.h; sourceTree = "<group>"; };
-		8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecordSessionManager.m; sourceTree = "<group>"; };
-		8D8F599F204F8AF900D99399 /* WechatShortVideoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatShortVideoConfig.h; sourceTree = "<group>"; };
-		8D8F59A0204F8AF900D99399 /* WechatShortVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatShortVideoController.h; sourceTree = "<group>"; };
-		8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatShortVideoController.m; sourceTree = "<group>"; };
-		8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WechatShortVideoController.xib; sourceTree = "<group>"; };
 		8D8F59DD204F8DC500D99399 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
 		8D8F59DE204F8DC500D99399 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
 		8D8F59DF204F8DC500D99399 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
@@ -478,17 +459,28 @@
 		8D8F59F7204F8DC500D99399 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
 		8D8F59F8204F8DC500D99399 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		8D8F59F9204F8DC500D99399 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		8D8F5A09204F929600D99399 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
-		8D8F5A0A204F929600D99399 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_cancel@2x.png"; sourceTree = "<group>"; };
-		8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_confirm@3x.png"; sourceTree = "<group>"; };
-		8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_confirm@2x.png"; sourceTree = "<group>"; };
-		8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_record_cancel@3x.png"; sourceTree = "<group>"; };
-		8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@2x.png"; sourceTree = "<group>"; };
-		8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_transfer@3x.png"; sourceTree = "<group>"; };
 		8D91D22E205BB96E00E4A4ED /* BindingPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingPhoneViewController.h; sourceTree = "<group>"; };
 		8D91D22F205BB96E00E4A4ED /* BindingPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingPhoneViewController.m; sourceTree = "<group>"; };
 		8D91D230205BB96E00E4A4ED /* BindingPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindingPhoneViewController.xib; sourceTree = "<group>"; };
+		8D98E0E720620BA4002E1DD9 /* XFCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCameraButton.h; sourceTree = "<group>"; };
+		8D98E0E820620BA4002E1DD9 /* XFCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCameraButton.m; sourceTree = "<group>"; };
+		8D98E0E920620BA4002E1DD9 /* XFCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCameraController.h; sourceTree = "<group>"; };
+		8D98E0EA20620BA4002E1DD9 /* XFCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCameraController.m; sourceTree = "<group>"; };
+		8D98E0EB20620BA4002E1DD9 /* XFCameraController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFCameraController.xib; sourceTree = "<group>"; };
+		8D98E0F020620CC7002E1DD9 /* XFPhotoLibraryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPhotoLibraryManager.h; sourceTree = "<group>"; };
+		8D98E0F120620CC7002E1DD9 /* XFPhotoLibraryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPhotoLibraryManager.m; sourceTree = "<group>"; };
+		8D98E0F420620D40002E1DD9 /* sight_video_focus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sight_video_focus@3x.png"; sourceTree = "<group>"; };
+		8D98E0F520620D40002E1DD9 /* sight_video_focus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sight_video_focus@2x.png"; sourceTree = "<group>"; };
+		8D98E0F820620D45002E1DD9 /* icon_return_p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_return_p@3x.png"; sourceTree = "<group>"; };
+		8D98E0F920620D46002E1DD9 /* icon_return_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_return_p@2x.png"; sourceTree = "<group>"; };
+		8D98E0FC20620D4B002E1DD9 /* icon_return_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_return_n@2x.png"; sourceTree = "<group>"; };
+		8D98E0FD20620D4B002E1DD9 /* icon_return_n@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_return_n@3x.png"; sourceTree = "<group>"; };
+		8D98E10020620D50002E1DD9 /* icon_finish_p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_finish_p@2x.png"; sourceTree = "<group>"; };
+		8D98E10120620D50002E1DD9 /* icon_finish_p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_finish_p@3x.png"; sourceTree = "<group>"; };
+		8D98E10420620D55002E1DD9 /* icon_close_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_@3x.png"; sourceTree = "<group>"; };
+		8D98E10520620D56002E1DD9 /* icon_close_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_@2x.png"; sourceTree = "<group>"; };
+		8D98E10820620D5B002E1DD9 /* icon_change@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_change@3x.png"; sourceTree = "<group>"; };
+		8D98E10920620D5B002E1DD9 /* icon_change@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_change@2x.png"; sourceTree = "<group>"; };
 		8D999F7A20464775005ADE6D /* StudentEvaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentEvaluation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D999F9820464C8C005ADE6D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D999F9920464C8C005ADE6D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -968,45 +960,6 @@
 			path = SCRecorder;
 			sourceTree = "<group>";
 		};
-		8D8F5991204F8AF900D99399 /* WechatShortVideo */ = {
-			isa = PBXGroup;
-			children = (
-				8D8F5A09204F929600D99399 /* ProgressView.h */,
-				8D8F5A0A204F929600D99399 /* ProgressView.m */,
-				8D8F5992204F8AF900D99399 /* CALayer+AddUIColor.h */,
-				8D8F5993204F8AF900D99399 /* CALayer+AddUIColor.m */,
-				8D8F599D204F8AF900D99399 /* SCRecordSessionManager.h */,
-				8D8F599E204F8AF900D99399 /* SCRecordSessionManager.m */,
-				8D8F599F204F8AF900D99399 /* WechatShortVideoConfig.h */,
-				8D8F59A0204F8AF900D99399 /* WechatShortVideoController.h */,
-				8D8F59A1204F8AF900D99399 /* WechatShortVideoController.m */,
-				8D8F59A2204F8AF900D99399 /* WechatShortVideoController.xib */,
-				8D8F5994204F8AF900D99399 /* Resources */,
-			);
-			path = WechatShortVideo;
-			sourceTree = "<group>";
-		};
-		8D8F5994204F8AF900D99399 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D8F5A14204FC66600D99399 /* camera_transfer@2x.png */,
-				8D8F5A15204FC66600D99399 /* camera_transfer@3x.png */,
-				8D8F5995204F8AF900D99399 /* WechatShortVideo_37x-Checkmark.png */,
-				8D8F5996204F8AF900D99399 /* WechatShortVideo_37x-Checkmark@2x.png */,
-				8D8F5997204F8AF900D99399 /* WechatShortVideo_close.png */,
-				8D8F5998204F8AF900D99399 /* WechatShortVideo_close@2x.png */,
-				8D8F5999204F8AF900D99399 /* WechatShortVideo_close@3x.png */,
-				8D8F599A204F8AF900D99399 /* WechatShortVideo_scan_focus.png */,
-				8D8F599B204F8AF900D99399 /* WechatShortVideo_scan_focus@2x.png */,
-				8D8F599C204F8AF900D99399 /* WechatShortVideo_scan_focus@3x.png */,
-				8D8F5A0C204FBC1500D99399 /* video_record_cancel@2x.png */,
-				8D8F5A0F204FBC1600D99399 /* video_record_cancel@3x.png */,
-				8D8F5A0E204FBC1500D99399 /* video_record_confirm@2x.png */,
-				8D8F5A0D204FBC1500D99399 /* video_record_confirm@3x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		8D8F59DC204F8DC500D99399 /* TZImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1041,6 +994,55 @@
 				8D8F59F9204F8DC500D99399 /* UIView+Layout.m */,
 			);
 			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		8D98E0E520620BA4002E1DD9 /* XFAVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8D98E0F320620D3A002E1DD9 /* images */,
+				8D98E0E620620BA4002E1DD9 /* XFCameraButton */,
+				8D98E0E920620BA4002E1DD9 /* XFCameraController.h */,
+				8D98E0EA20620BA4002E1DD9 /* XFCameraController.m */,
+				8D98E0EB20620BA4002E1DD9 /* XFCameraController.xib */,
+			);
+			path = XFAVFoundation;
+			sourceTree = "<group>";
+		};
+		8D98E0E620620BA4002E1DD9 /* XFCameraButton */ = {
+			isa = PBXGroup;
+			children = (
+				8D98E0E720620BA4002E1DD9 /* XFCameraButton.h */,
+				8D98E0E820620BA4002E1DD9 /* XFCameraButton.m */,
+			);
+			path = XFCameraButton;
+			sourceTree = "<group>";
+		};
+		8D98E0EF20620CC7002E1DD9 /* XFPhotoLibraryManager */ = {
+			isa = PBXGroup;
+			children = (
+				8D98E0F020620CC7002E1DD9 /* XFPhotoLibraryManager.h */,
+				8D98E0F120620CC7002E1DD9 /* XFPhotoLibraryManager.m */,
+			);
+			path = XFPhotoLibraryManager;
+			sourceTree = "<group>";
+		};
+		8D98E0F320620D3A002E1DD9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8D98E10920620D5B002E1DD9 /* icon_change@2x.png */,
+				8D98E10820620D5B002E1DD9 /* icon_change@3x.png */,
+				8D98E10520620D56002E1DD9 /* icon_close_@2x.png */,
+				8D98E10420620D55002E1DD9 /* icon_close_@3x.png */,
+				8D98E10020620D50002E1DD9 /* icon_finish_p@2x.png */,
+				8D98E10120620D50002E1DD9 /* icon_finish_p@3x.png */,
+				8D98E0FC20620D4B002E1DD9 /* icon_return_n@2x.png */,
+				8D98E0FD20620D4B002E1DD9 /* icon_return_n@3x.png */,
+				8D98E0F920620D46002E1DD9 /* icon_return_p@2x.png */,
+				8D98E0F820620D45002E1DD9 /* icon_return_p@3x.png */,
+				8D98E0F520620D40002E1DD9 /* sight_video_focus@2x.png */,
+				8D98E0F420620D40002E1DD9 /* sight_video_focus@3x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		8D999F7120464775005ADE6D = {
@@ -1404,8 +1406,9 @@
 		8D999FFB20468C04005ADE6D /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				8D98E0EF20620CC7002E1DD9 /* XFPhotoLibraryManager */,
+				8D98E0E520620BA4002E1DD9 /* XFAVFoundation */,
 				8D8F59DC204F8DC500D99399 /* TZImagePickerController */,
-				8D8F5991204F8AF900D99399 /* WechatShortVideo */,
 				8D8F592D204F8AEB00D99399 /* SCRecorder */,
 				8D999FFC20468C04005ADE6D /* NJKWebViewProgress */,
 			);
@@ -1796,18 +1799,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D8F5A17204FC66700D99399 /* camera_transfer@3x.png in Resources */,
 				8DA178AC204813FC000D7B5B /* uanzexunzhang_icon_incrcase_nor@3x.png in Resources */,
 				8DD84C12204936060047E125 /* personal_icon_new message_nor@2x.png in Resources */,
 				8D99A01E20469435005ADE6D /* login_icon_account_default@2x.png in Resources */,
-				8D8F59A8204F8AFA00D99399 /* WechatShortVideo_close@3x.png in Resources */,
 				8DD84C03204936060047E125 /* login_button_login_normal@2x.png in Resources */,
 				8DD84C23204936060047E125 /* photograph_button_determine_nor@2x.png in Resources */,
-				8D8F59A9204F8AFA00D99399 /* WechatShortVideo_scan_focus.png in Resources */,
 				8DD84C1E204936060047E125 /* lssued_icon_score_nor@2x.png in Resources */,
 				8DAF1574205289860076EA91 /* StudentListCell.xib in Resources */,
+				8D98E0F620620D41002E1DD9 /* sight_video_focus@3x.png in Resources */,
 				8D99A01220468ED6005ADE6D /* Info.plist in Resources */,
 				8DA1789820480EBB000D7B5B /* class_icon_reward_nor@2x.png in Resources */,
+				8D98E0FA20620D46002E1DD9 /* icon_return_p@3x.png in Resources */,
 				8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */,
 				8DAF155A20526FBB0076EA91 /* VoiceListCell.xib in Resources */,
 				8DD84BFF204936060047E125 /* LaunchImage.png in Resources */,
@@ -1830,23 +1832,20 @@
 				8DD84BED204936060047E125 /* bind_button_enter_nor@2x.png in Resources */,
 				8DBD9EDB205B683300B83802 /* SelfProveViewController.xib in Resources */,
 				8DD84C0A204936060047E125 /* benji file_icon_pack up_nor@2x.png in Resources */,
-				8D8F59A7204F8AFA00D99399 /* WechatShortVideo_close@2x.png in Resources */,
 				8DD84C2C20493E630047E125 /* BSMedalTableViewCell.xib in Resources */,
-				8D8F59AB204F8AFA00D99399 /* WechatShortVideo_scan_focus@3x.png in Resources */,
 				8DD84BF3204936060047E125 /* benji file_icon_unfolded_nor@2x.png in Resources */,
 				8DD84C0C204936060047E125 /* lssued_icon_record_nor@2x.png in Resources */,
 				8DD84BEC204936060047E125 /* tab_button_nav_normal@3x.png in Resources */,
+				8D98E0FE20620D4B002E1DD9 /* icon_return_n@2x.png in Resources */,
 				8DD84C0B204936060047E125 /* photograph_button_camera_nor@3x.png in Resources */,
 				8DA178732047A45C000D7B5B /* ForgetPasswordViewController.xib in Resources */,
 				8DD84BDE204936060047E125 /* photograph_button_progress rate_sel@3x.png in Resources */,
 				8D99A01C20469435005ADE6D /* login_icon_avatar_default@3x.png in Resources */,
 				8D9D0723204E412D00446775 /* video@3x.png in Resources */,
 				8D41C5122060DF0700ED6B7C /* NoticeAlertViewController.xib in Resources */,
-				8D8F59A5204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark@2x.png in Resources */,
 				8DD84BF1204936060047E125 /* luyinshi_icon_record_sel@3x.png in Resources */,
 				8DB73A54205131890082C78F /* ic_record_ripple@3x.png in Resources */,
 				8DD84BD1204936060047E125 /* xiugaimima_button_enter_nor@3x.png in Resources */,
-				8D8F59A6204F8AFA00D99399 /* WechatShortVideo_close.png in Resources */,
 				8DB3D5362060B43900DBC092 /* password_visible_normal@2x.png in Resources */,
 				8D8F5972204F8AEB00D99399 /* LICENSE in Resources */,
 				8D2F0BEF2059257100268E31 /* sex_male@2x.png in Resources */,
@@ -1858,7 +1857,6 @@
 				8D9D0722204E412D00446775 /* video@2x.png in Resources */,
 				8D999FFA20468AC4005ADE6D /* BSErrorPage.xib in Resources */,
 				8D8F5A00204F8DC500D99399 /* TZImagePickerController.bundle in Resources */,
-				8D8F5A10204FBC1600D99399 /* video_record_cancel@2x.png in Resources */,
 				8DAF15072052407E0076EA91 /* arrow_backward_white@3x.png in Resources */,
 				8DA1789A20480EBB000D7B5B /* class_icon_reward_nor@3x.png in Resources */,
 				8DD84BCA204936060047E125 /* personal_icon_notice_nor@2x.png in Resources */,
@@ -1866,7 +1864,6 @@
 				8DD84BD0204936060047E125 /* chehuitankuang_button_determine@3x.png in Resources */,
 				8DD84BFD204936060047E125 /* lssued_icon_photo_nor@3x.png in Resources */,
 				8DA1789520480EBB000D7B5B /* class_icon_comment_sel@3x.png in Resources */,
-				8D8F59AA204F8AFA00D99399 /* WechatShortVideo_scan_focus@2x.png in Resources */,
 				8DD84BCF204936060047E125 /* xingaimima_icon_close_hig@3x.png in Resources */,
 				8D2F0BED2059257100268E31 /* sex_female@3x.png in Resources */,
 				8DD84BE2204936060047E125 /* password_button_verification_nor@3x.png in Resources */,
@@ -1904,42 +1901,45 @@
 				8DB73A51205131890082C78F /* ic_record@2x.png in Resources */,
 				8DD84C13204936060047E125 /* personal_icon_new message_nor@3x.png in Resources */,
 				8DD84BD2204936060047E125 /* lssued_icon_fu score_sel@2x.png in Resources */,
-				8D8F5A11204FBC1600D99399 /* video_record_confirm@3x.png in Resources */,
 				8DA178AD204813FC000D7B5B /* xiugaimima_icon_mimakejian_sal@3x.png in Resources */,
 				8DD84BF4204936060047E125 /* xiugaimima_button_enter_nor@2x.png in Resources */,
 				8DD84C08204936060047E125 /* medal_icon_nor@3x.png in Resources */,
 				8DA178762047A957000D7B5B /* arrow_back_w@3x.png in Resources */,
-				8D8F59A4204F8AFA00D99399 /* WechatShortVideo_37x-Checkmark.png in Resources */,
 				8DD84C09204936060047E125 /* photograph_button_camera_nor@2x.png in Resources */,
 				8DD84BFC204936060047E125 /* photograph_button_determine_nor@3x.png in Resources */,
+				8D98E10320620D50002E1DD9 /* icon_finish_p@3x.png in Resources */,
 				8DAF155D205271ED0076EA91 /* voice_close@3x.png in Resources */,
 				8D99A01A20469435005ADE6D /* login_icon_avatar_default@2x.png in Resources */,
 				8DA1789B20480EBB000D7B5B /* class_icon_reward_sel@2x.png in Resources */,
 				8DD84BEE204936060047E125 /* file_icon_audil_nor@3x.png in Resources */,
 				8DD84C20204936060047E125 /* benji file_icon_unfolded_nor@3x.png in Resources */,
+				8D98E10620620D56002E1DD9 /* icon_close_@3x.png in Resources */,
 				8DBD9EE3205B9B1F00B83802 /* SettingsViewController.xib in Resources */,
-				8D8F5A16204FC66700D99399 /* camera_transfer@2x.png in Resources */,
 				8DD84BDC204936060047E125 /* password_button_verification_nor@2x.png in Resources */,
 				8DB73A55205131890082C78F /* ic_release_to_cancel@3x.png in Resources */,
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
+				8D98E10220620D50002E1DD9 /* icon_finish_p@2x.png in Resources */,
 				8D91D232205BB96E00E4A4ED /* BindingPhoneViewController.xib in Resources */,
-				8D8F5A12204FBC1600D99399 /* video_record_confirm@2x.png in Resources */,
 				8DA1789E20480EBB000D7B5B /* class_icon_reward_sel@3x.png in Resources */,
 				8DB3D5382060B43900DBC092 /* password_visible_normal@3x.png in Resources */,
 				8DAF1563205272A30076EA91 /* AddVoiceCell.xib in Resources */,
+				8D98E0F720620D41002E1DD9 /* sight_video_focus@2x.png in Resources */,
 				8DD84BD3204936060047E125 /* xuanzexunzhang_icon_selected@2x.png in Resources */,
 				8DD84C1A204936060047E125 /* record_button_withdraw_sal@2x.png in Resources */,
 				8DA1789C20480EBB000D7B5B /* class_icon_comment_nor@2x.png in Resources */,
 				8DD84C0D204936060047E125 /* record_button_withdraw_sal@3x.png in Resources */,
 				8DA178A520481033000D7B5B /* MedalCollectionViewCell.xib in Resources */,
+				8D98E0FF20620D4B002E1DD9 /* icon_return_n@3x.png in Resources */,
 				8DD84BDB204936060047E125 /* bind_button_replace_nor@2x.png in Resources */,
 				8D99A00C20468DE6005ADE6D /* LaunchScreen.storyboard in Resources */,
+				8D98E10B20620D5B002E1DD9 /* icon_change@2x.png in Resources */,
 				8D99A01920469435005ADE6D /* login_icon_password_default@2x.png in Resources */,
 				8DD84C0F204936060047E125 /* password_button_getback_onr@3x.png in Resources */,
 				8DD84BD5204936060047E125 /* login_button_login_normal@3x.png in Resources */,
 				8DD84C0E204936060047E125 /* login_dividing line@2x.png in Resources */,
 				8DAF155E205271ED0076EA91 /* voice_close@2x.png in Resources */,
 				8DA178AB204813FC000D7B5B /* xiugaimima_icon_mimakejian_sal@2x.png in Resources */,
+				8D98E0EE20620BA4002E1DD9 /* XFCameraController.xib in Resources */,
 				8DD84BD9204936060047E125 /* xingaimima_icon_open_hig@2x.png in Resources */,
 				8DD84BDA204936060047E125 /* file_icon_audil_nor@2x.png in Resources */,
 				8DB73A53205131890082C78F /* ic_release_to_cancel@2x.png in Resources */,
@@ -1947,12 +1947,11 @@
 				8DD84C15204936060047E125 /* xuanzexunzhang_icon_selected@3x.png in Resources */,
 				8DD84BEA204936060047E125 /* banfaxunzhang_icon_lssued_nor@3x.png in Resources */,
 				8DA1789320480EBB000D7B5B /* class_icon_personal_nor@2x.png in Resources */,
-				8D8F59AE204F8AFA00D99399 /* WechatShortVideoController.xib in Resources */,
 				8DCD0149204D4EFD000B93E1 /* ReleaseMedalViewController.xib in Resources */,
 				8D99A0372046B80B005ADE6D /* SelectMedalViewController.xib in Resources */,
 				8DA178822047E4FD000D7B5B /* ResetPasswordViewController.xib in Resources */,
 				8DD84BDF204936060047E125 /* banfajiangli_button_annex_sal@2x.png in Resources */,
-				8D8F5A13204FBC1600D99399 /* video_record_cancel@3x.png in Resources */,
+				8D98E0FB20620D46002E1DD9 /* icon_return_p@2x.png in Resources */,
 				8DD84C1F204936060047E125 /* lssued_icon_camera_nor@3x.png in Resources */,
 				8DD84BC9204936060047E125 /* class_icon_more_nor@2x.png in Resources */,
 				8DD84C24204936060047E125 /* benji file_icon_pack up_nor@3x.png in Resources */,
@@ -1962,6 +1961,7 @@
 				8DB3D5392060B43900DBC092 /* password_visible_selected@3x.png in Resources */,
 				8DD84C14204936060047E125 /* tab_icon_back_nor@2x.png in Resources */,
 				8DD84BE7204936060047E125 /* class_icon_more_nor@3x.png in Resources */,
+				8D98E10A20620D5B002E1DD9 /* icon_change@3x.png in Resources */,
 				8DD84BF8204936060047E125 /* file_button_underline_sel@2x.png in Resources */,
 				8DB3D52F2060AC8100DBC092 /* ChangePasswordViewController.xib in Resources */,
 				8DD84C01204936060047E125 /* set up_button_quit_nor@3x.png in Resources */,
@@ -1971,6 +1971,7 @@
 				8DD84BCD204936060047E125 /* photograph_button_progress rate_sel@2x.png in Resources */,
 				8DA8D1052058CF4300575729 /* qujing@3x.png in Resources */,
 				8D8F5974204F8AEB00D99399 /* README.md in Resources */,
+				8D98E10720620D56002E1DD9 /* icon_close_@2x.png in Resources */,
 				8D999FBE20464D31005ADE6D /* BSWebviewViewController.xib in Resources */,
 				8D9D071B204E3CC100446775 /* AttachmentListCell.xib in Resources */,
 				8DA178772047A957000D7B5B /* arrow_back_w@2x.png in Resources */,
@@ -2093,7 +2094,6 @@
 				8D8F5A06204F8DC500D99399 /* TZProgressView.m in Sources */,
 				8DA1787D2047B1A8000D7B5B /* NetworkManager.m in Sources */,
 				8D8F5988204F8AEB00D99399 /* SCRecordSession.m in Sources */,
-				8D8F5A0B204F929600D99399 /* ProgressView.m in Sources */,
 				8DB9A81B204D3314006445E3 /* ClassListViewController.m in Sources */,
 				8D8F597C204F8AEB00D99399 /* SCFilterAnimation.m in Sources */,
 				8DBD9ECC205B547D00B83802 /* NoticeListCell.m in Sources */,
@@ -2101,12 +2101,10 @@
 				8D99A00120468C04005ADE6D /* NJKWebViewProgress.m in Sources */,
 				8D8F598A204F8AEB00D99399 /* SCSampleBufferHolder.m in Sources */,
 				8D8F5977204F8AEB00D99399 /* SCAudioTools.m in Sources */,
-				8D8F59AC204F8AFA00D99399 /* SCRecordSessionManager.m in Sources */,
 				8DD84C33204941EA0047E125 /* DataManager.m in Sources */,
 				8D9D071A204E3CC100446775 /* AttachmentListCell.m in Sources */,
 				8D8F5979204F8AEB00D99399 /* SCFilter+UIImage.m in Sources */,
 				8DA178A420481033000D7B5B /* MedalCollectionViewCell.m in Sources */,
-				8D8F59A3204F8AFA00D99399 /* CALayer+AddUIColor.m in Sources */,
 				8D8F5981204F8AEB00D99399 /* SCPhotoConfiguration.m in Sources */,
 				8D8F5975204F8AEB00D99399 /* SCAssetExportSession.m in Sources */,
 				8DA95DB620576D83006C2FCE /* MedalRecordTableView.m in Sources */,
@@ -2134,6 +2132,8 @@
 				8DBD9EDA205B683300B83802 /* SelfProveViewController.m in Sources */,
 				8D91D231205BB96E00E4A4ED /* BindingPhoneViewController.m in Sources */,
 				8DAF154C20525F1C0076EA91 /* BSMusicPlayer.m in Sources */,
+				8D98E0F220620CC8002E1DD9 /* XFPhotoLibraryManager.m in Sources */,
+				8D98E0ED20620BA4002E1DD9 /* XFCameraController.m in Sources */,
 				8DA8D10A2058FAF300575729 /* ScanQrCodeApi.m in Sources */,
 				8D8F59FE204F8DC500D99399 /* TZImageCropManager.m in Sources */,
 				8DCD0148204D4EFD000B93E1 /* ReleaseMedalViewController.m in Sources */,
@@ -2158,10 +2158,10 @@
 				8DA1788520480637000D7B5B /* ResetPasswordApi.m in Sources */,
 				8DD84C2720493DD30047E125 /* MedalLibraryViewController.m in Sources */,
 				8D8F5976204F8AEB00D99399 /* SCAudioConfiguration.m in Sources */,
-				8D8F59AD204F8AFA00D99399 /* WechatShortVideoController.m in Sources */,
 				8D8F598B204F8AEB00D99399 /* SCSaveToCameraRollOperation.m in Sources */,
 				8D999FD520465A5B005ADE6D /* BSSettings.m in Sources */,
 				8DD84C2A20493E550047E125 /* BSMedalTableViewCell.m in Sources */,
+				8D98E0EC20620BA4002E1DD9 /* XFCameraButton.m in Sources */,
 				8DB128EC205654E400D0D593 /* StudentModel.m in Sources */,
 				8DA178722047A45C000D7B5B /* ForgetPasswordViewController.m in Sources */,
 				8D999FC220464D31005ADE6D /* BSLoginManager.m in Sources */,

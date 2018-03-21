@@ -12,7 +12,6 @@
 #import "AttachmentListCollectionView.h"
 #import <Masonry.h>
 #import "TZImagePickerController.h"
-#import "WechatShortVideoController.h"
 #import "BSAttachmentModel.h"
 #import <Photos/Photos.h>
 #import "BSVideoUtil.h"
@@ -25,6 +24,7 @@
 #import "NetworkManager.h"
 #import "DataManager.h"
 #import "BSLoginManager.h"
+#import "XFCameraController.h"
 
 static NSInteger TEXT_LIMIT = 150;
 
@@ -298,24 +298,25 @@ static NSInteger TEXT_LIMIT = 150;
 
 - (void)addVideo
 {
-    __weak typeof(self) weakSelf = self;
-    WechatShortVideoController *wechatShortVideoController = [[WechatShortVideoController alloc] init];
-    wechatShortVideoController.didFinishRecordHandle = ^(NSError *error, NSURL *videoUrl) {
+    XFCameraController *cameraController = [XFCameraController defaultCameraController];
+    __weak XFCameraController *weakCameraController = cameraController;
+    
+    cameraController.shootCompletionBlock = ^(NSURL *videoUrl, CGFloat videoTimeLength, UIImage *thumbnailImage, NSError *error) {
         if (error) {
             return ;
         }
         
-        __strong typeof(weakSelf) strongSelf = weakSelf;
         BSAttachmentModel *model = [[BSAttachmentModel alloc] init];
-        model.image = [BSVideoUtil screenShotImageFromVideoPath:videoUrl.absoluteString];
-        model.videoDuration = @([BSVideoUtil durationFromVideoPath:videoUrl.absoluteString]);
+        model.image = thumbnailImage;
+        model.videoDuration = @(videoTimeLength);
         model.videoPath = videoUrl.path;
         model.isVideo = YES;
-        [strongSelf.collectionView.dataArray addObject:model];
-        [strongSelf.collectionView reloadData];
+        [self.collectionView.dataArray addObject:model];
+        [self.collectionView reloadData];
+
+        [weakCameraController dismissViewControllerAnimated:YES completion:nil];
     };
-    
-    [self presentViewController:wechatShortVideoController animated:YES completion:nil];
+    [self presentViewController:cameraController animated:YES completion:nil];
 }
 
 - (IBAction)scoreButtonClick:(UIButton *)sender

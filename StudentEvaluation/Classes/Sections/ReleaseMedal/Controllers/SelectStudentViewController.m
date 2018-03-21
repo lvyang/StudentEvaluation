@@ -25,7 +25,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"选择班级";
+    self.title = @"选择学生";
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(confirm)];
     self.navigationItem.rightBarButtonItem = rightItem;

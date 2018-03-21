@@ -10,10 +10,11 @@
 #import <LYBaseWebView.h>
 #import <Masonry.h>
 #import "BSSettings.h"
+#import <WebKit/WebKit.h>
 
 @interface MedalRecordDetailViewController ()
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
@@ -27,7 +28,7 @@
 
     // web view
     {
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:self.webView];
         [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view.mas_top).with.offset(0);

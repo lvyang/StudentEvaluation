@@ -16,20 +16,32 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success_icon_medal.png" translatesAutoresizingMaskIntoConstraints="NO" id="04i-Ws-NDS">
-                    <rect key="frame" x="99" y="242" width="178" height="183"/>
+                    <rect key="frame" x="99" y="212" width="178" height="183"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="183" id="c69-SZ-coM"/>
                         <constraint firstAttribute="width" constant="178" id="kOA-Jk-4Rx"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颁发成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-LD-GOx">
+                    <rect key="frame" x="0.0" y="395" width="375" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tBS-6c-eIF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <color key="textColor" red="0.98431372549019602" green="0.89803921568627454" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="04i-Ws-NDS" firstAttribute="centerY" secondItem="e9j-lO-hQC" secondAttribute="centerY" id="6ko-5k-VFj"/>
+                <constraint firstItem="04i-Ws-NDS" firstAttribute="centerY" secondItem="e9j-lO-hQC" secondAttribute="centerY" constant="-30" id="6ko-5k-VFj"/>
                 <constraint firstItem="04i-Ws-NDS" firstAttribute="centerX" secondItem="e9j-lO-hQC" secondAttribute="centerX" id="RzB-gN-MWG"/>
+                <constraint firstItem="wKb-LD-GOx" firstAttribute="top" secondItem="04i-Ws-NDS" secondAttribute="bottom" id="ept-OE-eYu"/>
+                <constraint firstAttribute="trailing" secondItem="wKb-LD-GOx" secondAttribute="trailing" id="gQ4-2s-CI9"/>
+                <constraint firstItem="wKb-LD-GOx" firstAttribute="leading" secondItem="e9j-lO-hQC" secondAttribute="leading" id="uJo-kc-e1l"/>
             </constraints>
-            <point key="canvasLocation" x="41" y="56"/>
+            <point key="canvasLocation" x="40.5" y="55.5"/>
         </view>
     </objects>
     <resources>
