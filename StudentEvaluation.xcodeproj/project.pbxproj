@@ -207,6 +207,8 @@
 		8DAF156F205283EA0076EA91 /* SelectStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF156E205283EA0076EA91 /* SelectStudentViewController.m */; };
 		8DAF1573205289860076EA91 /* StudentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF1571205289860076EA91 /* StudentListCell.m */; };
 		8DAF1574205289860076EA91 /* StudentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAF1572205289860076EA91 /* StudentListCell.xib */; };
+		8DB0514E206355F10056DB2C /* ConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0514D206355F10056DB2C /* ConfirmView.m */; };
+		8DB05150206356830056DB2C /* ConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB0514F206356830056DB2C /* ConfirmView.xib */; };
 		8DB128E62056313B00D0D593 /* StudentListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128E52056313B00D0D593 /* StudentListApi.m */; };
 		8DB128E9205633AE00D0D593 /* StudentListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128E8205633AE00D0D593 /* StudentListTableView.m */; };
 		8DB128EC205654E400D0D593 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB128EB205654E300D0D593 /* StudentModel.m */; };
@@ -675,6 +677,9 @@
 		8DAF1570205289860076EA91 /* StudentListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListCell.h; sourceTree = "<group>"; };
 		8DAF1571205289860076EA91 /* StudentListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentListCell.m; sourceTree = "<group>"; };
 		8DAF1572205289860076EA91 /* StudentListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentListCell.xib; sourceTree = "<group>"; };
+		8DB0514C206355F10056DB2C /* ConfirmView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmView.h; sourceTree = "<group>"; };
+		8DB0514D206355F10056DB2C /* ConfirmView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmView.m; sourceTree = "<group>"; };
+		8DB0514F206356830056DB2C /* ConfirmView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmView.xib; sourceTree = "<group>"; };
 		8DB128E42056313B00D0D593 /* StudentListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListApi.h; sourceTree = "<group>"; };
 		8DB128E52056313B00D0D593 /* StudentListApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentListApi.m; sourceTree = "<group>"; };
 		8DB128E7205633AE00D0D593 /* StudentListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentListTableView.h; sourceTree = "<group>"; };
@@ -1076,7 +1081,6 @@
 			isa = PBXGroup;
 			children = (
 				8D99A00A20468DE6005ADE6D /* LaunchScreen.storyboard */,
-				8D99A00620468DA4005ADE6D /* Base.lproj */,
 				8D999F9820464C8C005ADE6D /* AppDelegate.h */,
 				8D999F9920464C8C005ADE6D /* AppDelegate.m */,
 				8D999F9A20464C8C005ADE6D /* Assets.xcassets */,
@@ -1427,13 +1431,6 @@
 			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
-		8D99A00620468DA4005ADE6D /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		8D99A01F2046A3F8005ADE6D /* BSUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -1622,6 +1619,9 @@
 				8DA95DB720576DA0006C2FCE /* MedalRecordCell.h */,
 				8DA95DB820576DA0006C2FCE /* MedalRecordCell.m */,
 				8DA95DB920576DA0006C2FCE /* MedalRecordCell.xib */,
+				8DB0514C206355F10056DB2C /* ConfirmView.h */,
+				8DB0514D206355F10056DB2C /* ConfirmView.m */,
+				8DB0514F206356830056DB2C /* ConfirmView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1772,7 +1772,7 @@
 					8D999F7920464775005ADE6D = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1872,6 +1872,7 @@
 				8DB73A56205131890082C78F /* ic_record_ripple@2x.png in Resources */,
 				8DA95DBB20576DA0006C2FCE /* MedalRecordCell.xib in Resources */,
 				8DA1789420480EBB000D7B5B /* class_icon_personal_nor@3x.png in Resources */,
+				8DB05150206356830056DB2C /* ConfirmView.xib in Resources */,
 				8DD84BE5204936060047E125 /* success_icon_medal@3x.png in Resources */,
 				8D999FD720465A63005ADE6D /* Settings.plist in Resources */,
 				8DBD9EE8205BB5FA00B83802 /* AccountSafeViewController.xib in Resources */,
@@ -2160,6 +2161,7 @@
 				8D8F598B204F8AEB00D99399 /* SCSaveToCameraRollOperation.m in Sources */,
 				8D999FD520465A5B005ADE6D /* BSSettings.m in Sources */,
 				8DD84C2A20493E550047E125 /* BSMedalTableViewCell.m in Sources */,
+				8DB0514E206355F10056DB2C /* ConfirmView.m in Sources */,
 				8D98E0EC20620BA4002E1DD9 /* XFCameraButton.m in Sources */,
 				8DB128EC205654E400D0D593 /* StudentModel.m in Sources */,
 				8DA178722047A45C000D7B5B /* ForgetPasswordViewController.m in Sources */,
@@ -2330,7 +2332,9 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hubei Bosun digital education service Co., Ltd (6ZL98DYCYY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hubei Bosun digital education service Co., Ltd (6ZL98DYCYY)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6ZL98DYCYY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
@@ -2342,10 +2346,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dodoedu.StudentEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "32749d84-7a1a-450d-ac4c-1d4f7cdde646";
+				PROVISIONING_PROFILE_SPECIFIER = StudentEvaluation_distribution;
 				SWIFT_OBJC_BRIDGING_HEADER = "StudentEvaluation/Others/StudentEvaluation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2358,7 +2364,9 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hubei Bosun digital education service Co., Ltd (6ZL98DYCYY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hubei Bosun digital education service Co., Ltd (6ZL98DYCYY)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6ZL98DYCYY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StudentEvaluation/Info.plist;
@@ -2370,9 +2378,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dodoedu.StudentEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "32749d84-7a1a-450d-ac4c-1d4f7cdde646";
+				PROVISIONING_PROFILE_SPECIFIER = StudentEvaluation_distribution;
 				SWIFT_OBJC_BRIDGING_HEADER = "StudentEvaluation/Others/StudentEvaluation-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

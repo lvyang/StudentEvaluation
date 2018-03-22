@@ -76,6 +76,11 @@
         [self.window makeKeyAndVisible];
     }
     
+    {
+        NSDictionary *settings = @{@"systemNoticeOpen" : @YES};
+        [[NSUserDefaults standardUserDefaults] registerDefaults:settings];
+    }
+    
     return YES;
 }
 

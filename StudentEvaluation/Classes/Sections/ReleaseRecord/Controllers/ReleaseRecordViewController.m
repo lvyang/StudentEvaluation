@@ -20,6 +20,7 @@
 #import "UIImage+ImageAddition.h"
 #import "BSWebviewViewController.h"
 #import "BSSettings.h"
+#import "ConfirmView.h"
 
 static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
 
@@ -74,7 +75,7 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
         }];
         
         self.tableView.revokeMedalHandler = ^(MedalRecordModel *model, NSIndexPath *indexPath) {
-            [weakSelf revokeMedalRecord:model atIndexPath:indexPath];
+            [weakSelf showAlert:model atIndexPath:indexPath];
         };
     }
     
@@ -135,6 +136,14 @@ static NSInteger MEDAL_RECORD_PAGE_COUNT = 10;
     vc.medalRecordId = model.medalScoreId;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showAlert:(MedalRecordModel *)medalRecord atIndexPath:(NSIndexPath *)indexPath
+{
+    ConfirmView *view = [[NSBundle mainBundle] loadNibNamed:@"ConfirmView" owner:nil options:nil][0];
+    [view showWithConfirmBlock:^{
+        [self revokeMedalRecord:medalRecord atIndexPath:indexPath];
+    }];
 }
 
 - (void)revokeMedalRecord:(MedalRecordModel *)medalRecord atIndexPath:(NSIndexPath *)indexPath

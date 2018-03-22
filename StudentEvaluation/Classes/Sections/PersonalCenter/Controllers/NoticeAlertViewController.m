@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"通知提醒";
     
     self.systemNoticeOpenSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"systemNoticeOpen"];
     self.voiceOpenSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"voiceOpen"];

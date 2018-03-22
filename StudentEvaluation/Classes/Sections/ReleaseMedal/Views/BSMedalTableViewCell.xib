@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,13 +20,14 @@
                 <subviews>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mls-ig-sfK">
                         <rect key="frame" x="8" y="3" width="304" height="74"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="mls-ig-sfK" secondAttribute="bottom" constant="-8" id="0Dt-ZC-V8A"/>
-                    <constraint firstItem="mls-ig-sfK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Lv1-Na-zjM"/>
-                    <constraint firstItem="mls-ig-sfK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Qhe-m6-TOv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="mls-ig-sfK" secondAttribute="trailing" constant="-8" id="zeY-E4-j8V"/>
+                    <constraint firstAttribute="bottom" secondItem="mls-ig-sfK" secondAttribute="bottom" constant="2.5" id="e7U-Z9-D6s"/>
+                    <constraint firstAttribute="trailing" secondItem="mls-ig-sfK" secondAttribute="trailing" constant="8" id="lSj-CY-jTd"/>
+                    <constraint firstItem="mls-ig-sfK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pwW-la-hex"/>
+                    <constraint firstItem="mls-ig-sfK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="q92-K5-Y6J"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
