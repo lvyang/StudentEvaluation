@@ -13,8 +13,8 @@
 /**
  *  @description: 根据屏幕scale从指定bundle中加载图片。
  *
- *  @param: bundle  bundle对象
- *  @param: imageName  图片名称
+ *  @param bundle  bundle对象
+ *  @param imageName  图片名称
  *
  *  @return: 最适合当前屏幕的图片
  */
@@ -26,9 +26,9 @@
 + (UIImage *)imageFromColor:(UIColor *)color;
 
 /**
- *  @description: 对图片进行模糊处理。NOTE:此操作比较耗时
+ *  @description 对图片进行模糊处理。NOTE:此操作比较耗时
  *
- *  @param: blur  模糊等级
+ *  @param blur  模糊等级
  *
  *  @return: 模糊处理后的图片
  */

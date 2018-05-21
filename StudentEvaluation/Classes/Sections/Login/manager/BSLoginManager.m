@@ -79,7 +79,13 @@ static NSString *ACCESS_TOKEN = @"token";
             return;
         }
         
-        NSDictionary *content = [request.responseJSONObject objectForKey:@"content"];
+        NSMutableDictionary *content = [[request.responseJSONObject objectForKey:@"content"] mutableCopy];
+        for (NSString *key in content.allKeys) {
+            if ([[content objectForKey:key] isKindOfClass:[NSNull class]]) {
+                [content setObject:@"" forKey:key];
+            }
+        }
+        
         self.userModel = [BSUserModel yy_modelWithDictionary:content];
         self.accessToken = [content objectForKey:ACCESS_TOKEN] ? : @"";
         
