@@ -22,7 +22,10 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self addBackButtonItem];
+    
+    if (self.navigationController.viewControllers.count != 1) {
+        [self addBackButtonItem];
+    }
 }
 
 - (void)back:(id)sender

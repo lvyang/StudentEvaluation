@@ -20,6 +20,7 @@
 #import "BSLoginManager.h"
 #import "UIViewController+Addition.h"
 #import "BSBaseRequest.h"
+#import "StatisticsViewController.h"
 
 @interface AppDelegate ()
 
@@ -96,12 +97,16 @@
     BSNavigationViewController *releaseRecordNavi = [[BSNavigationViewController alloc] initWithRootViewController:releaseRecordVC];
     releaseRecordNavi.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"颁发记录" image:[[UIImage imageNamed:@"class_icon_comment_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"class_icon_comment_sel.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
+    StatisticsViewController *statisticsVC = [[StatisticsViewController alloc] initWithNibName:nil bundle:nil];
+    BSNavigationViewController *statisticsNavi = [[BSNavigationViewController alloc] initWithRootViewController:statisticsVC];
+    statisticsNavi.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"班级情况" image:[[UIImage imageNamed:@"footer_icon_banji_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"footer_icon_banji_sel.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
     PersonCenterViewController *personalCenterVC = [[PersonCenterViewController alloc] initWithNibName:@"PersonCenterViewController" bundle:nil];
     BSNavigationViewController *personalCenterNavi = [[BSNavigationViewController alloc] initWithRootViewController:personalCenterVC];
     personalCenterNavi.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"个人中心" image:[[UIImage imageNamed:@"class_icon_personal_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"class_icon_personal_sal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
     UITabBarController *tab = [[UITabBarController alloc] init];
-    [tab setViewControllers:@[releaseMedalNavi, releaseRecordNavi, personalCenterNavi]];
+    [tab setViewControllers:@[releaseMedalNavi, releaseRecordNavi, statisticsNavi, personalCenterNavi]];
     
     self.window.rootViewController = tab;
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		491D396E9BB5B6CFA68D831C /* libPods-StudentEvaluation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */; };
+		8D1945D621A3F56100A6E6C9 /* footer_icon_banji_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1945D021A3F56000A6E6C9 /* footer_icon_banji_sel@3x.png */; };
+		8D1945D721A3F56100A6E6C9 /* footer_icon_banji_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1945D121A3F56000A6E6C9 /* footer_icon_banji_normal@3x.png */; };
+		8D1945D821A3F56100A6E6C9 /* footer_icon_banji_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1945D221A3F56000A6E6C9 /* footer_icon_banji_normal@2x.png */; };
+		8D1945D921A3F56100A6E6C9 /* footer_icon_banji_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1945D321A3F56000A6E6C9 /* footer_icon_banji_sel@2x.png */; };
+		8D1945DE21A3F5DF00A6E6C9 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1945DD21A3F5DF00A6E6C9 /* StatisticsViewController.m */; };
 		8D2F0BEC2059257100268E31 /* sex_male@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BE82059256F00268E31 /* sex_male@3x.png */; };
 		8D2F0BED2059257100268E31 /* sex_female@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BE92059257000268E31 /* sex_female@3x.png */; };
 		8D2F0BEE2059257100268E31 /* sex_female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F0BEA2059257000268E31 /* sex_female@2x.png */; };
@@ -111,7 +116,6 @@
 		8D99A00220468C04005ADE6D /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D99A00020468C04005ADE6D /* NJKWebViewProgressView.m */; };
 		8D99A00520468CE2005ADE6D /* BSUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D99A00420468CE2005ADE6D /* BSUrlArgumentsFilter.m */; };
 		8D99A00C20468DE6005ADE6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A00A20468DE6005ADE6D /* LaunchScreen.storyboard */; };
-		8D99A01220468ED6005ADE6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A01120468ED6005ADE6D /* Info.plist */; };
 		8D99A01920469435005ADE6D /* login_icon_password_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A01320469434005ADE6D /* login_icon_password_default@2x.png */; };
 		8D99A01A20469435005ADE6D /* login_icon_avatar_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A01420469434005ADE6D /* login_icon_avatar_default@2x.png */; };
 		8D99A01B20469435005ADE6D /* login_icon_account_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D99A01520469434005ADE6D /* login_icon_account_default@3x.png */; };
@@ -353,6 +357,12 @@
 
 /* Begin PBXFileReference section */
 		5538F3309F3EB8F555EAE7D2 /* libPods-StudentEvaluation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StudentEvaluation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1945D021A3F56000A6E6C9 /* footer_icon_banji_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer_icon_banji_sel@3x.png"; sourceTree = "<group>"; };
+		8D1945D121A3F56000A6E6C9 /* footer_icon_banji_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer_icon_banji_normal@3x.png"; sourceTree = "<group>"; };
+		8D1945D221A3F56000A6E6C9 /* footer_icon_banji_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer_icon_banji_normal@2x.png"; sourceTree = "<group>"; };
+		8D1945D321A3F56000A6E6C9 /* footer_icon_banji_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer_icon_banji_sel@2x.png"; sourceTree = "<group>"; };
+		8D1945DC21A3F5DF00A6E6C9 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		8D1945DD21A3F5DF00A6E6C9 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		8D2F0BE82059256F00268E31 /* sex_male@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_male@3x.png"; sourceTree = "<group>"; };
 		8D2F0BE92059257000268E31 /* sex_female@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_female@3x.png"; sourceTree = "<group>"; };
 		8D2F0BEA2059257000268E31 /* sex_female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sex_female@2x.png"; sourceTree = "<group>"; };
@@ -890,6 +900,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D1945DB21A3F59300A6E6C9 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				8D1945DC21A3F5DF00A6E6C9 /* StatisticsViewController.h */,
+				8D1945DD21A3F5DF00A6E6C9 /* StatisticsViewController.m */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		8D8F592D204F8AEB00D99399 /* SCRecorder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1119,6 +1138,10 @@
 		8D999FA320464C8C005ADE6D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D1945D221A3F56000A6E6C9 /* footer_icon_banji_normal@2x.png */,
+				8D1945D121A3F56000A6E6C9 /* footer_icon_banji_normal@3x.png */,
+				8D1945D321A3F56000A6E6C9 /* footer_icon_banji_sel@2x.png */,
+				8D1945D021A3F56000A6E6C9 /* footer_icon_banji_sel@3x.png */,
 				8DB3D5322060B43800DBC092 /* password_visible_normal@2x.png */,
 				8DB3D5342060B43900DBC092 /* password_visible_normal@3x.png */,
 				8DB3D5332060B43800DBC092 /* password_visible_selected@2x.png */,
@@ -1461,6 +1484,7 @@
 		8D99A0312046B750005ADE6D /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8D1945DB21A3F59300A6E6C9 /* Statistics */,
 				8DA8D0FE2058CE7700575729 /* QRCode */,
 				8DAF150B20525E390076EA91 /* Player */,
 				8DAF14F82052330C0076EA91 /* PhotoBrower */,
@@ -1807,7 +1831,6 @@
 				8DD84C1E204936060047E125 /* lssued_icon_score_nor@2x.png in Resources */,
 				8DAF1574205289860076EA91 /* StudentListCell.xib in Resources */,
 				8D98E0F620620D41002E1DD9 /* sight_video_focus@3x.png in Resources */,
-				8D99A01220468ED6005ADE6D /* Info.plist in Resources */,
 				8DA1789820480EBB000D7B5B /* class_icon_reward_nor@2x.png in Resources */,
 				8D98E0FA20620D46002E1DD9 /* icon_return_p@3x.png in Resources */,
 				8DB9A823204D3351006445E3 /* ClassListCell.xib in Resources */,
@@ -1885,6 +1908,7 @@
 				8D2F0BEC2059257100268E31 /* sex_male@3x.png in Resources */,
 				8DD84C16204936060047E125 /* success_icon_medal@2x.png in Resources */,
 				8DD84BFE204936060047E125 /* banfaxunzhang_icon_sound_nor@2x.png in Resources */,
+				8D1945D921A3F56100A6E6C9 /* footer_icon_banji_sel@2x.png in Resources */,
 				8DAF15082052407E0076EA91 /* arrow_backward_white@2x.png in Resources */,
 				8DA1789D20480EBB000D7B5B /* class_icon_personal_sal@3x.png in Resources */,
 				8DD84C11204936060047E125 /* lssued_icon_score_sel@2x.png in Resources */,
@@ -1916,6 +1940,7 @@
 				8D98E10620620D56002E1DD9 /* icon_close_@3x.png in Resources */,
 				8DBD9EE3205B9B1F00B83802 /* SettingsViewController.xib in Resources */,
 				8DD84BDC204936060047E125 /* password_button_verification_nor@2x.png in Resources */,
+				8D1945D821A3F56100A6E6C9 /* footer_icon_banji_normal@2x.png in Resources */,
 				8DB73A55205131890082C78F /* ic_release_to_cancel@3x.png in Resources */,
 				8DD84BF0204936060047E125 /* luyinshi_button_recor@2x.png in Resources */,
 				8D98E10220620D50002E1DD9 /* icon_finish_p@2x.png in Resources */,
@@ -1932,6 +1957,8 @@
 				8D98E0FF20620D4B002E1DD9 /* icon_return_n@3x.png in Resources */,
 				8DD84BDB204936060047E125 /* bind_button_replace_nor@2x.png in Resources */,
 				8D99A00C20468DE6005ADE6D /* LaunchScreen.storyboard in Resources */,
+				8D1945D721A3F56100A6E6C9 /* footer_icon_banji_normal@3x.png in Resources */,
+				8D1945D621A3F56100A6E6C9 /* footer_icon_banji_sel@3x.png in Resources */,
 				8D98E10B20620D5B002E1DD9 /* icon_change@2x.png in Resources */,
 				8D99A01920469435005ADE6D /* login_icon_password_default@2x.png in Resources */,
 				8DD84C0F204936060047E125 /* password_button_getback_onr@3x.png in Resources */,
@@ -2158,6 +2185,7 @@
 				8DA1788520480637000D7B5B /* ResetPasswordApi.m in Sources */,
 				8DD84C2720493DD30047E125 /* MedalLibraryViewController.m in Sources */,
 				8D8F5976204F8AEB00D99399 /* SCAudioConfiguration.m in Sources */,
+				8D1945DE21A3F5DF00A6E6C9 /* StatisticsViewController.m in Sources */,
 				8D8F598B204F8AEB00D99399 /* SCSaveToCameraRollOperation.m in Sources */,
 				8D999FD520465A5B005ADE6D /* BSSettings.m in Sources */,
 				8DD84C2A20493E550047E125 /* BSMedalTableViewCell.m in Sources */,
